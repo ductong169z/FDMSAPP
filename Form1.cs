@@ -16,5 +16,12 @@ namespace FMSAPP
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'animeDataSet.account' table. You can move, or remove it, as needed.
+            this.accountTableAdapter.Fill(this.animeDataSet.account);
+
+        }
     }
 }

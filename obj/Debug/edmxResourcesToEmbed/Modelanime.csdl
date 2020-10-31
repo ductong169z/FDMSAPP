@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="animeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="avatar" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="Int32" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" />
+    <Property Name="deleted_at" Type="DateTime" />
+    <Property Name="updated_at" Type="DateTime" />
+    <NavigationProperty Name="animes" Relationship="Self.Admin" FromRole="account" ToRole="anime" />
+  </EntityType>
+  <EntityType Name="anime">
+    <Key>
+      <PropertyRef Name="AnimeID" />
+    </Key>
+    <Property Name="AnimeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountID" Type="Int32" Nullable="false" />
+    <Property Name="SeasonID" Type="Int32" />
+    <Property Name="type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="135" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="releaseDate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="rating" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="episodes" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="17" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="duration" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="poster" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="trailer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" />
+    <Property Name="deleted_at" Type="DateTime" />
+    <Property Name="updated_at" Type="DateTime" />
+    <NavigationProperty Name="account" Relationship="Self.Admin" FromRole="anime" ToRole="account" />
+  </EntityType>
+  <EntityType Name="genre">
+    <Key>
+      <PropertyRef Name="GenreID" />
+    </Key>
+    <Property Name="GenreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" />
+    <Property Name="deleted_at" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="list">
+    <Key>
+      <PropertyRef Name="AnimeID" />
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AnimeID" Type="Int32" Nullable="false" />
+    <Property Name="AccountID" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="progress" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="list_history">
+    <Key>
+      <PropertyRef Name="ListHistoryID" />
+    </Key>
+    <Property Name="ListHistoryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ListAnimeID" Type="Int32" Nullable="false" />
+    <Property Name="ListAccountID" Type="Int32" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="review">
+    <Key>
+      <PropertyRef Name="ReviewID" />
+    </Key>
+    <Property Name="ReviewID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnimeID" Type="Int32" Nullable="false" />
+    <Property Name="AccountID" Type="Int32" Nullable="false" />
+    <Property Name="score" Type="Int32" Nullable="false" />
+    <Property Name="content" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" />
+    <Property Name="deleted_at" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="slug" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="season">
+    <Key>
+      <PropertyRef Name="SeasonID" />
+    </Key>
+    <Property Name="SeasonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="created_at" Type="DateTime" />
+    <Property Name="deleted_at" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="studio">
+    <Key>
+      <PropertyRef Name="StudioID" />
+    </Key>
+    <Property Name="StudioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" />
+    <Property Name="deleted_at" Type="DateTime" />
+    <Property Name="updated_at" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="anime_studio">
+    <Key>
+      <PropertyRef Name="AnimeID" />
+      <PropertyRef Name="StudioID" />
+    </Key>
+    <Property Name="AnimeID" Type="Int32" Nullable="false" />
+    <Property Name="StudioID" Type="Int32" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" />
+    <Property Name="updated_at" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="genre_anime">
+    <Key>
+      <PropertyRef Name="GenreID" />
+      <PropertyRef Name="AnimeID" />
+      <PropertyRef Name="created_at" />
+    </Key>
+    <Property Name="GenreID" Type="Int32" Nullable="false" />
+    <Property Name="AnimeID" Type="Int32" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" />
+    <Property Name="deleted_at" Type="DateTime" />
+    <Property Name="updated_at" Type="DateTime" />
+  </EntityType>
+  <Association Name="Admin">
+    <End Role="account" Type="Self.account" Multiplicity="1" />
+    <End Role="anime" Type="Self.anime" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="anime">
+        <PropertyRef Name="AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="animeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="accounts" EntityType="Self.account" />
+    <EntitySet Name="animes" EntityType="Self.anime" />
+    <EntitySet Name="genres" EntityType="Self.genre" />
+    <EntitySet Name="lists" EntityType="Self.list" />
+    <EntitySet Name="list_history" EntityType="Self.list_history" />
+    <EntitySet Name="reviews" EntityType="Self.review" />
+    <EntitySet Name="roles" EntityType="Self.role" />
+    <EntitySet Name="seasons" EntityType="Self.season" />
+    <EntitySet Name="studios" EntityType="Self.studio" />
+    <EntitySet Name="anime_studio" EntityType="Self.anime_studio" />
+    <EntitySet Name="genre_anime" EntityType="Self.genre_anime" />
+    <AssociationSet Name="Admin" Association="Self.Admin">
+      <End Role="account" EntitySet="accounts" />
+      <End Role="anime" EntitySet="animes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

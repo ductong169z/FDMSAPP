@@ -38,3 +38,4 @@ D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csproj.CoreCompileInpu
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csproj.CopyComplete
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.exe
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.pdb
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.Form1.resources
