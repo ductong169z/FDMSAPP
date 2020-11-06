@@ -66,7 +66,9 @@
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -110,6 +112,24 @@
     <Compile Include="account.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>
     </Compile>
+    <Compile Include="AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLoginForm.Designer.cs">
+      <DependentUpon>AdminLoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="anime.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>
     </Compile>
@@ -118,14 +138,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>animeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="animeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>animeDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AnimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnimeForm.Designer.cs">
+      <DependentUpon>AnimeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="anime_studio.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MDIParent1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
     </Compile>
     <Compile Include="genre.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>
@@ -168,9 +199,28 @@
     <Compile Include="studio.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLoginForm.resx">
+      <DependentUpon>AdminLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimeForm.resx">
+      <DependentUpon>AnimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -179,7 +229,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Modelanime.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Modelanime.Designer.cs</LastGenOutput>
@@ -195,10 +249,24 @@
     <None Include="animeDataSet.xss">
       <DependentUpon>animeDataSet.xsd</DependentUpon>
     </None>
+    <None Include="animeDataSet1.xsc">
+      <DependentUpon>animeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="animeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>animeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="animeDataSet1.xss">
+      <DependentUpon>animeDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Modelanime.edmx.diagram">
       <DependentUpon>Modelanime.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\account.datasource" />
+    <None Include="Properties\DataSources\anime.datasource" />
+    <None Include="Properties\DataSources\season.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -223,6 +291,7 @@
       <DependentUpon>Modelanime.edmx</DependentUpon>
       <LastGenOutput>Modelanime.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\10-2-anime-png-images.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

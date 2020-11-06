@@ -1,6 +1,6 @@
 ﻿namespace FMSAPP
 {
-    partial class Form1
+    partial class AdminForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,126 +30,46 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panelTitle = new System.Windows.Forms.Panel();
-            this.lbTitle = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.animeDataSet = new FMSAPP.animeDataSet();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountTableAdapter = new FMSAPP.animeDataSetTableAdapters.accountTableAdapter();
             this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avatarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deleted_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.updated_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.animeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.accountIDDataGridViewTextBoxColumn,
             this.roleIDDataGridViewTextBoxColumn,
             this.usernameDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
             this.fullnameDataGridViewTextBoxColumn,
             this.avatarDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.genderDataGridViewTextBoxColumn,
             this.createdatDataGridViewTextBoxColumn,
-            this.deleted_at,
             this.updated_at});
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridView1.DataSource = this.accountBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 142);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(923, 403);
+            this.dataGridView1.Size = new System.Drawing.Size(804, 426);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // panelTitle
-            // 
-            this.panelTitle.AutoSize = true;
-            this.panelTitle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelTitle.Controls.Add(this.lbTitle);
-            this.panelTitle.Location = new System.Drawing.Point(140, 12);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(508, 59);
-            this.panelTitle.TabIndex = 1;
-            // 
-            // lbTitle
-            // 
-            this.lbTitle.AutoSize = true;
-            this.lbTitle.Font = new System.Drawing.Font("Matura MT Script Capitals", 17.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lbTitle.Location = new System.Drawing.Point(148, 10);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(239, 40);
-            this.lbTitle.TabIndex = 0;
-            this.lbTitle.Text = "FormSinhVien";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.AutoEllipsis = true;
-            this.btnAdd.AutoSize = true;
-            this.btnAdd.Location = new System.Drawing.Point(140, 105);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(127, 32);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AutoEllipsis = true;
-            this.btnDelete.AutoSize = true;
-            this.btnDelete.Location = new System.Drawing.Point(335, 105);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(127, 32);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.AutoEllipsis = true;
-            this.btnUpdate.AutoSize = true;
-            this.btnUpdate.Location = new System.Drawing.Point(521, 105);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(127, 32);
-            this.btnUpdate.TabIndex = 4;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // animeDataSet
-            // 
-            this.animeDataSet.DataSetName = "animeDataSet";
-            this.animeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataMember = "account";
-            this.accountBindingSource.DataSource = this.animeDataSet;
-            // 
-            // accountTableAdapter
-            // 
-            this.accountTableAdapter.ClearBeforeFill = true;
             // 
             // accountIDDataGridViewTextBoxColumn
             // 
@@ -158,7 +78,7 @@
             this.accountIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.accountIDDataGridViewTextBoxColumn.Name = "accountIDDataGridViewTextBoxColumn";
             this.accountIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.accountIDDataGridViewTextBoxColumn.Visible = false;
+            this.accountIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // roleIDDataGridViewTextBoxColumn
             // 
@@ -167,6 +87,7 @@
             this.roleIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.roleIDDataGridViewTextBoxColumn.Name = "roleIDDataGridViewTextBoxColumn";
             this.roleIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roleIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // usernameDataGridViewTextBoxColumn
             // 
@@ -175,15 +96,7 @@
             this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
             this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
-            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            this.usernameDataGridViewTextBoxColumn.Width = 125;
             // 
             // fullnameDataGridViewTextBoxColumn
             // 
@@ -192,6 +105,7 @@
             this.fullnameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
             this.fullnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fullnameDataGridViewTextBoxColumn.Width = 125;
             // 
             // avatarDataGridViewTextBoxColumn
             // 
@@ -200,6 +114,7 @@
             this.avatarDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.avatarDataGridViewTextBoxColumn.Name = "avatarDataGridViewTextBoxColumn";
             this.avatarDataGridViewTextBoxColumn.ReadOnly = true;
+            this.avatarDataGridViewTextBoxColumn.Width = 125;
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -208,6 +123,7 @@
             this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 125;
             // 
             // genderDataGridViewTextBoxColumn
             // 
@@ -216,6 +132,7 @@
             this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
             this.genderDataGridViewTextBoxColumn.ReadOnly = true;
+            this.genderDataGridViewTextBoxColumn.Width = 125;
             // 
             // createdatDataGridViewTextBoxColumn
             // 
@@ -224,15 +141,7 @@
             this.createdatDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.createdatDataGridViewTextBoxColumn.Name = "createdatDataGridViewTextBoxColumn";
             this.createdatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // deleted_at
-            // 
-            this.deleted_at.DataPropertyName = "deleted_at";
-            this.deleted_at.HeaderText = "deleted_at";
-            this.deleted_at.MinimumWidth = 6;
-            this.deleted_at.Name = "deleted_at";
-            this.deleted_at.ReadOnly = true;
-            this.deleted_at.Visible = false;
+            this.createdatDataGridViewTextBoxColumn.Width = 125;
             // 
             // updated_at
             // 
@@ -241,66 +150,39 @@
             this.updated_at.MinimumWidth = 6;
             this.updated_at.Name = "updated_at";
             this.updated_at.ReadOnly = true;
-            this.updated_at.Visible = false;
+            this.updated_at.Width = 125;
             // 
-            // label1
+            // accountBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(772, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.accountBindingSource.DataSource = typeof(FMSAPP.account);
             // 
-            // Form1
+            // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(923, 545);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.panelTitle);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "AdminForm";
+            this.Text = "AdminForm";
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panelTitle.ResumeLayout(false);
-            this.panelTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.animeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panelTitle;
-        private System.Windows.Forms.Label lbTitle;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private animeDataSet animeDataSet;
         private System.Windows.Forms.BindingSource accountBindingSource;
-        private animeDataSetTableAdapters.accountTableAdapter accountTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn accountIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn avatarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createdatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deleted_at;
         private System.Windows.Forms.DataGridViewTextBoxColumn updated_at;
-        private System.Windows.Forms.Label label1;
     }
 }
-

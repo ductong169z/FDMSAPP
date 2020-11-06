@@ -38,4 +38,10 @@ D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csproj.CoreCompileInpu
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csproj.CopyComplete
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.exe
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.pdb
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.Form1.resources
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.AnimeForm.resources
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.exe.licenses
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.AdminLoginForm.resources
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.MDIParent1.resources
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.UserForm.resources
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.AdminForm.resources
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.AddUserForm.resources
