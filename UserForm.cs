@@ -28,7 +28,7 @@ namespace FMSAPP
             db = new animeEntities();
             db.accounts.Load();
             accountBindingSource.DataSource = db.accounts.Local;
-            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+            //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
             var roleid = db.roles;
             cbbRoleID.DataSource = roleid.ToList();
             cbbRoleID.DisplayMember = "RoleID";
@@ -125,7 +125,7 @@ namespace FMSAPP
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+            //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
         }
     }
 }

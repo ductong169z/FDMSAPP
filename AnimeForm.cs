@@ -35,7 +35,7 @@ namespace FMSAPP
             db = new animeEntities();
             db.animes.Load();
             animeBindingSource.DataSource = db.animes.Local;
-            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
+            //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
             var season = db.seasons;
             cbbSeason.DataSource = season.ToList();
             cbbSeason.DisplayMember = "SeasonID";
@@ -170,7 +170,7 @@ namespace FMSAPP
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
+            //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
