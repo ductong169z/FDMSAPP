@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -64,7 +65,12 @@ namespace FMSAPP
         private void btnAdd_Click(object sender, EventArgs e)
         {
             check_valid_all();
-            if (cbbRoleID.SelectedIndex == -1)//Nothing selected
+            var exituser = db.accounts.FirstOrDefault(a => a.username.Equals(txtusername.Text));
+            if (exituser != null)
+            {
+                MessageBox.Show("This username already have", "Error");
+            }
+            else if (cbbRoleID.SelectedIndex == -1)//Nothing selected
             {
                 MessageBox.Show("You must select a role", "Error");
             }
@@ -78,6 +84,19 @@ namespace FMSAPP
             else
             {
                 MessageBox.Show("Have something wrong in input! Plz check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        OpenFileDialog open;
+        private void btnChoose_Click(object sender, EventArgs e)
+        {
+            open = new OpenFileDialog();
+            open.Filter = "Images|*.jpg;*.jpeg;*.png";
+            open.InitialDirectory = @"C:\";
+            open.Title = "Please select an image to add.";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                txtavatar.Text = Path.GetFileName(open.FileName);
+                File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(open.FileName), true);
             }
         }
 

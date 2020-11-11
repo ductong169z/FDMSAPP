@@ -69,5 +69,26 @@ namespace FMSAPP.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Konachan_com___304642_2girls_blue_eyes_brown_hair_camera_clouds_long_hair_pink_hair_red_eyes_shirt_sky_water_yuigahama_yui_yukinoshita_yukino_yuuki_mix {
+            get {
+                object obj = ResourceManager.GetObject("Konachan.com - 304642 2girls blue_eyes brown_hair camera clouds long_hair pink_ha" +
+                        "ir red_eyes shirt sky water yuigahama_yui yukinoshita_yukino yuuki_mix", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Konachan1 {
+            get {
+                object obj = ResourceManager.GetObject("Konachan1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

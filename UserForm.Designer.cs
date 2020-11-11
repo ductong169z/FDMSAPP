@@ -38,7 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAvatar = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -52,6 +52,8 @@
             this.dateTimeUpdate = new System.Windows.Forms.DateTimePicker();
             this.dateTimeDelete = new System.Windows.Forms.DateTimePicker();
             this.btnRefesh = new System.Windows.Forms.Button();
+            this.btnChoose = new System.Windows.Forms.Button();
+            this.testpicturebox = new System.Windows.Forms.PictureBox();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testpicturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,13 +90,14 @@
             this.deletedatDataGridViewTextBoxColumn,
             this.updatedatDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.accountBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(324, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(606, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(464, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(442, 426);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label1
             // 
@@ -158,13 +162,13 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "avatar:";
             // 
-            // textBox3
+            // txtAvatar
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "avatar", true));
-            this.textBox3.Location = new System.Drawing.Point(95, 146);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 22);
-            this.textBox3.TabIndex = 9;
+            this.txtAvatar.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "avatar", true));
+            this.txtAvatar.Location = new System.Drawing.Point(95, 146);
+            this.txtAvatar.Name = "txtAvatar";
+            this.txtAvatar.Size = new System.Drawing.Size(174, 22);
+            this.txtAvatar.TabIndex = 9;
             // 
             // label7
             // 
@@ -312,6 +316,28 @@
             this.btnRefesh.UseVisualStyleBackColor = false;
             this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
             // 
+            // btnChoose
+            // 
+            this.btnChoose.Location = new System.Drawing.Point(275, 143);
+            this.btnChoose.Name = "btnChoose";
+            this.btnChoose.Size = new System.Drawing.Size(43, 28);
+            this.btnChoose.TabIndex = 37;
+            this.btnChoose.Text = "C";
+            this.btnChoose.UseVisualStyleBackColor = true;
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
+            // 
+            // testpicturebox
+            // 
+            this.testpicturebox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.testpicturebox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.testpicturebox.Location = new System.Drawing.Point(308, 32);
+            this.testpicturebox.Name = "testpicturebox";
+            this.testpicturebox.Size = new System.Drawing.Size(292, 375);
+            this.testpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.testpicturebox.TabIndex = 38;
+            this.testpicturebox.TabStop = false;
+            // 
             // accountBindingSource
             // 
             this.accountBindingSource.DataSource = typeof(FMSAPP.account);
@@ -410,7 +436,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1060, 450);
+            this.Controls.Add(this.testpicturebox);
+            this.Controls.Add(this.btnChoose);
             this.Controls.Add(this.btnRefesh);
             this.Controls.Add(this.dateTimeUpdate);
             this.Controls.Add(this.dateTimeDelete);
@@ -424,7 +452,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtAvatar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.cbbRoleID);
@@ -439,6 +467,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testpicturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -465,7 +494,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAvatar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -481,5 +510,7 @@
         private System.Windows.Forms.DateTimePicker dateTimeUpdate;
         private System.Windows.Forms.DateTimePicker dateTimeDelete;
         private System.Windows.Forms.Button btnRefesh;
+        private System.Windows.Forms.Button btnChoose;
+        private System.Windows.Forms.PictureBox testpicturebox;
     }
 }

@@ -32,6 +32,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblemail = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblavatar = new System.Windows.Forms.Label();
             this.txtavatar = new System.Windows.Forms.TextBox();
             this.lblfullname = new System.Windows.Forms.Label();
@@ -51,11 +52,11 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.roleTableAdapter = new FMSAPP.animeDataSet1TableAdapters.roleTableAdapter();
             this.dateTimeAdd = new System.Windows.Forms.DateTimePicker();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accountBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnChoose = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +87,10 @@
             this.txtemail.Size = new System.Drawing.Size(174, 22);
             this.txtemail.TabIndex = 25;
             this.txtemail.Validating += new System.ComponentModel.CancelEventHandler(this.txtemail_Validating);
+            // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataSource = typeof(FMSAPP.account);
             // 
             // lblavatar
             // 
@@ -258,19 +263,26 @@
             this.dateTimeAdd.Value = new System.DateTime(2020, 11, 4, 13, 35, 15, 0);
             this.dateTimeAdd.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimeAdd_Validating);
             // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataSource = typeof(FMSAPP.account);
-            // 
             // accountBindingSource1
             // 
             this.accountBindingSource1.DataSource = typeof(FMSAPP.account);
+            // 
+            // btnChoose
+            // 
+            this.btnChoose.Location = new System.Drawing.Point(90, 179);
+            this.btnChoose.Name = "btnChoose";
+            this.btnChoose.Size = new System.Drawing.Size(75, 23);
+            this.btnChoose.TabIndex = 39;
+            this.btnChoose.Text = "Choose";
+            this.btnChoose.UseVisualStyleBackColor = true;
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
             // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 508);
+            this.Controls.Add(this.btnChoose);
             this.Controls.Add(this.dateTimeAdd);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cmbgender);
@@ -296,9 +308,9 @@
             this.Name = "AddUserForm";
             this.Text = "AddUserForm";
             this.Load += new System.EventHandler(this.AddUserForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -331,5 +343,6 @@
         private System.Windows.Forms.BindingSource roleBindingSource;
         private animeDataSet1TableAdapters.roleTableAdapter roleTableAdapter;
         private System.Windows.Forms.DateTimePicker dateTimeAdd;
+        private System.Windows.Forms.Button btnChoose;
     }
 }

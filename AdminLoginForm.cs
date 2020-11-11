@@ -54,12 +54,15 @@ namespace FMSAPP
                         {
                             // Succeed
                             lblError.Text = "";
+                            //show id admin
+                            MessageBox.Show("ID Admin: "+exituser.AccountID.ToString(), "Message ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             // Hide this form
                             this.Hide();
+                            DashBoard db = new DashBoard();
                             //show form MDI
-                            MDIParent1 mp = new MDIParent1(exituser.AccountID.ToString());
+                            //MDIParent1 mp = new MDIParent1(exituser.AccountID.ToString());
                             // Show info form
-                            mp.Show();
+                            db.Show();
                             //this.Close();// This line stops the hidden form from running in the background, which can lead to memory leaks and performance issues.
                         }
                         else

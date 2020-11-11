@@ -50,7 +50,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
-            this.txtPassword.Size = new System.Drawing.Size(184, 29);
+            this.txtPassword.Size = new System.Drawing.Size(198, 29);
             this.txtPassword.TabIndex = 7;
             // 
             // txtUsername
@@ -62,7 +62,7 @@
             this.txtUsername.Location = new System.Drawing.Point(209, 41);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(184, 29);
+            this.txtUsername.Size = new System.Drawing.Size(198, 29);
             this.txtUsername.TabIndex = 6;
             // 
             // lblPassword
@@ -101,7 +101,7 @@
             this.btnLogin.Location = new System.Drawing.Point(242, 102);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(84, 28);
+            this.btnLogin.Size = new System.Drawing.Size(98, 30);
             this.btnLogin.TabIndex = 8;
             this.btnLogin.Text = "Login   ";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -116,9 +116,9 @@
             this.lblError.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblError.Location = new System.Drawing.Point(166, 134);
+            this.lblError.Location = new System.Drawing.Point(117, 109);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(227, 15);
+            this.lblError.Size = new System.Drawing.Size(119, 19);
             this.lblError.TabIndex = 11;
             this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -141,11 +141,11 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Image = global::FMSAPP.Properties.Resources._10_2_anime_png_images;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(11, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 107);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -155,7 +155,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(410, 165);
+            this.ClientSize = new System.Drawing.Size(424, 145);
             this.Controls.Add(this.linkpaypay);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.pictureBox1);

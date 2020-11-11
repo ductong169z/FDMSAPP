@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -27,13 +28,14 @@ namespace FMSAPP
             dateTimeUpdate.Value = DateTime.Now;
         }
         // Regex contstraints
-        static Regex LINK_REGEX = new Regex(@"^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]*)?$");
-        static Regex DURATION_REGEX = new Regex(@"^\d{1,2}\s((min|sec|hour){1})\s((per){1})\s((ep){1})?$");
+        static Regex LINK_REGEX = new Regex(@"^(https?\:\/\/)?(www\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)|(\&[\w\-]+)(\S+)?$");
+        static Regex DURATION_REGEX = new Regex(@"^\d{1,2}\s((min|sec|hour|hr){1})\s((per){1}|(\d{1,2}))\s((ep|min){1})?$");
         private void AnimeForm_Load(object sender, EventArgs e)
         {
             db = new animeEntities();
             db.animes.Load();
             animeBindingSource.DataSource = db.animes.Local;
+            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
             var season = db.seasons;
             cbbSeason.DataSource = season.ToList();
             cbbSeason.DisplayMember = "SeasonID";
@@ -122,7 +124,6 @@ namespace FMSAPP
                 int n = dataGridView1.CurrentRow.Index;
                 dataGridView1.Rows[n].Cells[13].Value = dateTimeAdd.Value.ToString();
                 animeBindingSource.AddNew();
-       //         txtIDAdmin.Text = ((Form)this.MdiParent).Controls["lblID"].Text;
             }
         }
 
@@ -130,8 +131,8 @@ namespace FMSAPP
         {
             if (!LINK_REGEX.IsMatch(txtTrailer.Text))
             {
-                // Incorrect password format
-                MessageBox.Show("The true URL must begin with https://");
+                // Incorrect link format
+                MessageBox.Show("The true URL must like this: https://www.youtube.com/embed/41Gj4Dri8wo?enablejsapi=1&wmode=opaque&autoplay=1");
                 check_valid4 = 1;
             }
             else
@@ -152,6 +153,24 @@ namespace FMSAPP
             {
                 check_valid4 = 0;
             }
+        }
+        OpenFileDialog open;
+        private void btnChoose_Click(object sender, EventArgs e)
+        {
+            open = new OpenFileDialog();
+            open.Filter = "Images|*.jpg;*.jpeg;*.png";
+            open.InitialDirectory = @"C:\";
+            open.Title = "Please select an image to add or update.";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                txtPoster.Text = Path.GetFileName(open.FileName);
+                File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(open.FileName), true);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

@@ -45,8 +45,8 @@
     </Key>
     <Property Name="GenreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="created_at" Type="DateTime" />
-    <Property Name="deleted_at" Type="DateTime" />
+    <Property Name="created_at" Type="DateTime" Nullable="true" />
+    <Property Name="deleted_at" Type="DateTime" Nullable="true" />
   </EntityType>
   <EntityType Name="list">
     <Key>

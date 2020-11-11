@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,7 @@ namespace FMSAPP
             db = new animeEntities();
             db.accounts.Load();
             accountBindingSource.DataSource = db.accounts.Local;
+            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
             var roleid = db.roles;
             cbbRoleID.DataSource = roleid.ToList();
             cbbRoleID.DisplayMember = "RoleID";
@@ -106,6 +108,24 @@ namespace FMSAPP
         private void btnRefesh_Click(object sender, EventArgs e)
         {
             dataGridView1.Refresh();
+        }
+        OpenFileDialog open;
+        private void btnChoose_Click(object sender, EventArgs e)
+        {
+            open = new OpenFileDialog();
+            open.Filter = "Images|*.jpg;*.jpeg;*.png";
+            open.InitialDirectory = @"C:\";
+            open.Title = "Please select an image to update.";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                txtAvatar.Text = Path.GetFileName(open.FileName);
+                File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(open.FileName), true);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
         }
     }
 }
