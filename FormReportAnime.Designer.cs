@@ -1,4 +1,4 @@
-﻿namespace FMSAPP
+﻿namespace FDMSAPP
 {
     partial class FormReportAnime
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.CrystalReportAnime1 = new FMSAPP.CrystalReportAnime();
+            this.CrystalReportAnime1 = new FDMSAPP.CrystalReportAnime();
             this.SuspendLayout();
             // 
             // crystalReportViewer1

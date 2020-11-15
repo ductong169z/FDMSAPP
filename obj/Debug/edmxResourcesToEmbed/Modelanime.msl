@@ -14,7 +14,6 @@
           <ScalarProperty Name="gender" ColumnName="gender" />
           <ScalarProperty Name="created_at" ColumnName="created_at" />
           <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
-          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -36,7 +35,6 @@
           <ScalarProperty Name="trailer" ColumnName="trailer" />
           <ScalarProperty Name="created_at" ColumnName="created_at" />
           <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
-          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -109,7 +107,6 @@
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="created_at" ColumnName="created_at" />
           <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
-          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -119,7 +116,6 @@
           <ScalarProperty Name="AnimeID" ColumnName="AnimeID" />
           <ScalarProperty Name="StudioID" ColumnName="StudioID" />
           <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -130,7 +126,6 @@
           <ScalarProperty Name="AnimeID" ColumnName="AnimeID" />
           <ScalarProperty Name="created_at" ColumnName="created_at" />
           <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
-          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -1,4 +1,4 @@
-﻿namespace FMSAPP
+﻿namespace FDMSAPP
 {
     partial class AdminLoginForm
     {

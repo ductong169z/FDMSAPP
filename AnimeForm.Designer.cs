@@ -1,4 +1,4 @@
-﻿namespace FMSAPP
+﻿namespace FDMSAPP
 {
     partial class AnimeForm
     {
@@ -365,11 +365,11 @@
             // 
             // animeBindingSource
             // 
-            this.animeBindingSource.DataSource = typeof(FMSAPP.anime);
+            this.animeBindingSource.DataSource = typeof(FDMSAPP.anime);
             // 
             // seasonBindingSource
             // 
-            this.seasonBindingSource.DataSource = typeof(FMSAPP.season);
+            this.seasonBindingSource.DataSource = typeof(FDMSAPP.season);
             // 
             // animeIDDataGridViewTextBoxColumn
             // 

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
-namespace FMSAPP
+namespace FDMSAPP
 {
     public partial class AnimeForm : Form
     {

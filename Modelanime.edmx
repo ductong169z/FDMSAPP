@@ -198,7 +198,6 @@ FROM `genre_anime` AS `genre_anime`</DefiningQuery>
           <Property Name="gender" Type="Int32" />
           <Property Name="created_at" Type="DateTime" Nullable="false" />
           <Property Name="deleted_at" Type="DateTime" />
-          <Property Name="updated_at" Type="DateTime" />
           <NavigationProperty Name="animes" Relationship="Self.Admin" FromRole="account" ToRole="anime" />
         </EntityType>
         <EntityType Name="anime">
@@ -220,7 +219,6 @@ FROM `genre_anime` AS `genre_anime`</DefiningQuery>
           <Property Name="trailer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="created_at" Type="DateTime" Nullable="false" />
           <Property Name="deleted_at" Type="DateTime" />
-          <Property Name="updated_at" Type="DateTime" />
           <NavigationProperty Name="account" Relationship="Self.Admin" FromRole="anime" ToRole="account" />
         </EntityType>
         <EntityType Name="genre">
@@ -288,7 +286,6 @@ FROM `genre_anime` AS `genre_anime`</DefiningQuery>
           <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="created_at" Type="DateTime" Nullable="false" />
           <Property Name="deleted_at" Type="DateTime" />
-          <Property Name="updated_at" Type="DateTime" />
         </EntityType>
         <EntityType Name="anime_studio">
           <Key>
@@ -298,7 +295,6 @@ FROM `genre_anime` AS `genre_anime`</DefiningQuery>
           <Property Name="AnimeID" Type="Int32" Nullable="false" />
           <Property Name="StudioID" Type="Int32" Nullable="false" />
           <Property Name="created_at" Type="DateTime" />
-          <Property Name="updated_at" Type="DateTime" />
         </EntityType>
         <EntityType Name="genre_anime">
           <Key>
@@ -310,7 +306,6 @@ FROM `genre_anime` AS `genre_anime`</DefiningQuery>
           <Property Name="AnimeID" Type="Int32" Nullable="false" />
           <Property Name="created_at" Type="DateTime" Nullable="false" />
           <Property Name="deleted_at" Type="DateTime" />
-          <Property Name="updated_at" Type="DateTime" />
         </EntityType>
         <Association Name="Admin">
           <End Role="account" Type="Self.account" Multiplicity="1" />
@@ -360,7 +355,6 @@ FROM `genre_anime` AS `genre_anime`</DefiningQuery>
                 <ScalarProperty Name="gender" ColumnName="gender" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
                 <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
-                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -382,7 +376,6 @@ FROM `genre_anime` AS `genre_anime`</DefiningQuery>
                 <ScalarProperty Name="trailer" ColumnName="trailer" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
                 <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
-                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -455,7 +448,6 @@ FROM `genre_anime` AS `genre_anime`</DefiningQuery>
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
                 <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
-                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -465,7 +457,6 @@ FROM `genre_anime` AS `genre_anime`</DefiningQuery>
                 <ScalarProperty Name="AnimeID" ColumnName="AnimeID" />
                 <ScalarProperty Name="StudioID" ColumnName="StudioID" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -476,7 +467,6 @@ FROM `genre_anime` AS `genre_anime`</DefiningQuery>
                 <ScalarProperty Name="AnimeID" ColumnName="AnimeID" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
                 <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
-                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

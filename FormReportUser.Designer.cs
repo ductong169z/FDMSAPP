@@ -1,4 +1,4 @@
-﻿namespace FMSAPP
+﻿namespace FDMSAPP
 {
     partial class FormReportUser
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.CrystalReportUser1 = new FMSAPP.CrystalReportUser();
+            this.CrystalReportUser1 = new FDMSAPP.CrystalReportUser();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
