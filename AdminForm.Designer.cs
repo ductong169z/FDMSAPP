@@ -1,4 +1,4 @@
-﻿namespace FMSAPP
+﻿namespace FDMSAPP
 {
     partial class AdminForm
     {
@@ -154,7 +154,7 @@
             // 
             // accountBindingSource
             // 
-            this.accountBindingSource.DataSource = typeof(FMSAPP.account);
+            this.accountBindingSource.DataSource = typeof(FDMSAPP.account);
             // 
             // AdminForm
             // 

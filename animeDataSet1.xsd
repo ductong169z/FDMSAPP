@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="animeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="animeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FMSAPP.Properties.Settings.GlobalReference.Default.animeConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="animeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="animeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FDMSAPP.Properties.Settings.GlobalReference.Default.animeConnectionString" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="roleTableAdapter" GeneratorDataComponentClassName="roleTableAdapter" Name="role" UserDataComponentName="roleTableAdapter">
@@ -70,7 +70,7 @@
   <xs:element name="animeDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="animeDataSet1" msprop:Generator_UserDSName="animeDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="role" msprop:Generator_TableClassName="roleDataTable" msprop:Generator_TableVarName="tablerole" msprop:Generator_TablePropName="role" msprop:Generator_RowDeletingName="roleRowDeleting" msprop:Generator_RowChangingName="roleRowChanging" msprop:Generator_RowEvHandlerName="roleRowChangeEventHandler" msprop:Generator_RowDeletedName="roleRowDeleted" msprop:Generator_UserTableName="role" msprop:Generator_RowChangedName="roleRowChanged" msprop:Generator_RowEvArgName="roleRowChangeEvent" msprop:Generator_RowClassName="roleRow">
+        <xs:element name="role" msprop:Generator_TableClassName="roleDataTable" msprop:Generator_TableVarName="tablerole" msprop:Generator_RowChangedName="roleRowChanged" msprop:Generator_TablePropName="role" msprop:Generator_RowDeletingName="roleRowDeleting" msprop:Generator_RowChangingName="roleRowChanging" msprop:Generator_RowEvHandlerName="roleRowChangeEventHandler" msprop:Generator_RowDeletedName="roleRowDeleted" msprop:Generator_RowClassName="roleRow" msprop:Generator_UserTableName="role" msprop:Generator_RowEvArgName="roleRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RoleID" msprop:Generator_ColumnVarNameInTable="columnRoleID" msprop:Generator_ColumnPropNameInRow="RoleID" msprop:Generator_ColumnPropNameInTable="RoleIDColumn" msprop:Generator_UserColumnName="RoleID" type="xs:int" />

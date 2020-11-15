@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace FMSAPP {
+namespace FDMSAPP {
     
     
     /// <summary>
@@ -677,7 +677,7 @@ namespace FMSAPP {
         }
     }
 }
-namespace FMSAPP.animeDataSet1TableAdapters {
+namespace FDMSAPP.animeDataSet1TableAdapters {
     
     
     /// <summary>
@@ -958,7 +958,7 @@ namespace FMSAPP.animeDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::FMSAPP.Properties.Settings.Default.animeConnectionString;
+            this._connection.ConnectionString = global::FDMSAPP.Properties.Settings.Default.animeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
