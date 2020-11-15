@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FDMSAPP {
+namespace FMSAPP {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace FDMSAPP {
         
         public override string FullResourceName {
             get {
-                return "FDMSAPP.CrystalReportUser.rpt";
+                return "FMSAPP.CrystalReportUser.rpt";
             }
             set {
                 // Do nothing

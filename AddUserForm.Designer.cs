@@ -1,4 +1,4 @@
-﻿namespace FDMSAPP
+﻿namespace FMSAPP
 {
     partial class AddUserForm
     {
@@ -45,12 +45,12 @@
             this.txtre_pass = new System.Windows.Forms.TextBox();
             this.cbbRoleID = new System.Windows.Forms.ComboBox();
             this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.animeDataSet1 = new FDMSAPP.animeDataSet1();
+            this.animeDataSet1 = new FMSAPP.animeDataSet1();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbgender = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.roleTableAdapter = new FDMSAPP.animeDataSet1TableAdapters.roleTableAdapter();
+            this.roleTableAdapter = new FMSAPP.animeDataSet1TableAdapters.roleTableAdapter();
             this.dateTimeAdd = new System.Windows.Forms.DateTimePicker();
             this.accountBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnChoose = new System.Windows.Forms.Button();
@@ -90,7 +90,7 @@
             // 
             // accountBindingSource
             // 
-            this.accountBindingSource.DataSource = typeof(FDMSAPP.account);
+            this.accountBindingSource.DataSource = typeof(FMSAPP.account);
             // 
             // lblavatar
             // 
@@ -265,7 +265,7 @@
             // 
             // accountBindingSource1
             // 
-            this.accountBindingSource1.DataSource = typeof(FDMSAPP.account);
+            this.accountBindingSource1.DataSource = typeof(FMSAPP.account);
             // 
             // btnChoose
             // 

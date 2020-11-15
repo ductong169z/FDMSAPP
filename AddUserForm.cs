@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FDMSAPP
+namespace FMSAPP
 {
     public partial class AddUserForm : Form
     {

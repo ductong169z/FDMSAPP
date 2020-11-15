@@ -1,4 +1,4 @@
-﻿namespace FDMSAPP
+﻿namespace FMSAPP
 {
     partial class DashBoard
     {
@@ -603,7 +603,7 @@
             // 
             // animeBindingSource
             // 
-            this.animeBindingSource.DataSource = typeof(FDMSAPP.anime);
+            this.animeBindingSource.DataSource = typeof(FMSAPP.anime);
             // 
             // DashBoard
             // 

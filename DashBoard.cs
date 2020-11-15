@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FDMSAPP
+namespace FMSAPP
 {
     public partial class DashBoard : Form
     {
