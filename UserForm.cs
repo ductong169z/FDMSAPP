@@ -150,5 +150,20 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtFind.Text))
+            {
+                this.accountBindingSource.DataSource = db.accounts.Local.ToBindingList();
+            }
+            else
+            {
+                var filteredData = db.accounts.Local.ToBindingList()
+                    .Where(x => x.username.Contains(this.txtFind.Text));
+                this.accountBindingSource.DataSource = filteredData.Count() > 0 ?
+                    filteredData : filteredData.ToArray();
+            }
+        }
     }
 }

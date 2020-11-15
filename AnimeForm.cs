@@ -195,6 +195,21 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.txtFind.Text))
+            {
+                this.animeBindingSource.DataSource = db.animes.Local.ToBindingList();
+            }
+            else
+            {
+                var filteredData = db.animes.Local.ToBindingList()
+                    .Where(x => x.name.Contains(this.txtFind.Text));
+                this.animeBindingSource.DataSource = filteredData.Count() > 0 ?
+                    filteredData : filteredData.ToArray();
+            }
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int n = dataGridView1.CurrentRow.Index;
