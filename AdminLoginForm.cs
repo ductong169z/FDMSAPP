@@ -37,46 +37,10 @@ namespace FMSAPP
                 .Replace("-", string.Empty)
                 .ToLower();
         }
-        // On Login button click
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            db = new animeEntities();
-
-            if (txtUsername.Text != string.Empty && txtPassword.Text != string.Empty)
-            {
-                var exituser = db.accounts.FirstOrDefault(a => a.username.Equals(txtUsername.Text));
-                if (exituser != null)
-                {
-                    txtPassword.Text = GetMD5(txtPassword.Text);
-                    if (exituser.password.Equals(txtPassword.Text))
-                    {
-                        if (exituser.RoleID.Equals(1))
-                        {
-                            // Succeed
-                            lblError.Text = "";
-                            //show id admin
-                            MessageBox.Show("ID Admin: "+exituser.AccountID.ToString(), "Message ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            // Hide this form
-                            this.Hide();
-                            DashBoard db = new DashBoard();
-                            //show form MDI
-                            //MDIParent1 mp = new MDIParent1(exituser.AccountID.ToString());
-                            // Show info form
-                            db.Show();
-                            //this.Close();// This line stops the hidden form from running in the background, which can lead to memory leaks and performance issues.
-                        }
-                        else
-                        {
-                            // Show error
-                            lblError.Text = "Goto napthe.vn";
-                        }
-                    }
-                }
-                // Show error
-                lblError.Text = "Goto napthe.vn";
-            }
-            // Show error
-            lblError.Text = "Goto napthe.vn";
+            
         }
         // Reset input password
         public void ResetPassword()
@@ -88,9 +52,68 @@ namespace FMSAPP
 
         }
 
-        private void linkpaypay_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lblUsername_Click(object sender, EventArgs e)
         {
-            Process.Start("https://www.napthe.vn/app");
+
+        }
+
+        private void lblPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // On Login button click
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            db = new animeEntities();
+
+            // By default, no errors
+            lblError.Text = "";
+
+            if (String.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                // Show error
+                lblError.Text = "Username cannot be null or empty!";
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                // Show error
+                lblError.Text = "Password cannot be null or empty!";
+                return;
+            }
+
+            var exituser = db.accounts.FirstOrDefault(a => a.username.Equals(txtUsername.Text));
+            if (exituser != null)
+            {
+                txtPassword.Text = GetMD5(txtPassword.Text);
+                if (exituser.password.Equals(txtPassword.Text))
+                {
+                    if (exituser.RoleID.Equals(1))
+                    {
+                        ////show id admin
+                        //MessageBox.Show("Your Admin ID is: " + exituser.AccountID.ToString(), "Message ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //show id admin
+                        MessageBox.Show("You have been logged in!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Hide this form
+                        this.Hide();
+                        DashBoard db = new DashBoard();
+                        //show form MDI
+                        //MDIParent1 mp = new MDIParent1(exituser.AccountID.ToString());
+                        // Show info form
+                        db.Show();
+                        //this.Close();// This line stops the hidden form from running in the background, which can lead to memory leaks and performance issues.
+                    }
+                    else
+                    {
+                        // Show error
+                        lblError.Text = "Username or Password is incorrect!";
+                    }
+                }
+            }
+            // Show error
+            lblError.Text = "Username or Password is incorrect!";
         }
     }
 }
