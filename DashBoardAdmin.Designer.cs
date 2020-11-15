@@ -1,4 +1,4 @@
-﻿namespace FDMSAPP
+﻿namespace FMSAPP
 {
     partial class MDIParent1
     {
