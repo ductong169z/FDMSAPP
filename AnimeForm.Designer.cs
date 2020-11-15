@@ -83,7 +83,6 @@
             this.btnChoose = new System.Windows.Forms.Button();
             this.txtPoster = new System.Windows.Forms.TextBox();
             this.lbPos = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeBindingSource)).BeginInit();
@@ -476,11 +475,6 @@
             resources.ApplyResources(this.lbPos, "lbPos");
             this.lbPos.Name = "lbPos";
             // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
@@ -491,7 +485,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnChoose);
             this.Controls.Add(this.txtPoster);
             this.Controls.Add(this.lbPos);
@@ -595,7 +588,6 @@
         private System.Windows.Forms.Button btnChoose;
         private System.Windows.Forms.TextBox txtPoster;
         private System.Windows.Forms.Label lbPos;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }
 }
