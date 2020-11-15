@@ -35,10 +35,10 @@ namespace FMSAPP
             db = new animeEntities();
             db.animes.Load();
             animeBindingSource.DataSource = db.animes.Local;
-            //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
+            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
             var season = db.seasons;
-            cbbSeason.DataSource = season.ToList();
             cbbSeason.DisplayMember = "SeasonID";
+            cbbSeason.DataSource = season.ToList();
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
                 if (dataGridView1.Rows[i].Cells[14].Value == null)
@@ -121,9 +121,9 @@ namespace FMSAPP
             }
             else
             {
+                animeBindingSource.AddNew();
                 int n = dataGridView1.CurrentRow.Index;
                 dataGridView1.Rows[n].Cells[13].Value = dateTimeAdd.Value.ToString();
-                animeBindingSource.AddNew();
             }
         }
 
@@ -164,13 +164,35 @@ namespace FMSAPP
             if (open.ShowDialog() == DialogResult.OK)
             {
                 txtPoster.Text = Path.GetFileName(open.FileName);
-                File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(open.FileName), true);
+                try
+                {
+                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(open.FileName), true);
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Don't change picture from the source file", "This admin is trying to change picture in source",
+MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
+            if (txtPoster.Text == "")
+            {
+                testpicturebox.Image = null;
+            }
+            else
+            {
+                try
+                {
+                    testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show("Can't not find the picture", "Error",
+MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

@@ -28,7 +28,7 @@ namespace FMSAPP
             db = new animeEntities();
             db.accounts.Load();
             accountBindingSource.DataSource = db.accounts.Local;
-            //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
             var roleid = db.roles;
             cbbRoleID.DataSource = roleid.ToList();
             cbbRoleID.DisplayMember = "RoleID";
@@ -71,10 +71,10 @@ namespace FMSAPP
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-                int n = dataGridView1.CurrentRow.Index;
-                dataGridView1.Rows[n].Cells[9].Value = dateTimeUpdate.Value.ToString();
-                db.SaveChanges();
-                MessageBox.Show("Your data has been successfully saved", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            int n = dataGridView1.CurrentRow.Index;
+            dataGridView1.Rows[n].Cells[9].Value = dateTimeUpdate.Value.ToString();
+            db.SaveChanges();
+            MessageBox.Show("Your data has been successfully saved", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -119,13 +119,36 @@ namespace FMSAPP
             if (open.ShowDialog() == DialogResult.OK)
             {
                 txtAvatar.Text = Path.GetFileName(open.FileName);
-                File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(open.FileName), true);
+                try
+                {
+                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(open.FileName), true);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Don't change picture from the source file", "This admin is trying to change picture in source",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+            if (txtAvatar.Text == "")
+            {
+                testpicturebox.Image = null;
+            }
+            else
+            {
+                try
+                {
+                    testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show("Can't not find the picture", "Error",
+MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
