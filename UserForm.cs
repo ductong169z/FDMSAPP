@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FMSAPP
+namespace FDMSAPP
 {
     public partial class UserForm : Form
     {
