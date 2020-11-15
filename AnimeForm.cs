@@ -16,7 +16,8 @@ namespace FMSAPP
 {
     public partial class AnimeForm : Form
     {
-
+        string dateTimeDelete;
+        string dateTimeUpdate;
         animeEntities db;
         int check_valid1, check_valid2, check_valid3, check_valid4, check_valid;
         public AnimeForm()
@@ -24,8 +25,9 @@ namespace FMSAPP
             InitializeComponent();
             DateTimePicker dt = new DateTimePicker();
             dateTimeAdd.Value = DateTime.Now;
-            dateTimeDelete.Value = DateTime.Now;
-            dateTimeUpdate.Value = DateTime.Now;
+            dateTimeDelete = DateTime.Now.ToString();
+            dateTimeUpdate = DateTime.Now.ToString();
+            this.WindowState = FormWindowState.Maximized;
         }
         // Regex contstraints
         static Regex LINK_REGEX = new Regex(@"^(https?\:\/\/)?(www\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)|(\&[\w\-]+)(\S+)?$");
@@ -213,13 +215,13 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int n = dataGridView1.CurrentRow.Index;
-            dataGridView1.Rows[n].Cells[14].Value = dateTimeDelete.Value.ToString();
+            dataGridView1.Rows[n].Cells[14].Value = dateTimeDelete;
             CurrencyManager currencyManager1 = (CurrencyManager)dataGridView1.BindingContext[dataGridView1.DataSource];
             currencyManager1.SuspendBinding();
             dataGridView1.Rows[n].Visible = false;
             currencyManager1.ResumeBinding();
             db.SaveChanges();
-            MessageBox.Show("Your data has been successfully delete(or you really think that is)", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("The selected anime has been successfully deleted!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -227,12 +229,12 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
             check_valid_all();
             if (check_valid != 0)
             {
-                MessageBox.Show("Have something wrong in input! Plz check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("There is something wrong in input! Please check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 int n = dataGridView1.CurrentRow.Index;
-                dataGridView1.Rows[n].Cells[15].Value = dateTimeUpdate.Value.ToString();
+                dataGridView1.Rows[n].Cells[15].Value = dateTimeUpdate;
                 db.SaveChanges();
                 MessageBox.Show("Your data has been successfully saved", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

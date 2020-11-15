@@ -21,6 +21,7 @@ namespace FMSAPP
             DateTimePicker dt = new DateTimePicker();
             dateTimeDelete.Value = DateTime.Now;
             dateTimeUpdate.Value = DateTime.Now;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void UserForm_Load(object sender, EventArgs e)
@@ -28,7 +29,8 @@ namespace FMSAPP
             db = new animeEntities();
             db.accounts.Load();
             accountBindingSource.DataSource = db.accounts.Local;
-            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+
+            //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
             var roleid = db.roles;
             cbbRoleID.DataSource = roleid.ToList();
             cbbRoleID.DisplayMember = "RoleID";

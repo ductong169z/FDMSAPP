@@ -224,6 +224,7 @@
             // 
             this.lblAnime.AutoSize = true;
             this.lblAnime.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblAnime.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblAnime.Location = new System.Drawing.Point(126, 30);
             this.lblAnime.Name = "lblAnime";
             this.lblAnime.Size = new System.Drawing.Size(64, 24);
@@ -245,6 +246,7 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblUser.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblUser.Location = new System.Drawing.Point(121, 29);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(64, 24);
@@ -255,7 +257,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label6.Location = new System.Drawing.Point(8, 5);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 24);
@@ -266,6 +268,7 @@
             // 
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblAdmin.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblAdmin.Location = new System.Drawing.Point(135, 28);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(64, 24);
@@ -276,7 +279,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.ForeColor = System.Drawing.Color.Gold;
+            this.label10.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label10.Location = new System.Drawing.Point(4, 4);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(145, 24);
@@ -287,6 +290,7 @@
             // 
             this.lblGenre.AutoSize = true;
             this.lblGenre.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblGenre.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblGenre.Location = new System.Drawing.Point(126, 28);
             this.lblGenre.Name = "lblGenre";
             this.lblGenre.Size = new System.Drawing.Size(64, 24);
@@ -297,7 +301,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.ForeColor = System.Drawing.Color.Tomato;
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label4.Location = new System.Drawing.Point(5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 24);
@@ -308,6 +312,7 @@
             // 
             this.lblSeason.AutoSize = true;
             this.lblSeason.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblSeason.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblSeason.Location = new System.Drawing.Point(121, 28);
             this.lblSeason.Name = "lblSeason";
             this.lblSeason.Size = new System.Drawing.Size(64, 24);
@@ -318,7 +323,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label8.ForeColor = System.Drawing.Color.DarkGray;
+            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label8.Location = new System.Drawing.Point(3, 5);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(156, 24);
@@ -329,6 +334,7 @@
             // 
             this.lblStudio.AutoSize = true;
             this.lblStudio.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblStudio.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblStudio.Location = new System.Drawing.Point(135, 28);
             this.lblStudio.Name = "lblStudio";
             this.lblStudio.Size = new System.Drawing.Size(64, 24);
@@ -339,7 +345,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.ForeColor = System.Drawing.Color.Maroon;
+            this.label12.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label12.Location = new System.Drawing.Point(3, 4);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(149, 24);
@@ -362,9 +368,9 @@
             this.btnAdmin1.ForeColor = System.Drawing.Color.Black;
             this.btnAdmin1.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin1.Image")));
             this.btnAdmin1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdmin1.Location = new System.Drawing.Point(539, 9);
+            this.btnAdmin1.Location = new System.Drawing.Point(584, 9);
             this.btnAdmin1.Name = "btnAdmin1";
-            this.btnAdmin1.Size = new System.Drawing.Size(182, 38);
+            this.btnAdmin1.Size = new System.Drawing.Size(137, 38);
             this.btnAdmin1.TabIndex = 0;
             this.btnAdmin1.Text = "Log Out";
             this.btnAdmin1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
