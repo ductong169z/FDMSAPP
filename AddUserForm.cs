@@ -96,7 +96,16 @@ namespace FMSAPP
             if (open.ShowDialog() == DialogResult.OK)
             {
                 txtavatar.Text = Path.GetFileName(open.FileName);
-                File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(open.FileName), true);
+                try
+                {
+                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(open.FileName), true);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Don't choose picture from the source file", "This admin is trying to change picture in source",
+MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtavatar.Text = "";
+                }
             }
         }
 

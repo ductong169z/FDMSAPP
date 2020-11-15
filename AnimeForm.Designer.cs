@@ -83,6 +83,9 @@
             this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deletedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.updatedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtFind = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testpicturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeBindingSource)).BeginInit();
@@ -480,10 +483,30 @@
             this.updatedatDataGridViewTextBoxColumn.Name = "updatedatDataGridViewTextBoxColumn";
             this.updatedatDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // btnFind
+            // 
+            resources.ApplyResources(this.btnFind, "btnFind");
+            this.btnFind.Name = "btnFind";
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // txtFind
+            // 
+            resources.ApplyResources(this.txtFind, "txtFind");
+            this.txtFind.Name = "txtFind";
+            // 
             // AnimeForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnFind);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtFind);
             this.Controls.Add(this.testpicturebox);
             this.Controls.Add(this.btnChoose);
             this.Controls.Add(this.txtIDAdmin);
@@ -585,5 +608,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnChoose;
         private System.Windows.Forms.PictureBox testpicturebox;
+        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtFind;
     }
 }
