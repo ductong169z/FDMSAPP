@@ -23,7 +23,7 @@ namespace FMSAPP
         {
             InitializeComponent();
             DateTimePicker dt = new DateTimePicker();
-            dateTimeAdd.Value = DateTime.Now;
+            currentDate.Value = DateTime.Now;
             this.AcceptButton = btnAdd;
             this.CenterToScreen();
             this.FormClosing += delegate
@@ -175,9 +175,9 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
                 check_valid4 = 0;
             }
         }
-        private void dateTimeAdd_Validating(object sender, CancelEventArgs e)
+        private void currentDate_Validating(object sender, CancelEventArgs e)
         {
-            if(DateTime.Compare(dateTimeAdd.Value, today) != 0) 
+            if(DateTime.Compare(currentDate.Value, today) != 0) 
             {
                 MessageBox.Show("Date Add not today, Plz choose again");
                 check_valid5 = 1;

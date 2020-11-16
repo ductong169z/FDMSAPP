@@ -117,10 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="animeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="animeGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>905, 19</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="animeGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="animeGridView.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="animeGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>981, 524</value>
+  </data>
+  <data name="animeGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;animeGridView.Name" xml:space="preserve">
+    <value>animeGridView</value>
+  </data>
+  <data name="&gt;&gt;animeGridView.Type" xml:space="preserve">
+    <value>FMSAPP.CustomDataGridView, FMSAPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;animeGridView.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;animeGridView.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
   <data name="animeIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>AnimeID</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="animeIDDataGridViewTextBoxColumn.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
@@ -256,35 +288,6 @@
   <metadata name="animeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>905, 19</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dataGridView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="dataGridView1.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>981, 524</value>
-  </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>FMSAPP.CustomDataGridView, FMSAPP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>35</value>
-  </data>
   <data name="btnAdd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -313,7 +316,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>38</value>
   </data>
   <data name="lbName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -343,7 +346,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbName.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>37</value>
   </data>
   <data name="txtName.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 60</value>
@@ -367,7 +370,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtName.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>36</value>
   </data>
   <data name="txtEpi.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 112</value>
@@ -391,7 +394,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtEpi.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>34</value>
   </data>
   <data name="lbEp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -421,7 +424,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbEp.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>35</value>
   </data>
   <data name="txtDura.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 159</value>
@@ -445,7 +448,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtDura.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>32</value>
   </data>
   <data name="lbDu.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -475,7 +478,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbDu.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>33</value>
   </data>
   <data name="txtDes.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 210</value>
@@ -502,7 +505,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtDes.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>30</value>
   </data>
   <data name="lbDes.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -532,7 +535,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbDes.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>31</value>
   </data>
   <data name="txtTrailer.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 388</value>
@@ -556,7 +559,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtTrailer.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>28</value>
   </data>
   <data name="lbTrailer.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -586,7 +589,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbTrailer.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>29</value>
   </data>
   <data name="btnDelete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -616,7 +619,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>27</value>
   </data>
   <data name="btnUpdate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -646,7 +649,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>26</value>
   </data>
   <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -676,7 +679,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>25</value>
   </data>
   <data name="lbSea.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -706,7 +709,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbSea.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>24</value>
   </data>
   <data name="lbType.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -736,7 +739,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbType.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>23</value>
   </data>
   <data name="lbRa.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -766,7 +769,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbRa.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="lbSta.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -796,7 +799,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbSta.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>21</value>
   </data>
   <data name="cbbType.Items" xml:space="preserve">
     <value>Movie</value>
@@ -838,7 +841,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbbType.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>20</value>
   </data>
   <data name="cbbStatus.Items" xml:space="preserve">
     <value>Currently Airing</value>
@@ -868,7 +871,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbbStatus.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>19</value>
   </data>
   <data name="cbbRating.Items" xml:space="preserve">
     <value>G</value>
@@ -907,7 +910,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbbRating.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>18</value>
   </data>
   <metadata name="seasonBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>214, 17</value>
@@ -934,175 +937,175 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbbSeason.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>17</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+  <metadata name="seasonBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>214, 17</value>
+  </metadata>
+  <data name="lbReleaseDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lbReleaseDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lbReleaseDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 576</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbReleaseDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 20</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbReleaseDate.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="lbReleaseDate.Text" xml:space="preserve">
     <value>Release Date:</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;lbReleaseDate.Name" xml:space="preserve">
+    <value>lbReleaseDate</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbReleaseDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbReleaseDate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="&gt;&gt;lbReleaseDate.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
-  <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtReleaseDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 571</value>
   </data>
-  <data name="dateTimePicker1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="txtReleaseDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="dateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtReleaseDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>302, 26</value>
   </data>
-  <data name="dateTimePicker1.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtReleaseDate.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker1.Name" xml:space="preserve">
-    <value>dateTimePicker1</value>
+  <data name="&gt;&gt;txtReleaseDate.Name" xml:space="preserve">
+    <value>txtReleaseDate</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker1.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtReleaseDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtReleaseDate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;txtReleaseDate.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
-  <data name="dateTimeAdd.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="dateTimeAdd.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtCurrentDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>594, 499</value>
   </data>
-  <data name="dateTimeAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="txtCurrentDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="dateTimeAdd.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtCurrentDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>281, 26</value>
   </data>
-  <data name="dateTimeAdd.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtCurrentDate.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="&gt;&gt;dateTimeAdd.Name" xml:space="preserve">
-    <value>dateTimeAdd</value>
+  <data name="&gt;&gt;txtCurrentDate.Name" xml:space="preserve">
+    <value>txtCurrentDate</value>
   </data>
-  <data name="&gt;&gt;dateTimeAdd.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtCurrentDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dateTimeAdd.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtCurrentDate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dateTimeAdd.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;txtCurrentDate.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbAdminId.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lbAdminId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 22</value>
+  <data name="lbAdminId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 22</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
+  <data name="lbAdminId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 20</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbAdminId.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Admin ID</value>
+  <data name="lbAdminId.Text" xml:space="preserve">
+    <value>Anime Admin ID</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="&gt;&gt;lbAdminId.Name" xml:space="preserve">
+    <value>lbAdminId</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbAdminId.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbAdminId.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="&gt;&gt;lbAdminId.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
-  <data name="txtIDAdmin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 19</value>
+  <data name="txtAdminId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>493, 19</value>
   </data>
-  <data name="txtIDAdmin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="txtAdminId.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="txtIDAdmin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 26</value>
+  <data name="txtAdminId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 26</value>
   </data>
-  <data name="txtIDAdmin.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtAdminId.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;txtIDAdmin.Name" xml:space="preserve">
-    <value>txtIDAdmin</value>
+  <data name="&gt;&gt;txtAdminId.Name" xml:space="preserve">
+    <value>txtAdminId</value>
   </data>
-  <data name="&gt;&gt;txtIDAdmin.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtAdminId.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtIDAdmin.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtAdminId.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtIDAdmin.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;txtAdminId.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>416, 17</value>
   </metadata>
-  <data name="testpicturebox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="pbPoster.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="testpicturebox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pbPoster.Location" type="System.Drawing.Point, System.Drawing">
     <value>629, 127</value>
   </data>
-  <data name="testpicturebox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="pbPoster.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="testpicturebox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pbPoster.Size" type="System.Drawing.Size, System.Drawing">
     <value>225, 310</value>
   </data>
-  <data name="testpicturebox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="pbPoster.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="testpicturebox.TabIndex" type="System.Int32, mscorlib">
+  <data name="pbPoster.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="&gt;&gt;testpicturebox.Name" xml:space="preserve">
-    <value>testpicturebox</value>
+  <data name="&gt;&gt;pbPoster.Name" xml:space="preserve">
+    <value>pbPoster</value>
   </data>
-  <data name="&gt;&gt;testpicturebox.Type" xml:space="preserve">
+  <data name="&gt;&gt;pbPoster.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;testpicturebox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pbPoster.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;testpicturebox.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;pbPoster.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="btnFind.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1132,40 +1135,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnFind.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbFind.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lbFind.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lbFind.Location" type="System.Drawing.Point, System.Drawing">
     <value>1091, 576</value>
   </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbFind.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 20</value>
   </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+  <data name="lbFind.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
-  <data name="label8.Text" xml:space="preserve">
+  <data name="lbFind.Text" xml:space="preserve">
     <value>Find by Anime Name:</value>
   </data>
-  <data name="label8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lbFind.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
+  <data name="&gt;&gt;lbFind.Name" xml:space="preserve">
+    <value>lbFind</value>
   </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbFind.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbFind.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;lbFind.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="txtFind.Location" type="System.Drawing.Point, System.Drawing">
     <value>1267, 573</value>
@@ -1189,7 +1192,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtFind.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="btnChoose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1219,31 +1222,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnChoose.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
-  <data name="txtPoster.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtPos.Location" type="System.Drawing.Point, System.Drawing">
     <value>690, 19</value>
   </data>
-  <data name="txtPoster.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="txtPos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="txtPoster.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtPos.Size" type="System.Drawing.Size, System.Drawing">
     <value>164, 26</value>
   </data>
-  <data name="txtPoster.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtPos.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
-  <data name="&gt;&gt;txtPoster.Name" xml:space="preserve">
-    <value>txtPoster</value>
+  <data name="&gt;&gt;txtPos.Name" xml:space="preserve">
+    <value>txtPos</value>
   </data>
-  <data name="&gt;&gt;txtPoster.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtPos.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtPoster.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtPos.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtPoster.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;txtPos.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="lbPos.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1273,36 +1276,144 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbPos.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblCurrentDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblCurrentDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblCurrentDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>686, 460</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblCurrentDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 20</value>
   </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblCurrentDate.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
+  <data name="lblCurrentDate.Text" xml:space="preserve">
     <value>Current Date:</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="&gt;&gt;lblCurrentDate.Name" xml:space="preserve">
+    <value>lblCurrentDate</value>
   </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblCurrentDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblCurrentDate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblCurrentDate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbUrAdminId.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbUrAdminId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbUrAdminId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="lbUrAdminId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 20</value>
+  </data>
+  <data name="lbUrAdminId.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="lbUrAdminId.Text" xml:space="preserve">
+    <value>Your Admin ID</value>
+  </data>
+  <data name="&gt;&gt;lbUrAdminId.Name" xml:space="preserve">
+    <value>lbUrAdminId</value>
+  </data>
+  <data name="&gt;&gt;lbUrAdminId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbUrAdminId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbUrAdminId.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtUrAdminId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>317, 19</value>
+  </data>
+  <data name="txtUrAdminId.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="txtUrAdminId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 26</value>
+  </data>
+  <data name="txtUrAdminId.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;txtUrAdminId.Name" xml:space="preserve">
+    <value>txtUrAdminId</value>
+  </data>
+  <data name="&gt;&gt;txtUrAdminId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtUrAdminId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtUrAdminId.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbAnimeId.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbAnimeId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbAnimeId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 22</value>
+  </data>
+  <data name="lbAnimeId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
+  </data>
+  <data name="lbAnimeId.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="lbAnimeId.Text" xml:space="preserve">
+    <value>Anime ID</value>
+  </data>
+  <data name="&gt;&gt;lbAnimeId.Name" xml:space="preserve">
+    <value>lbAnimeId</value>
+  </data>
+  <data name="&gt;&gt;lbAnimeId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbAnimeId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbAnimeId.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtAnimeId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 19</value>
+  </data>
+  <data name="txtAnimeId.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="txtAnimeId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 26</value>
+  </data>
+  <data name="txtAnimeId.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;txtAnimeId.Name" xml:space="preserve">
+    <value>txtAnimeId</value>
+  </data>
+  <data name="&gt;&gt;txtAnimeId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAnimeId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtAnimeId.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -88,7 +88,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::FMSAPP.Properties.Resources._10_2_anime_png_images;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(90, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -152,7 +153,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AdminLoginForm";
-            this.Text = "AdminLoginForm";
+            this.Text = "Admin Login Form";
             this.Load += new System.EventHandler(this.AdminLoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

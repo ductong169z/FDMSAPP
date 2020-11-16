@@ -12,46 +12,46 @@
 namespace FMSAPP
 {
 
-using System;
+    using System;
     using System.Collections.Generic;
-    
-public partial class anime
-{
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
-    public int AnimeID { get; set; }
+    public partial class anime
+    {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int AnimeID { get; set; }
 
-    public int AccountID { get; set; }
+        public int AccountID { get; set; }
 
-    public Nullable<int> SeasonID { get; set; }
+        public Nullable<int> SeasonID { get; set; }
 
-    public string type { get; set; }
+        public string type { get; set; }
 
-    public string name { get; set; }
+        public string name { get; set; }
 
-    public string releaseDate { get; set; }
+        public string releaseDate { get; set; }
 
-    public string rating { get; set; }
+        public string rating { get; set; }
 
-    public Nullable<int> episodes { get; set; }
+        public Nullable<int> episodes { get; set; }
 
-    public string status { get; set; }
+        public string status { get; set; }
 
-    public string duration { get; set; }
+        public string duration { get; set; }
 
-    public string description { get; set; }
+        public string description { get; set; }
 
-    public string poster { get; set; }
+        public string poster { get; set; }
 
-    public string trailer { get; set; }
+        public string trailer { get; set; }
 
-    public System.DateTime created_at { get; set; }
+        public System.DateTime created_at { get; set; }
 
-    public Nullable<System.DateTime> deleted_at { get; set; }
+        public Nullable<System.DateTime> deleted_at { get; set; }
 
+        public virtual account account { get; set; }
 
-
-    public virtual account account { get; set; }
-
-}
+    }
 
 }

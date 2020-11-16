@@ -124,7 +124,6 @@ C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AdminForm.resources
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AdminLoginForm.resources
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AnimeForm.resources
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.DashBoard.resources
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.MDIParent1.resources
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.FormReportAnime.resources
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.FormReportUser.resources
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.Properties.Resources.resources

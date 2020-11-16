@@ -51,7 +51,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.roleTableAdapter = new FMSAPP.animeDataSet1TableAdapters.roleTableAdapter();
-            this.dateTimeAdd = new System.Windows.Forms.DateTimePicker();
+            this.currentDate = new System.Windows.Forms.DateTimePicker();
             this.accountBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnChoose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
@@ -253,15 +253,15 @@
             // 
             this.roleTableAdapter.ClearBeforeFill = true;
             // 
-            // dateTimeAdd
+            // currentDate
             // 
-            this.dateTimeAdd.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.accountBindingSource, "created_at", true));
-            this.dateTimeAdd.Location = new System.Drawing.Point(96, 59);
-            this.dateTimeAdd.Name = "dateTimeAdd";
-            this.dateTimeAdd.Size = new System.Drawing.Size(200, 22);
-            this.dateTimeAdd.TabIndex = 38;
-            this.dateTimeAdd.Value = new System.DateTime(2020, 11, 4, 13, 35, 15, 0);
-            this.dateTimeAdd.Validating += new System.ComponentModel.CancelEventHandler(this.dateTimeAdd_Validating);
+            this.currentDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.accountBindingSource, "created_at", true));
+            this.currentDate.Location = new System.Drawing.Point(96, 59);
+            this.currentDate.Name = "currentDate";
+            this.currentDate.Size = new System.Drawing.Size(200, 22);
+            this.currentDate.TabIndex = 38;
+            this.currentDate.Value = new System.DateTime(2020, 11, 4, 13, 35, 15, 0);
+            this.currentDate.Validating += new System.ComponentModel.CancelEventHandler(this.currentDate_Validating);
             // 
             // accountBindingSource1
             // 
@@ -283,7 +283,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 508);
             this.Controls.Add(this.btnChoose);
-            this.Controls.Add(this.dateTimeAdd);
+            this.Controls.Add(this.currentDate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cmbgender);
             this.Controls.Add(this.label2);
@@ -342,7 +342,7 @@
         private animeDataSet1 animeDataSet1;
         private System.Windows.Forms.BindingSource roleBindingSource;
         private animeDataSet1TableAdapters.roleTableAdapter roleTableAdapter;
-        private System.Windows.Forms.DateTimePicker dateTimeAdd;
+        private System.Windows.Forms.DateTimePicker currentDate;
         private System.Windows.Forms.Button btnChoose;
     }
 }

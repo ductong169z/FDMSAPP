@@ -13,7 +13,8 @@ namespace FMSAPP
     public partial class DashBoard : Form
     {
         animeEntities db;
-        public DashBoard()
+        string adminId;
+        public DashBoard(string adminId)
         {
             InitializeComponent();
             db = new animeEntities();
@@ -25,6 +26,7 @@ namespace FMSAPP
             chart1.Series["s1"].Points.AddXY("Special", db.animes.Count(x => x.type == "Special"));
             chart1.Series["s1"].Points.AddXY("OVA", db.animes.Count(x => x.type == "OVA"));
             chart1.Series["s1"].Points.AddXY("Movie", db.animes.Count(x => x.type == "Movie"));
+            this.adminId = adminId;
             this.CenterToScreen();
         }
 
@@ -59,7 +61,7 @@ namespace FMSAPP
 
         private void btnAnime_Click(object sender, EventArgs e)
         {
-            AnimeForm af = new AnimeForm();
+            AnimeForm af = new AnimeForm(adminId);
             af.ShowDialog();
         }
 
@@ -98,6 +100,16 @@ namespace FMSAPP
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

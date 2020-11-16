@@ -18,15 +18,21 @@ namespace FMSAPP
     {
         string dateTimeUpdate;
         string dateTimeDelete;
+        string adminId;
         animeEntities db;
         int check_valid1, check_valid2, check_valid3, check_valid4, check_valid;
-        public AnimeForm()
+        public AnimeForm(string adminId)
         {
             InitializeComponent();
-            dateTimeAdd.Value = DateTime.Now;
+            System.Diagnostics.Debug.WriteLine(DateTime.Now);
+            txtCurrentDate.Value = DateTime.Now;
+            txtCurrentDate.Enabled = false;
             dateTimeUpdate = DateTime.Now.ToString();
             dateTimeDelete = DateTime.Now.ToString();
+            txtUrAdminId.Text = adminId;
+            this.adminId = adminId;
             this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+            animeGridView.Columns["deletedatDataGridViewTextBoxColumn"].Visible = false;
             this.CenterToScreen();
         }
         // Regex contstraints
@@ -37,37 +43,24 @@ namespace FMSAPP
             db = new animeEntities();
             db.animes.Load();
             animeBindingSource.DataSource = db.animes.Local;
-            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
+            pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text));
             var season = db.seasons;
             cbbSeason.DataSource = season.ToList();
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            for (int i = 0; i < animeGridView.Rows.Count - 1; i++)
             {
-                if (dataGridView1.Rows[i].Cells[14].Value == null)
-                /* if (dataGridView1.Rows.Cast<DataGridViewRow>()
-      .Any(c => string.IsNullOrWhiteSpace(c.Cells[13].Value?.ToString())))*/
+                if (animeGridView.Rows[i].Cells[14].Value == null)
                 {
-                    dataGridView1.Rows[i].Visible = true;
+                    animeGridView.Rows[i].Visible = true;
                 }
-                else if (dataGridView1.Rows.Cast<DataGridViewRow>()
+                else if (animeGridView.Rows.Cast<DataGridViewRow>()
      .Any(c => string.IsNullOrWhiteSpace(c.Cells[14].Value?.ToString())))
                 {
-                    CurrencyManager currencyManager1 = (CurrencyManager)dataGridView1.BindingContext[dataGridView1.DataSource];
+                    CurrencyManager currencyManager1 = (CurrencyManager)animeGridView.BindingContext[animeGridView.DataSource];
                     currencyManager1.SuspendBinding();
-                    dataGridView1.Rows[i].Visible = false;
+                    animeGridView.Rows[i].Visible = false;
                     currencyManager1.ResumeBinding();
                 }
             }
-            /*            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                if (dataGridView1.Rows[i].Cells[13].Value.ToString() != null)
-            if (dataGridView1.Rows.Cast<DataGridViewRow>().Any(c => c.Cells[13].Value.ToString() != ""))
-                {
-                    CurrencyManager currencyManager1 = (CurrencyManager)dataGridView1.BindingContext[dataGridView1.DataSource];
-                    currencyManager1.SuspendBinding();
-                    dataGridView1.Rows[i].Visible = false;
-                    currencyManager1.ResumeBinding();
-                }
-            }*/
         }
 
         private void txtName_Validating(object sender, EventArgs e)
@@ -127,9 +120,31 @@ namespace FMSAPP
             }
             else
             {
-                animeBindingSource.AddNew();
-                int n = dataGridView1.CurrentRow.Index;
-                dataGridView1.Rows[n].Cells[13].Value = dateTimeAdd.Value.ToString();
+                anime obj = new anime();
+                obj.AccountID = Convert.ToInt32(this.adminId);
+                obj.created_at = txtCurrentDate.Value;
+                obj.deleted_at = null;
+                obj.description = txtDes.Text;
+                obj.duration = txtDura.Text;
+                obj.episodes = Convert.ToInt32(txtEpi.Text);
+                obj.name = txtName.Text;
+                obj.poster = txtPos.Text;
+                obj.rating = cbbRating.GetItemText(cbbRating.SelectedItem);
+                if (cbbSeason.SelectedItem != null)
+                {
+                    obj.SeasonID = Convert.ToInt32(cbbSeason.SelectedValue);
+                }
+                else
+                {
+                    obj.SeasonID = null;
+                }
+                obj.type = cbbRating.GetItemText(cbbType.SelectedItem);
+                obj.releaseDate = txtReleaseDate.Value.ToString();
+                obj.status = cbbStatus.GetItemText(cbbStatus.SelectedItem);
+                obj.trailer = txtTrailer.Text;
+                obj.episodes = Convert.ToInt32(txtEpi.Text);
+                db.animes.Add(obj);
+                db.SaveChanges();
             }
         }
 
@@ -163,35 +178,20 @@ namespace FMSAPP
         OpenFileDialog open;
         private void btnChoose_Click(object sender, EventArgs e)
         {
-            open = new OpenFileDialog();
-            open.Filter = "Images|*.jpg;*.jpeg;*.png";
-            open.InitialDirectory = @"C:\";
-            open.Title = "Please select an image to add or update.";
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                txtPoster.Text = Path.GetFileName(open.FileName);
-                try
-                {
-                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(open.FileName), true);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Don't change picture from the source file", "This admin is trying to change picture in source", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (txtPoster.Text == "")
+            if (txtPos.Text == "")
             {
-                testpicturebox.Image = null;
+                pbPoster.Image = null;
             }
             else
             {
                 try
                 {
-                    testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
+                    pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text));
                 }
                 catch (Exception ex)
                 {
@@ -215,13 +215,33 @@ namespace FMSAPP
             }
         }
 
+        private void btnChoose_Click_1(object sender, EventArgs e)
+        {
+            open = new OpenFileDialog();
+            open.Filter = "Images|*.jpg;*.jpeg;*.png";
+            open.InitialDirectory = @"C:\";
+            open.Title = "Please select an image to add or update.";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                txtPos.Text = Path.GetFileName(open.FileName);
+                try
+                {
+                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(open.FileName), true);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Don't change picture from the source file", "This admin is trying to change picture in source", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int n = dataGridView1.CurrentRow.Index;
-            dataGridView1.Rows[n].Cells[14].Value = dateTimeDelete;
-            CurrencyManager currencyManager1 = (CurrencyManager)dataGridView1.BindingContext[dataGridView1.DataSource];
+            int n = animeGridView.CurrentRow.Index;
+            animeGridView.Rows[n].Cells[14].Value = dateTimeDelete;
+            CurrencyManager currencyManager1 = (CurrencyManager)animeGridView.BindingContext[animeGridView.DataSource];
             currencyManager1.SuspendBinding();
-            dataGridView1.Rows[n].Visible = false;
+            animeGridView.Rows[n].Visible = false;
             currencyManager1.ResumeBinding();
             db.SaveChanges();
             MessageBox.Show("The selected anime has been successfully deleted!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -236,7 +256,7 @@ namespace FMSAPP
             }
             else
             {
-                int n = dataGridView1.CurrentRow.Index;
+                int n = animeGridView.CurrentRow.Index;
                 //dataGridView1.Rows[n].Cells[15].Value = dateTimeUpdate;
                 db.SaveChanges();
                 MessageBox.Show("Your data has been successfully saved", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);

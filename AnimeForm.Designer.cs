@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnimeForm));
-            this.dataGridView1 = new FMSAPP.CustomDataGridView();
+            this.animeGridView = new FMSAPP.CustomDataGridView();
             this.animeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,31 +70,36 @@
             this.cbbRating = new System.Windows.Forms.ComboBox();
             this.cbbSeason = new System.Windows.Forms.ComboBox();
             this.seasonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimeAdd = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtIDAdmin = new System.Windows.Forms.TextBox();
+            this.lbReleaseDate = new System.Windows.Forms.Label();
+            this.txtReleaseDate = new System.Windows.Forms.DateTimePicker();
+            this.txtCurrentDate = new System.Windows.Forms.DateTimePicker();
+            this.lbAdminId = new System.Windows.Forms.Label();
+            this.txtAdminId = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.testpicturebox = new System.Windows.Forms.PictureBox();
+            this.pbPoster = new System.Windows.Forms.PictureBox();
             this.btnFind = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbFind = new System.Windows.Forms.Label();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.btnChoose = new System.Windows.Forms.Button();
-            this.txtPoster = new System.Windows.Forms.TextBox();
+            this.txtPos = new System.Windows.Forms.TextBox();
             this.lbPos = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblCurrentDate = new System.Windows.Forms.Label();
+            this.lbUrAdminId = new System.Windows.Forms.Label();
+            this.txtUrAdminId = new System.Windows.Forms.TextBox();
+            this.lbAnimeId = new System.Windows.Forms.Label();
+            this.txtAnimeId = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.animeGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seasonBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testpicturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPoster)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // animeGridView
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.animeGridView.AllowUserToAddRows = false;
+            this.animeGridView.AutoGenerateColumns = false;
+            this.animeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.animeGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.animeIDDataGridViewTextBoxColumn,
             this.accountIDDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
@@ -110,12 +115,14 @@
             this.releaseDateDataGridViewTextBoxColumn,
             this.createdatDataGridViewTextBoxColumn,
             this.deletedatDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.animeBindingSource;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.animeGridView.DataSource = this.animeBindingSource;
+            resources.ApplyResources(this.animeGridView, "animeGridView");
+            this.animeGridView.Name = "animeGridView";
+            this.animeGridView.ReadOnly = true;
+            this.animeGridView.RowHeadersVisible = false;
+            this.animeGridView.RowTemplate.Height = 24;
+            this.animeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.animeGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // animeIDDataGridViewTextBoxColumn
             // 
@@ -404,45 +411,45 @@
             // 
             this.seasonBindingSource.DataSource = typeof(FMSAPP.season);
             // 
-            // label1
+            // lbReleaseDate
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.lbReleaseDate, "lbReleaseDate");
+            this.lbReleaseDate.Name = "lbReleaseDate";
             // 
-            // dateTimePicker1
+            // txtReleaseDate
             // 
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.animeBindingSource, "releaseDate", true));
-            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
-            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.txtReleaseDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.animeBindingSource, "releaseDate", true));
+            resources.ApplyResources(this.txtReleaseDate, "txtReleaseDate");
+            this.txtReleaseDate.Name = "txtReleaseDate";
             // 
-            // dateTimeAdd
+            // txtCurrentDate
             // 
-            this.dateTimeAdd.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.animeBindingSource, "created_at", true));
-            resources.ApplyResources(this.dateTimeAdd, "dateTimeAdd");
-            this.dateTimeAdd.Name = "dateTimeAdd";
-            this.dateTimeAdd.Value = new System.DateTime(2020, 11, 4, 13, 19, 56, 0);
+            this.txtCurrentDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.animeBindingSource, "created_at", true));
+            resources.ApplyResources(this.txtCurrentDate, "txtCurrentDate");
+            this.txtCurrentDate.Name = "txtCurrentDate";
+            this.txtCurrentDate.Value = new System.DateTime(2020, 11, 4, 13, 19, 56, 0);
             // 
-            // label2
+            // lbAdminId
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.lbAdminId, "lbAdminId");
+            this.lbAdminId.Name = "lbAdminId";
             // 
-            // txtIDAdmin
+            // txtAdminId
             // 
-            this.txtIDAdmin.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "AccountID", true));
-            resources.ApplyResources(this.txtIDAdmin, "txtIDAdmin");
-            this.txtIDAdmin.Name = "txtIDAdmin";
-            this.txtIDAdmin.ReadOnly = true;
+            this.txtAdminId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "AccountID", true));
+            resources.ApplyResources(this.txtAdminId, "txtAdminId");
+            this.txtAdminId.Name = "txtAdminId";
+            this.txtAdminId.ReadOnly = true;
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // testpicturebox
+            // pbPoster
             // 
-            resources.ApplyResources(this.testpicturebox, "testpicturebox");
-            this.testpicturebox.Name = "testpicturebox";
-            this.testpicturebox.TabStop = false;
+            resources.ApplyResources(this.pbPoster, "pbPoster");
+            this.pbPoster.Name = "pbPoster";
+            this.pbPoster.TabStop = false;
             // 
             // btnFind
             // 
@@ -451,10 +458,10 @@
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
-            // label8
+            // lbFind
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
+            resources.ApplyResources(this.lbFind, "lbFind");
+            this.lbFind.Name = "lbFind";
             // 
             // txtFind
             // 
@@ -466,40 +473,68 @@
             resources.ApplyResources(this.btnChoose, "btnChoose");
             this.btnChoose.Name = "btnChoose";
             this.btnChoose.UseVisualStyleBackColor = true;
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click_1);
             // 
-            // txtPoster
+            // txtPos
             // 
-            this.txtPoster.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "poster", true));
-            resources.ApplyResources(this.txtPoster, "txtPoster");
-            this.txtPoster.Name = "txtPoster";
+            this.txtPos.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "poster", true));
+            resources.ApplyResources(this.txtPos, "txtPos");
+            this.txtPos.Name = "txtPos";
             // 
             // lbPos
             // 
             resources.ApplyResources(this.lbPos, "lbPos");
             this.lbPos.Name = "lbPos";
             // 
-            // label4
+            // lblCurrentDate
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.lblCurrentDate, "lblCurrentDate");
+            this.lblCurrentDate.Name = "lblCurrentDate";
+            // 
+            // lbUrAdminId
+            // 
+            resources.ApplyResources(this.lbUrAdminId, "lbUrAdminId");
+            this.lbUrAdminId.Name = "lbUrAdminId";
+            // 
+            // txtUrAdminId
+            // 
+            resources.ApplyResources(this.txtUrAdminId, "txtUrAdminId");
+            this.txtUrAdminId.Name = "txtUrAdminId";
+            this.txtUrAdminId.ReadOnly = true;
+            // 
+            // lbAnimeId
+            // 
+            resources.ApplyResources(this.lbAnimeId, "lbAnimeId");
+            this.lbAnimeId.Name = "lbAnimeId";
+            // 
+            // txtAnimeId
+            // 
+            this.txtAnimeId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "AnimeID", true));
+            resources.ApplyResources(this.txtAnimeId, "txtAnimeId");
+            this.txtAnimeId.Name = "txtAnimeId";
+            this.txtAnimeId.ReadOnly = true;
             // 
             // AnimeForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtAnimeId);
+            this.Controls.Add(this.lbAnimeId);
+            this.Controls.Add(this.txtUrAdminId);
+            this.Controls.Add(this.lbUrAdminId);
+            this.Controls.Add(this.lblCurrentDate);
             this.Controls.Add(this.btnChoose);
-            this.Controls.Add(this.txtPoster);
+            this.Controls.Add(this.txtPos);
             this.Controls.Add(this.lbPos);
             this.Controls.Add(this.btnFind);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lbFind);
             this.Controls.Add(this.txtFind);
-            this.Controls.Add(this.testpicturebox);
-            this.Controls.Add(this.txtIDAdmin);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimeAdd);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pbPoster);
+            this.Controls.Add(this.txtAdminId);
+            this.Controls.Add(this.lbAdminId);
+            this.Controls.Add(this.txtCurrentDate);
+            this.Controls.Add(this.txtReleaseDate);
+            this.Controls.Add(this.lbReleaseDate);
             this.Controls.Add(this.cbbSeason);
             this.Controls.Add(this.cbbRating);
             this.Controls.Add(this.cbbStatus);
@@ -522,14 +557,14 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.animeGridView);
             this.Name = "AnimeForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AnimeForm_FormClosing);
             this.Load += new System.EventHandler(this.AnimeForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animeGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seasonBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.testpicturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPoster)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,7 +572,7 @@
 
         #endregion
 
-        private CustomDataGridView dataGridView1;
+        private CustomDataGridView animeGridView;
         private System.Windows.Forms.BindingSource animeBindingSource;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lbName;
@@ -561,12 +596,12 @@
         private System.Windows.Forms.ComboBox cbbStatus;
         private System.Windows.Forms.ComboBox cbbRating;
         private System.Windows.Forms.ComboBox cbbSeason;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimeAdd;
+        private System.Windows.Forms.Label lbReleaseDate;
+        private System.Windows.Forms.DateTimePicker txtReleaseDate;
+        private System.Windows.Forms.DateTimePicker txtCurrentDate;
         private System.Windows.Forms.BindingSource seasonBindingSource;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIDAdmin;
+        private System.Windows.Forms.Label lbAdminId;
+        private System.Windows.Forms.TextBox txtAdminId;
         private System.Windows.Forms.DataGridViewTextBoxColumn animeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn accountIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
@@ -582,15 +617,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn releaseDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createdatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deletedatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn updatedatDataGridViewTextBoxColumn;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox testpicturebox;
+        private System.Windows.Forms.PictureBox pbPoster;
         private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbFind;
         private System.Windows.Forms.TextBox txtFind;
         private System.Windows.Forms.Button btnChoose;
-        private System.Windows.Forms.TextBox txtPoster;
+        private System.Windows.Forms.TextBox txtPos;
         private System.Windows.Forms.Label lbPos;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCurrentDate;
+        private System.Windows.Forms.Label lbUrAdminId;
+        private System.Windows.Forms.TextBox txtUrAdminId;
+        private System.Windows.Forms.Label lbAnimeId;
+        private System.Windows.Forms.TextBox txtAnimeId;
     }
 }

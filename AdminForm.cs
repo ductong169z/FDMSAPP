@@ -27,13 +27,11 @@ namespace FMSAPP
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 if (dataGridView1.Rows[i].Cells[8].Value == null && dataGridView1.Rows[i].Cells[1].Value?.ToString() == "1")
-                /* if (dataGridView1.Rows.Cast<DataGridViewRow>()
-      .Any(c => string.IsNullOrWhiteSpace(c.Cells[13].Value?.ToString())))*/
                 {
                     dataGridView1.Rows[i].Visible = true;
                 }
                 else if (dataGridView1.Rows.Cast<DataGridViewRow>()
-     .Any(c => string.IsNullOrWhiteSpace(c.Cells[8].Value?.ToString())))
+.Any(c => string.IsNullOrWhiteSpace(c.Cells[8].Value?.ToString())))
                 {
                     CurrencyManager currencyManager1 = (CurrencyManager)dataGridView1.BindingContext[dataGridView1.DataSource];
                     currencyManager1.SuspendBinding();
