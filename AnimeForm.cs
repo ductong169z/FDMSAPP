@@ -193,7 +193,7 @@ namespace FMSAPP
                 {
                     testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
                 }
-                catch (Exception exc)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Can't not find the anime picture", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

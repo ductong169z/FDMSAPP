@@ -939,9 +939,6 @@
   <data name="&gt;&gt;cbbSeason.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <metadata name="seasonBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>214, 17</value>
-  </metadata>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -996,23 +993,20 @@
   <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="dateTimeAdd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
+  <data name="dateTimeAdd.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="dateTimeAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>584, 571</value>
+    <value>594, 499</value>
   </data>
   <data name="dateTimeAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="dateTimeAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 26</value>
+    <value>281, 26</value>
   </data>
   <data name="dateTimeAdd.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
-  </data>
-  <data name="dateTimeAdd.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;dateTimeAdd.Name" xml:space="preserve">
     <value>dateTimeAdd</value>
@@ -1110,14 +1104,17 @@
   <data name="&gt;&gt;testpicturebox.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="btnFind.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnFind.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1082, 643</value>
+    <value>1082, 641</value>
   </data>
   <data name="btnFind.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="btnFind.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 29</value>
+    <value>84, 36</value>
   </data>
   <data name="btnFind.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -1139,6 +1136,9 @@
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>578, 649</value>
@@ -1278,17 +1278,20 @@
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>495, 576</value>
+    <value>686, 460</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 20</value>
+    <value>105, 20</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Add Date:</value>
+    <value>Current Date:</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -1302,6 +1305,9 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="seasonBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>214, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1328,6 +1334,24 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AnimeForm</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;animeBindingSource.Name" xml:space="preserve">
+    <value>animeBindingSource</value>
+  </data>
+  <data name="&gt;&gt;animeBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;seasonBindingSource.Name" xml:space="preserve">
+    <value>seasonBindingSource</value>
+  </data>
+  <data name="&gt;&gt;seasonBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;animeIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>animeIDDataGridViewTextBoxColumn</value>
@@ -1418,24 +1442,6 @@
   </data>
   <data name="&gt;&gt;deletedatDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;animeBindingSource.Name" xml:space="preserve">
-    <value>animeBindingSource</value>
-  </data>
-  <data name="&gt;&gt;animeBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;seasonBindingSource.Name" xml:space="preserve">
-    <value>seasonBindingSource</value>
-  </data>
-  <data name="&gt;&gt;seasonBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
-    <value>openFileDialog1</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AnimeForm</value>
