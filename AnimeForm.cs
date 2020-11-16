@@ -16,16 +16,17 @@ namespace FMSAPP
 {
     public partial class AnimeForm : Form
     {
-
+        string dateTimeUpdate;
+        string dateTimeDelete;
         animeEntities db;
         int check_valid1, check_valid2, check_valid3, check_valid4, check_valid;
         public AnimeForm()
         {
             InitializeComponent();
-            DateTimePicker dt = new DateTimePicker();
             dateTimeAdd.Value = DateTime.Now;
-            dateTimeDelete.Value = DateTime.Now;
-            dateTimeUpdate.Value = DateTime.Now;
+            dateTimeUpdate = DateTime.Now.ToString();
+            dateTimeDelete = DateTime.Now.ToString();
+            this.WindowState = FormWindowState.Maximized;
         }
         // Regex contstraints
         static Regex LINK_REGEX = new Regex(@"^(https?\:\/\/)?(www\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)|(\&[\w\-]+)(\S+)?$");
@@ -37,7 +38,6 @@ namespace FMSAPP
             animeBindingSource.DataSource = db.animes.Local;
             testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
             var season = db.seasons;
-            cbbSeason.DisplayMember = "SeasonID";
             cbbSeason.DataSource = season.ToList();
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
@@ -69,7 +69,7 @@ namespace FMSAPP
             }*/
         }
 
-        private void txtName_Validating(object sender, CancelEventArgs e)
+        private void txtName_Validating(object sender, EventArgs e)
         {
             if (txtName.Text == string.Empty)
             {
@@ -82,11 +82,11 @@ namespace FMSAPP
             }
         }
 
-        private void txtEpi_Validating(object sender, CancelEventArgs e)
+        private void txtEpi_Validating(object sender, EventArgs e)
         {
-            if (txtEpi.Text.Length >= 5)
+            if (txtEpi.Text.Length >= 4)
             {
-                MessageBox.Show("Episode is too big(Not longger than 99999");
+                MessageBox.Show("Episode is too big (Not longer than 9999");
                 check_valid2 = 1;
             }
             else
@@ -95,7 +95,7 @@ namespace FMSAPP
             }
         }
 
-        private void txtDes_Validating(object sender, CancelEventArgs e)
+        private void txtDes_Validating(object sender, EventArgs e)
         {
             if (txtDes.Text == string.Empty)
             {
@@ -107,17 +107,22 @@ namespace FMSAPP
                 check_valid3 = 0;
             }
         }
-        public int check_valid_all()
+        public int check_valid_all(object sender, EventArgs e)
         {
+            txtName_Validating(sender, e);
+            txtEpi_Validating(sender, e);
+            txtDes_Validating(sender, e);
+            txtDura_Validating(sender, e);
+            txtTrailer_Validating(sender, e);
             check_valid = check_valid1 + check_valid2 + check_valid3 + check_valid4;
             return check_valid;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            check_valid_all();
+            check_valid_all(sender, e);
             if (check_valid != 0)
             {
-                MessageBox.Show("Have something wrong in input! Plz check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("There is something wrong in input! Please check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -127,12 +132,12 @@ namespace FMSAPP
             }
         }
 
-        private void txtTrailer_Validating(object sender, CancelEventArgs e)
+        private void txtTrailer_Validating(object sender, EventArgs e)
         {
             if (!LINK_REGEX.IsMatch(txtTrailer.Text))
             {
                 // Incorrect link format
-                MessageBox.Show("The true URL must like this: https://www.youtube.com/embed/41Gj4Dri8wo?enablejsapi=1&wmode=opaque&autoplay=1");
+                MessageBox.Show("A valid URL must be like this: https://www.youtube.com/embed/41Gj4Dri8wo?enablejsapi=1&wmode=opaque&autoplay=1");
                 check_valid4 = 1;
             }
             else
@@ -141,7 +146,7 @@ namespace FMSAPP
             }
         }
 
-        private void txtDura_Validating(object sender, CancelEventArgs e)
+        private void txtDura_Validating(object sender, EventArgs e)
         {
             if (!DURATION_REGEX.IsMatch(txtDura.Text))
             {
@@ -167,10 +172,10 @@ namespace FMSAPP
                 try
                 {
                     File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(open.FileName), true);
-                }catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Don't change picture from the source file", "This admin is trying to change picture in source",
-MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Don't change picture from the source file", "This admin is trying to change picture in source", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -187,10 +192,9 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
                 {
                     testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
                 }
-                catch (Exception exc)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Can't not find the picture", "Error",
-MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Can't not find the anime picture", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -213,26 +217,26 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int n = dataGridView1.CurrentRow.Index;
-            dataGridView1.Rows[n].Cells[14].Value = dateTimeDelete.Value.ToString();
+            dataGridView1.Rows[n].Cells[14].Value = dateTimeDelete;
             CurrencyManager currencyManager1 = (CurrencyManager)dataGridView1.BindingContext[dataGridView1.DataSource];
             currencyManager1.SuspendBinding();
             dataGridView1.Rows[n].Visible = false;
             currencyManager1.ResumeBinding();
             db.SaveChanges();
-            MessageBox.Show("Your data has been successfully delete(or you really think that is)", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("The selected anime has been successfully deleted!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            check_valid_all();
+            check_valid_all(sender, e);
             if (check_valid != 0)
             {
-                MessageBox.Show("Have something wrong in input! Plz check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("There is something wrong in input! Please check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 int n = dataGridView1.CurrentRow.Index;
-                dataGridView1.Rows[n].Cells[15].Value = dateTimeUpdate.Value.ToString();
+                //dataGridView1.Rows[n].Cells[15].Value = dateTimeUpdate;
                 db.SaveChanges();
                 MessageBox.Show("Your data has been successfully saved", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -264,6 +268,14 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
         private void AnimeForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             db.Dispose();
+        }
+    }
+
+    class CustomDataGridView : DataGridView
+    {
+        public CustomDataGridView()
+        {
+            DoubleBuffered = true;
         }
     }
 }

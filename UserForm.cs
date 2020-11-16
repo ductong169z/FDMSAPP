@@ -21,6 +21,8 @@ namespace FMSAPP
             DateTimePicker dt = new DateTimePicker();
             dateTimeDelete.Value = DateTime.Now;
             dateTimeUpdate.Value = DateTime.Now;
+            this.WindowState = FormWindowState.Normal;
+            this.CenterToScreen();
         }
 
         private void UserForm_Load(object sender, EventArgs e)
@@ -28,7 +30,8 @@ namespace FMSAPP
             db = new animeEntities();
             db.accounts.Load();
             accountBindingSource.DataSource = db.accounts.Local;
-            testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+
+            //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
             var roleid = db.roles;
             cbbRoleID.DataSource = roleid.ToList();
             cbbRoleID.DisplayMember = "RoleID";
@@ -66,7 +69,7 @@ namespace FMSAPP
             dataGridView1.Rows[n].Visible = false;
             currencyManager1.ResumeBinding();
             db.SaveChanges();
-            MessageBox.Show("Your data has been successfully delete(or you really think that is)", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Your data has been successfully deleted!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -125,8 +128,7 @@ namespace FMSAPP
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Don't change picture from the source file", "This admin is trying to change picture in source",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Don't change picture from the source file", "This admin is trying to change picture in source", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

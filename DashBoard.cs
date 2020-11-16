@@ -16,19 +16,20 @@ namespace FMSAPP
         public DashBoard()
         {
             InitializeComponent();
+            db = new animeEntities();
             chart1.Titles.Add("Types");
             chart1.Series["s1"].IsValueShownAsLabel = true;
-            chart1.Series["s1"].Points.AddXY("TV", 137);
-            chart1.Series["s1"].Points.AddXY("ONA", 7);
-            chart1.Series["s1"].Points.AddXY("Music", 1);
-            chart1.Series["s1"].Points.AddXY("Special", 4);
-            chart1.Series["s1"].Points.AddXY("OVA", 2);
-            chart1.Series["s1"].Points.AddXY("Movie", 24);
+            chart1.Series["s1"].Points.AddXY("TV", db.animes.Count(x => x.type == "TV"));
+            chart1.Series["s1"].Points.AddXY("ONA", db.animes.Count(x => x.type == "ONA"));
+            chart1.Series["s1"].Points.AddXY("Music", db.animes.Count(x => x.type == "Music"));
+            chart1.Series["s1"].Points.AddXY("Special", db.animes.Count(x => x.type == "Special"));
+            chart1.Series["s1"].Points.AddXY("OVA", db.animes.Count(x => x.type == "OVA"));
+            chart1.Series["s1"].Points.AddXY("Movie", db.animes.Count(x => x.type == "Movie"));
+            this.CenterToScreen();
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
-            db = new animeEntities();
             //count user
             var countuser = db.accounts.Count(t => t.RoleID == 2 && t.deleted_at == null);
             lblUser.Text = countuser.ToString();
@@ -64,7 +65,7 @@ namespace FMSAPP
 
         private void btnAdmin1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("じゃあまたね", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("You have been logged out!", "Logout Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
             AdminLoginForm adminLogin = new AdminLoginForm();
             adminLogin.Show();
@@ -78,17 +79,27 @@ namespace FMSAPP
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.facebook.com/");
+
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.whatsapp.com/");
+
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.instagram.com/");
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
