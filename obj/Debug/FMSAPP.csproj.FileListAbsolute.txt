@@ -119,7 +119,6 @@ C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\System.Buffers.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\System.Memory.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\System.Numerics.Vectors.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csprojAssemblyReference.cache
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AddUserForm.resources
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AdminForm.resources
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AdminLoginForm.resources
