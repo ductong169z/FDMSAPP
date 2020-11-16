@@ -29,7 +29,6 @@ namespace FMSAPP
         public string trailer { get; set; }
         public System.DateTime created_at { get; set; }
         public Nullable<System.DateTime> deleted_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
     
         public virtual account account { get; set; }
     }

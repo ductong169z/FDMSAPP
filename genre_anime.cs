@@ -18,6 +18,5 @@ namespace FMSAPP
         public int AnimeID { get; set; }
         public System.DateTime created_at { get; set; }
         public Nullable<System.DateTime> deleted_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
     }
 }

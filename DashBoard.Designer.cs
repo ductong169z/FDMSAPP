@@ -140,7 +140,7 @@
             this.checkBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox4.Location = new System.Drawing.Point(435, 147);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(167, 25);
+            this.checkBox4.Size = new System.Drawing.Size(128, 21);
             this.checkBox4.TabIndex = 4;
             this.checkBox4.Text = "C# UI Academy";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -151,7 +151,7 @@
             this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox3.Location = new System.Drawing.Point(435, 120);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(195, 25);
+            this.checkBox3.Size = new System.Drawing.Size(150, 21);
             this.checkBox3.TabIndex = 4;
             this.checkBox3.Text = "By SaLaaR HuSceyN";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@
             this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.Location = new System.Drawing.Point(435, 93);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(164, 25);
+            this.checkBox2.Size = new System.Drawing.Size(129, 21);
             this.checkBox2.TabIndex = 4;
             this.checkBox2.Text = "C# UI Designing";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -173,7 +173,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(435, 66);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(272, 25);
+            this.checkBox1.Size = new System.Drawing.Size(215, 21);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "Lorem Ispum is a dummy Text";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -183,7 +183,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(429, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 23);
+            this.label3.Size = new System.Drawing.Size(49, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Texts";
             // 
@@ -283,7 +283,7 @@
             this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(24, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 46);
+            this.label2.Size = new System.Drawing.Size(91, 37);
             this.label2.TabIndex = 0;
             this.label2.Text = "Anime";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -294,7 +294,7 @@
             this.lblAnime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnime.Location = new System.Drawing.Point(113, 33);
             this.lblAnime.Name = "lblAnime";
-            this.lblAnime.Size = new System.Drawing.Size(56, 20);
+            this.lblAnime.Size = new System.Drawing.Size(48, 17);
             this.lblAnime.TabIndex = 10;
             this.lblAnime.Text = "lorem";
             // 
@@ -305,7 +305,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(7, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 22);
+            this.label1.Size = new System.Drawing.Size(73, 18);
             this.label1.TabIndex = 9;
             this.label1.Text = "Total Animes:";
             // 
@@ -315,7 +315,7 @@
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblUser.Location = new System.Drawing.Point(133, 34);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(56, 20);
+            this.lblUser.Size = new System.Drawing.Size(48, 17);
             this.lblUser.TabIndex = 12;
             this.lblUser.Text = "lorem";
             // 
@@ -326,7 +326,7 @@
             this.label6.ForeColor = System.Drawing.Color.LimeGreen;
             this.label6.Location = new System.Drawing.Point(8, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 19);
+            this.label6.Size = new System.Drawing.Size(102, 15);
             this.label6.TabIndex = 11;
             this.label6.Text = "Total Users:";
             // 
@@ -336,7 +336,7 @@
             this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblAdmin.Location = new System.Drawing.Point(133, 34);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(56, 20);
+            this.lblAdmin.Size = new System.Drawing.Size(48, 17);
             this.lblAdmin.TabIndex = 14;
             this.lblAdmin.Text = "lorem";
             // 
@@ -347,7 +347,7 @@
             this.label10.ForeColor = System.Drawing.Color.Gold;
             this.label10.Location = new System.Drawing.Point(4, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 23);
+            this.label10.Size = new System.Drawing.Size(108, 19);
             this.label10.TabIndex = 13;
             this.label10.Text = "Total Admins:";
             // 
@@ -357,7 +357,7 @@
             this.lblGenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblGenre.Location = new System.Drawing.Point(129, 32);
             this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(56, 20);
+            this.lblGenre.Size = new System.Drawing.Size(48, 17);
             this.lblGenre.TabIndex = 16;
             this.lblGenre.Text = "lorem";
             // 
@@ -368,7 +368,7 @@
             this.label4.ForeColor = System.Drawing.Color.Tomato;
             this.label4.Location = new System.Drawing.Point(5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 32);
+            this.label4.Size = new System.Drawing.Size(98, 25);
             this.label4.TabIndex = 15;
             this.label4.Text = "Total Genres:";
             // 
@@ -378,7 +378,7 @@
             this.lblSeason.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblSeason.Location = new System.Drawing.Point(129, 32);
             this.lblSeason.Name = "lblSeason";
-            this.lblSeason.Size = new System.Drawing.Size(56, 20);
+            this.lblSeason.Size = new System.Drawing.Size(48, 17);
             this.lblSeason.TabIndex = 18;
             this.lblSeason.Text = "lorem";
             // 
@@ -389,7 +389,7 @@
             this.label8.ForeColor = System.Drawing.Color.DarkGray;
             this.label8.Location = new System.Drawing.Point(3, 5);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 24);
+            this.label8.Size = new System.Drawing.Size(96, 19);
             this.label8.TabIndex = 17;
             this.label8.Text = "Total Seasons:";
             // 
@@ -399,7 +399,7 @@
             this.lblStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblStudio.Location = new System.Drawing.Point(129, 32);
             this.lblStudio.Name = "lblStudio";
-            this.lblStudio.Size = new System.Drawing.Size(56, 20);
+            this.lblStudio.Size = new System.Drawing.Size(48, 17);
             this.lblStudio.TabIndex = 20;
             this.lblStudio.Text = "lorem";
             // 
@@ -410,7 +410,7 @@
             this.label12.ForeColor = System.Drawing.Color.Maroon;
             this.label12.Location = new System.Drawing.Point(3, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(115, 25);
+            this.label12.Size = new System.Drawing.Size(91, 21);
             this.label12.TabIndex = 19;
             this.label12.Text = "Total Studios:";
             // 
