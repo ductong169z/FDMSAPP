@@ -200,9 +200,6 @@
     <Compile Include="list.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>
     </Compile>
-    <Compile Include="list_history.cs">
-      <DependentUpon>Modelanime.tt</DependentUpon>
-    </Compile>
     <Compile Include="Modelanime.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -224,9 +221,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="review.cs">
-      <DependentUpon>Modelanime.tt</DependentUpon>
     </Compile>
     <Compile Include="role.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>

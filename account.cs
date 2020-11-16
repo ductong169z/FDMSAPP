@@ -53,6 +53,8 @@ public partial class account
 
     public virtual ICollection<anime> animes { get; set; }
 
+    public virtual role role { get; set; }
+
 }
 
 }

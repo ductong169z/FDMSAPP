@@ -18,14 +18,14 @@ namespace FMSAPP
         {
             InitializeComponent();
             db = new animeEntities();
-            chart1.Titles.Add("Types");
-            chart1.Series["s1"].IsValueShownAsLabel = true;
-            chart1.Series["s1"].Points.AddXY("TV", db.animes.Count(x => x.type == "TV"));
-            chart1.Series["s1"].Points.AddXY("ONA", db.animes.Count(x => x.type == "ONA"));
-            chart1.Series["s1"].Points.AddXY("Music", db.animes.Count(x => x.type == "Music"));
-            chart1.Series["s1"].Points.AddXY("Special", db.animes.Count(x => x.type == "Special"));
-            chart1.Series["s1"].Points.AddXY("OVA", db.animes.Count(x => x.type == "OVA"));
-            chart1.Series["s1"].Points.AddXY("Movie", db.animes.Count(x => x.type == "Movie"));
+            typeChart.Titles.Add("Types");
+            typeChart.Series["s1"].IsValueShownAsLabel = true;
+            typeChart.Series["s1"].Points.AddXY("TV", db.animes.Count(x => x.type == "TV"));
+            typeChart.Series["s1"].Points.AddXY("ONA", db.animes.Count(x => x.type == "ONA"));
+            typeChart.Series["s1"].Points.AddXY("Music", db.animes.Count(x => x.type == "Music"));
+            typeChart.Series["s1"].Points.AddXY("Special", db.animes.Count(x => x.type == "Special"));
+            typeChart.Series["s1"].Points.AddXY("OVA", db.animes.Count(x => x.type == "OVA"));
+            typeChart.Series["s1"].Points.AddXY("Movie", db.animes.Count(x => x.type == "Movie"));
             this.adminId = adminId;
             this.CenterToScreen();
         }
@@ -34,22 +34,22 @@ namespace FMSAPP
         {
             //count user
             var countuser = db.accounts.Count(t => t.RoleID == 2 && t.deleted_at == null);
-            lblUser.Text = countuser.ToString();
+            lbUser.Text = countuser.ToString();
             //count admin
             var countadmin = db.accounts.Count(t => t.RoleID == 1 && t.deleted_at == null);
-            lblAdmin.Text = countadmin.ToString();
+            lbAdmin.Text = countadmin.ToString();
             //count genre
             Int32 countgenre = db.genres.Count();
-            lblGenre.Text = countgenre.ToString();
+            lbGenre.Text = countgenre.ToString();
             //count season
             Int32 countseason = db.seasons.Count();
-            lblSeason.Text = countseason.ToString();
+            lbSeason.Text = countseason.ToString();
             //count studio
             Int32 countstudio = db.studios.Count();
-            lblStudio.Text = countstudio.ToString();
+            lbStudio.Text = countstudio.ToString();
             //count anime
             Int32 countanime = db.animes.Count();
-            lblAnime.Text = countanime.ToString();
+            lbAnime.Text = countanime.ToString();
         }
 
 

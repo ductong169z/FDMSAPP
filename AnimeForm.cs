@@ -126,7 +126,7 @@ namespace FMSAPP
                 obj.deleted_at = null;
                 obj.description = txtDes.Text;
                 obj.duration = txtDura.Text;
-                obj.episodes = Convert.ToInt32(txtEpi.Text);
+                obj.episodes = txtEpi.Text;
                 obj.name = txtName.Text;
                 obj.poster = txtPos.Text;
                 obj.rating = cbbRating.GetItemText(cbbRating.SelectedItem);
@@ -139,10 +139,10 @@ namespace FMSAPP
                     obj.SeasonID = null;
                 }
                 obj.type = cbbRating.GetItemText(cbbType.SelectedItem);
-                obj.releaseDate = txtReleaseDate.Value.ToString();
+                obj.releaseDate = txtReleaseDate.Value;
                 obj.status = cbbStatus.GetItemText(cbbStatus.SelectedItem);
                 obj.trailer = txtTrailer.Text;
-                obj.episodes = Convert.ToInt32(txtEpi.Text);
+                obj.episodes = txtEpi.Text;
                 db.animes.Add(obj);
                 db.SaveChanges();
             }

@@ -34,7 +34,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.typeChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSeason = new System.Windows.Forms.Button();
             this.btnStudio = new System.Windows.Forms.Button();
@@ -43,36 +43,36 @@
             this.btnUser = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblAnime = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblAdmin = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblGenre = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblSeason = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblStudio = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbDashboard = new System.Windows.Forms.Label();
+            this.lbAnime = new System.Windows.Forms.Label();
+            this.lbTotalAnimes = new System.Windows.Forms.Label();
+            this.lbUser = new System.Windows.Forms.Label();
+            this.lbTotalUsers = new System.Windows.Forms.Label();
+            this.lbAdmin = new System.Windows.Forms.Label();
+            this.lbTotalAds = new System.Windows.Forms.Label();
+            this.lbGenre = new System.Windows.Forms.Label();
+            this.lbTotalGenres = new System.Windows.Forms.Label();
+            this.lbSeason = new System.Windows.Forms.Label();
+            this.lbTotalSeasons = new System.Windows.Forms.Label();
+            this.lbStudio = new System.Windows.Forms.Label();
+            this.lbTotalStudios = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnAdmin1 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbAnime = new System.Windows.Forms.PictureBox();
+            this.pbSeasons = new System.Windows.Forms.PictureBox();
+            this.pbStudios = new System.Windows.Forms.PictureBox();
+            this.pbGenres = new System.Windows.Forms.PictureBox();
+            this.pbAdmins = new System.Windows.Forms.PictureBox();
+            this.pbUsers = new System.Windows.Forms.PictureBox();
             this.animeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeChart)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -82,43 +82,43 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSeasons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStudios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGenres)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdmins)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            this.panel2.Controls.Add(this.chart1);
+            this.panel2.Controls.Add(this.typeChart);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(166, 344);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(739, 322);
             this.panel2.TabIndex = 3;
             // 
-            // chart1
+            // typeChart
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.typeChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(128, 0);
-            this.chart1.Name = "chart1";
+            this.typeChart.Legends.Add(legend1);
+            this.typeChart.Location = new System.Drawing.Point(128, 0);
+            this.typeChart.Name = "typeChart";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "s1";
             series1.XValueMember = "type";
             series1.YValueMembers = "0";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(501, 319);
-            this.chart1.TabIndex = 5;
-            this.chart1.Text = "chart1";
+            this.typeChart.Series.Add(series1);
+            this.typeChart.Size = new System.Drawing.Size(501, 319);
+            this.typeChart.TabIndex = 5;
+            this.typeChart.Text = "chart1";
             // 
             // panel1
             // 
@@ -238,192 +238,192 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.lbDashboard);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(166, 76);
             this.panel3.TabIndex = 0;
             // 
-            // label2
+            // lbDashboard
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 56);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Admin\r\nDashboard\r\n";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lbDashboard.AutoSize = true;
+            this.lbDashboard.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbDashboard.ForeColor = System.Drawing.Color.Black;
+            this.lbDashboard.Location = new System.Drawing.Point(12, 9);
+            this.lbDashboard.Name = "lbDashboard";
+            this.lbDashboard.Size = new System.Drawing.Size(141, 56);
+            this.lbDashboard.TabIndex = 0;
+            this.lbDashboard.Text = "Admin\r\nDashboard\r\n";
+            this.lbDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbDashboard.Click += new System.EventHandler(this.label2_Click);
             // 
-            // lblAnime
+            // lbAnime
             // 
-            this.lblAnime.AutoSize = true;
-            this.lblAnime.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblAnime.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblAnime.Location = new System.Drawing.Point(126, 30);
-            this.lblAnime.Name = "lblAnime";
-            this.lblAnime.Size = new System.Drawing.Size(71, 25);
-            this.lblAnime.TabIndex = 10;
-            this.lblAnime.Text = "lorem";
+            this.lbAnime.AutoSize = true;
+            this.lbAnime.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbAnime.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbAnime.Location = new System.Drawing.Point(126, 30);
+            this.lbAnime.Name = "lbAnime";
+            this.lbAnime.Size = new System.Drawing.Size(71, 25);
+            this.lbAnime.TabIndex = 10;
+            this.lbAnime.Text = "lorem";
             // 
-            // label1
+            // lbTotalAnimes
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(7, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Total Animes:";
+            this.lbTotalAnimes.AutoSize = true;
+            this.lbTotalAnimes.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbTotalAnimes.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbTotalAnimes.Location = new System.Drawing.Point(7, 3);
+            this.lbTotalAnimes.Name = "lbTotalAnimes";
+            this.lbTotalAnimes.Size = new System.Drawing.Size(159, 25);
+            this.lbTotalAnimes.TabIndex = 9;
+            this.lbTotalAnimes.Text = "Total Animes:";
             // 
-            // lblUser
+            // lbUser
             // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblUser.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblUser.Location = new System.Drawing.Point(121, 29);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(71, 25);
-            this.lblUser.TabIndex = 12;
-            this.lblUser.Text = "lorem";
+            this.lbUser.AutoSize = true;
+            this.lbUser.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbUser.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbUser.Location = new System.Drawing.Point(121, 29);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(71, 25);
+            this.lbUser.TabIndex = 12;
+            this.lbUser.Text = "lorem";
             // 
-            // label6
+            // lbTotalUsers
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(8, 5);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 25);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Total Users:";
+            this.lbTotalUsers.AutoSize = true;
+            this.lbTotalUsers.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbTotalUsers.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbTotalUsers.Location = new System.Drawing.Point(8, 5);
+            this.lbTotalUsers.Name = "lbTotalUsers";
+            this.lbTotalUsers.Size = new System.Drawing.Size(145, 25);
+            this.lbTotalUsers.TabIndex = 11;
+            this.lbTotalUsers.Text = "Total Users:";
             // 
-            // lblAdmin
+            // lbAdmin
             // 
-            this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblAdmin.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblAdmin.Location = new System.Drawing.Point(135, 28);
-            this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(71, 25);
-            this.lblAdmin.TabIndex = 14;
-            this.lblAdmin.Text = "lorem";
+            this.lbAdmin.AutoSize = true;
+            this.lbAdmin.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbAdmin.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbAdmin.Location = new System.Drawing.Point(135, 28);
+            this.lbAdmin.Name = "lbAdmin";
+            this.lbAdmin.Size = new System.Drawing.Size(71, 25);
+            this.lbAdmin.TabIndex = 14;
+            this.lbAdmin.Text = "lorem";
             // 
-            // label10
+            // lbTotalAds
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label10.Location = new System.Drawing.Point(4, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 25);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Total Admins:";
+            this.lbTotalAds.AutoSize = true;
+            this.lbTotalAds.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbTotalAds.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbTotalAds.Location = new System.Drawing.Point(4, 4);
+            this.lbTotalAds.Name = "lbTotalAds";
+            this.lbTotalAds.Size = new System.Drawing.Size(159, 25);
+            this.lbTotalAds.TabIndex = 13;
+            this.lbTotalAds.Text = "Total Admins:";
             // 
-            // lblGenre
+            // lbGenre
             // 
-            this.lblGenre.AutoSize = true;
-            this.lblGenre.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblGenre.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblGenre.Location = new System.Drawing.Point(126, 28);
-            this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(71, 25);
-            this.lblGenre.TabIndex = 16;
-            this.lblGenre.Text = "lorem";
+            this.lbGenre.AutoSize = true;
+            this.lbGenre.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbGenre.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbGenre.Location = new System.Drawing.Point(126, 28);
+            this.lbGenre.Name = "lbGenre";
+            this.lbGenre.Size = new System.Drawing.Size(71, 25);
+            this.lbGenre.TabIndex = 16;
+            this.lbGenre.Text = "lorem";
             // 
-            // label4
+            // lbTotalGenres
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 25);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Total Genres:";
+            this.lbTotalGenres.AutoSize = true;
+            this.lbTotalGenres.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbTotalGenres.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbTotalGenres.Location = new System.Drawing.Point(5, 0);
+            this.lbTotalGenres.Name = "lbTotalGenres";
+            this.lbTotalGenres.Size = new System.Drawing.Size(159, 25);
+            this.lbTotalGenres.TabIndex = 15;
+            this.lbTotalGenres.Text = "Total Genres:";
             // 
-            // lblSeason
+            // lbSeason
             // 
-            this.lblSeason.AutoSize = true;
-            this.lblSeason.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblSeason.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblSeason.Location = new System.Drawing.Point(121, 28);
-            this.lblSeason.Name = "lblSeason";
-            this.lblSeason.Size = new System.Drawing.Size(71, 25);
-            this.lblSeason.TabIndex = 18;
-            this.lblSeason.Text = "lorem";
+            this.lbSeason.AutoSize = true;
+            this.lbSeason.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbSeason.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbSeason.Location = new System.Drawing.Point(121, 28);
+            this.lbSeason.Name = "lbSeason";
+            this.lbSeason.Size = new System.Drawing.Size(71, 25);
+            this.lbSeason.TabIndex = 18;
+            this.lbSeason.Text = "lorem";
             // 
-            // label8
+            // lbTotalSeasons
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label8.Location = new System.Drawing.Point(3, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 25);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Total Seasons:";
+            this.lbTotalSeasons.AutoSize = true;
+            this.lbTotalSeasons.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbTotalSeasons.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbTotalSeasons.Location = new System.Drawing.Point(3, 5);
+            this.lbTotalSeasons.Name = "lbTotalSeasons";
+            this.lbTotalSeasons.Size = new System.Drawing.Size(172, 25);
+            this.lbTotalSeasons.TabIndex = 17;
+            this.lbTotalSeasons.Text = "Total Seasons:";
             // 
-            // lblStudio
+            // lbStudio
             // 
-            this.lblStudio.AutoSize = true;
-            this.lblStudio.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblStudio.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblStudio.Location = new System.Drawing.Point(135, 28);
-            this.lblStudio.Name = "lblStudio";
-            this.lblStudio.Size = new System.Drawing.Size(71, 25);
-            this.lblStudio.TabIndex = 20;
-            this.lblStudio.Text = "lorem";
+            this.lbStudio.AutoSize = true;
+            this.lbStudio.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbStudio.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbStudio.Location = new System.Drawing.Point(135, 28);
+            this.lbStudio.Name = "lbStudio";
+            this.lbStudio.Size = new System.Drawing.Size(71, 25);
+            this.lbStudio.TabIndex = 20;
+            this.lbStudio.Text = "lorem";
             // 
-            // label12
+            // lbTotalStudios
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label12.Location = new System.Drawing.Point(3, 4);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(162, 25);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Total Studios:";
+            this.lbTotalStudios.AutoSize = true;
+            this.lbTotalStudios.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbTotalStudios.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbTotalStudios.Location = new System.Drawing.Point(3, 4);
+            this.lbTotalStudios.Name = "lbTotalStudios";
+            this.lbTotalStudios.Size = new System.Drawing.Size(162, 25);
+            this.lbTotalStudios.TabIndex = 19;
+            this.lbTotalStudios.Text = "Total Studios:";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel4.Controls.Add(this.btnAdmin1);
+            this.panel4.Controls.Add(this.btnLogout);
             this.panel4.Location = new System.Drawing.Point(172, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(733, 55);
             this.panel4.TabIndex = 21;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // btnAdmin1
+            // btnLogout
             // 
-            this.btnAdmin1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.btnAdmin1.FlatAppearance.BorderSize = 0;
-            this.btnAdmin1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin1.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnAdmin1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAdmin1.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin1.Image")));
-            this.btnAdmin1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnAdmin1.Location = new System.Drawing.Point(543, 3);
-            this.btnAdmin1.Name = "btnAdmin1";
-            this.btnAdmin1.Size = new System.Drawing.Size(178, 49);
-            this.btnAdmin1.TabIndex = 0;
-            this.btnAdmin1.Text = "Log Out";
-            this.btnAdmin1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAdmin1.UseVisualStyleBackColor = true;
-            this.btnAdmin1.Click += new System.EventHandler(this.btnAdmin1_Click);
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnLogout.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnLogout.Location = new System.Drawing.Point(543, 3);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(178, 49);
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnAdmin1_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.lblAnime);
+            this.panel5.Controls.Add(this.lbTotalAnimes);
+            this.panel5.Controls.Add(this.lbAnime);
             this.panel5.Location = new System.Drawing.Point(197, 111);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(215, 55);
@@ -433,8 +433,8 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.lblUser);
+            this.panel6.Controls.Add(this.lbTotalUsers);
+            this.panel6.Controls.Add(this.lbUser);
             this.panel6.Location = new System.Drawing.Point(431, 111);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(203, 55);
@@ -444,8 +444,8 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.lblAdmin);
+            this.panel7.Controls.Add(this.lbTotalAds);
+            this.panel7.Controls.Add(this.lbAdmin);
             this.panel7.Location = new System.Drawing.Point(661, 111);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(216, 55);
@@ -455,8 +455,8 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.label12);
-            this.panel8.Controls.Add(this.lblStudio);
+            this.panel8.Controls.Add(this.lbTotalStudios);
+            this.panel8.Controls.Add(this.lbStudio);
             this.panel8.Location = new System.Drawing.Point(661, 195);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(216, 55);
@@ -466,8 +466,8 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.label8);
-            this.panel9.Controls.Add(this.lblSeason);
+            this.panel9.Controls.Add(this.lbTotalSeasons);
+            this.panel9.Controls.Add(this.lbSeason);
             this.panel9.Location = new System.Drawing.Point(431, 195);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(203, 55);
@@ -477,80 +477,80 @@
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.label4);
-            this.panel10.Controls.Add(this.lblGenre);
+            this.panel10.Controls.Add(this.lbTotalGenres);
+            this.panel10.Controls.Add(this.lbGenre);
             this.panel10.Location = new System.Drawing.Point(197, 195);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(211, 55);
             this.panel10.TabIndex = 23;
             // 
-            // pictureBox1
+            // pbAnime
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(356, 93);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbAnime.BackColor = System.Drawing.Color.White;
+            this.pbAnime.Image = ((System.Drawing.Image)(resources.GetObject("pbAnime.Image")));
+            this.pbAnime.Location = new System.Drawing.Point(356, 93);
+            this.pbAnime.Name = "pbAnime";
+            this.pbAnime.Size = new System.Drawing.Size(32, 32);
+            this.pbAnime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbAnime.TabIndex = 24;
+            this.pbAnime.TabStop = false;
+            this.pbAnime.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox6
+            // pbSeasons
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.White;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(443, 236);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 19;
-            this.pictureBox6.TabStop = false;
+            this.pbSeasons.BackColor = System.Drawing.Color.White;
+            this.pbSeasons.Image = ((System.Drawing.Image)(resources.GetObject("pbSeasons.Image")));
+            this.pbSeasons.Location = new System.Drawing.Point(443, 236);
+            this.pbSeasons.Name = "pbSeasons";
+            this.pbSeasons.Size = new System.Drawing.Size(32, 32);
+            this.pbSeasons.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbSeasons.TabIndex = 19;
+            this.pbSeasons.TabStop = false;
             // 
-            // pictureBox7
+            // pbStudios
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.White;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(670, 236);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox7.TabIndex = 21;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.pbStudios.BackColor = System.Drawing.Color.White;
+            this.pbStudios.Image = ((System.Drawing.Image)(resources.GetObject("pbStudios.Image")));
+            this.pbStudios.Location = new System.Drawing.Point(670, 236);
+            this.pbStudios.Name = "pbStudios";
+            this.pbStudios.Size = new System.Drawing.Size(32, 32);
+            this.pbStudios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbStudios.TabIndex = 21;
+            this.pbStudios.TabStop = false;
+            this.pbStudios.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
-            // pictureBox5
+            // pbGenres
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(209, 236);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 27;
-            this.pictureBox5.TabStop = false;
+            this.pbGenres.BackColor = System.Drawing.Color.White;
+            this.pbGenres.Image = ((System.Drawing.Image)(resources.GetObject("pbGenres.Image")));
+            this.pbGenres.Location = new System.Drawing.Point(209, 236);
+            this.pbGenres.Name = "pbGenres";
+            this.pbGenres.Size = new System.Drawing.Size(32, 32);
+            this.pbGenres.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbGenres.TabIndex = 27;
+            this.pbGenres.TabStop = false;
             // 
-            // pictureBox4
+            // pbAdmins
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(829, 93);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 26;
-            this.pictureBox4.TabStop = false;
+            this.pbAdmins.BackColor = System.Drawing.Color.White;
+            this.pbAdmins.Image = ((System.Drawing.Image)(resources.GetObject("pbAdmins.Image")));
+            this.pbAdmins.Location = new System.Drawing.Point(829, 93);
+            this.pbAdmins.Name = "pbAdmins";
+            this.pbAdmins.Size = new System.Drawing.Size(32, 32);
+            this.pbAdmins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbAdmins.TabIndex = 26;
+            this.pbAdmins.TabStop = false;
             // 
-            // pictureBox3
+            // pbUsers
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(585, 93);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 25;
-            this.pictureBox3.TabStop = false;
+            this.pbUsers.BackColor = System.Drawing.Color.White;
+            this.pbUsers.Image = ((System.Drawing.Image)(resources.GetObject("pbUsers.Image")));
+            this.pbUsers.Location = new System.Drawing.Point(585, 93);
+            this.pbUsers.Name = "pbUsers";
+            this.pbUsers.Size = new System.Drawing.Size(32, 32);
+            this.pbUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbUsers.TabIndex = 25;
+            this.pbUsers.TabStop = false;
             // 
             // animeBindingSource
             // 
@@ -562,12 +562,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(905, 666);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pbAnime);
+            this.Controls.Add(this.pbSeasons);
+            this.Controls.Add(this.pbStudios);
+            this.Controls.Add(this.pbGenres);
+            this.Controls.Add(this.pbAdmins);
+            this.Controls.Add(this.pbUsers);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel7);
@@ -584,7 +584,7 @@
             this.Text = "DashBoard";
             this.Load += new System.EventHandler(this.DashBoard_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeChart)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -601,12 +601,12 @@
             this.panel9.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSeasons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStudios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGenres)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdmins)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -621,34 +621,34 @@
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblAnime;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblUser;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblAdmin;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblGenre;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblSeason;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblStudio;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbDashboard;
+        private System.Windows.Forms.Label lbAnime;
+        private System.Windows.Forms.Label lbTotalAnimes;
+        private System.Windows.Forms.Label lbUser;
+        private System.Windows.Forms.Label lbTotalUsers;
+        private System.Windows.Forms.Label lbAdmin;
+        private System.Windows.Forms.Label lbTotalAds;
+        private System.Windows.Forms.Label lbGenre;
+        private System.Windows.Forms.Label lbTotalGenres;
+        private System.Windows.Forms.Label lbSeason;
+        private System.Windows.Forms.Label lbTotalSeasons;
+        private System.Windows.Forms.Label lbStudio;
+        private System.Windows.Forms.Label lbTotalStudios;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnAdmin1;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.PictureBox pbAnime;
+        private System.Windows.Forms.PictureBox pbUsers;
+        private System.Windows.Forms.PictureBox pbAdmins;
+        private System.Windows.Forms.PictureBox pbGenres;
+        private System.Windows.Forms.PictureBox pbSeasons;
+        private System.Windows.Forms.PictureBox pbStudios;
+        private System.Windows.Forms.DataVisualization.Charting.Chart typeChart;
         private System.Windows.Forms.BindingSource animeBindingSource;
         private System.Windows.Forms.Button btnSeason;
         private System.Windows.Forms.Button btnStudio;

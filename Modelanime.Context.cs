@@ -40,10 +40,6 @@ public partial class animeEntities : DbContext
 
     public virtual DbSet<list> lists { get; set; }
 
-    public virtual DbSet<list_history> list_history { get; set; }
-
-    public virtual DbSet<review> reviews { get; set; }
-
     public virtual DbSet<role> roles { get; set; }
 
     public virtual DbSet<season> seasons { get; set; }

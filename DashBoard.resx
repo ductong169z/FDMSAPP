@@ -241,7 +241,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="btnAdmin1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnLogout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
@@ -258,7 +258,7 @@
         NTE67WJj/RL7Gd/v0XINajT+ARy0O8CXrTP3AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbAnime.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABldJREFUWEfV
         V1lsW1UQDQJREIgdAUIgBB8IBEggwQdCAgnxgeAHJPjgAxAfhcZ+XuLsJKmbLgnxe8/2cxbbz293nNRN
@@ -291,7 +291,7 @@
         aA1I4QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbSeasons.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABPNJREFUWEe1
         V/1PW1UYboyaaNT/ws/4g4m/mGh0Gocw5VPKYHEbwxid2dhcZPgZm+lgRVooH45K1Azcxg9OjbpNY3RM
@@ -318,7 +318,7 @@
         ZBl/ImYJ+uAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbStudios.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABehJREFUWEe1
         V+lTU1cUj12mnX7vMp1O12mnnS7TL51p/xC/d8GIBEaUJQkE8gRCMAmErCQkIQtBICyBQBABwQICGh2t
@@ -349,7 +349,7 @@
         eS4S/Q8mhjZqQq87oAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbGenres.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABSdJREFUWEfF
         l2tM21UUwNEPPuPjm1/84iN+MX7RxEyNyYwLUEpbHhuOKCRmW4wxzsy5mQ1UkkXo698WGOPhssF8wHjo
@@ -377,7 +377,7 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbAdmins.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAA0hJREFUWEft
         lk1IVFEUx5Wioi+iohZBq6ioTKKNFdUsxJggaKE0H85gE0wi1K4Po1VBLRKCIiQoopbRxyrQAlHDqOyT
@@ -397,7 +397,7 @@
         NwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pbUsers.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABFtJREFUWEft
         lm1MW1Ucxhtf4wejRhNdY4z6xfhBP+hHeQkCMb4t2YBkEJYsS4ZsWUgm4SWmQsfGCrbjTUBAWNdbMNoM
