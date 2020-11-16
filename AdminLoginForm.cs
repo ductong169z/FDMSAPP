@@ -87,8 +87,7 @@ namespace FMSAPP
             var exituser = db.accounts.FirstOrDefault(a => a.username.Equals(txtUsername.Text));
             if (exituser != null)
             {
-                txtPassword.Text = GetMD5(txtPassword.Text);
-                if (exituser.password.Equals(txtPassword.Text))
+                if (exituser.password.Equals(GetMD5(txtPassword.Text)))
                 {
                     if (exituser.RoleID.Equals(1))
                     {
