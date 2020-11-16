@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnimeForm));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new CustomDataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lbName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -534,7 +534,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private CustomDataGridView dataGridView1;
         private System.Windows.Forms.BindingSource animeBindingSource;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lbName;

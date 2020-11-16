@@ -271,4 +271,12 @@ namespace FMSAPP
             db.Dispose();
         }
     }
+
+    class CustomDataGridView : DataGridView
+    {
+        public CustomDataGridView()
+        {
+            DoubleBuffered = true;
+        }
+    }
 }
