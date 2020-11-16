@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -16,51 +17,55 @@ namespace FMSAPP
 {
     public partial class AnimeForm : Form
     {
-        string dateTimeUpdate;
-        string dateTimeDelete;
+        DateTime dateTimeDelete;
         string adminId;
         animeEntities db;
         int check_valid1, check_valid2, check_valid3, check_valid4, check_valid;
         public AnimeForm(string adminId)
         {
             InitializeComponent();
-            System.Diagnostics.Debug.WriteLine(DateTime.Now);
-            txtCurrentDate.Value = DateTime.Now;
-            txtCurrentDate.Enabled = false;
-            dateTimeUpdate = DateTime.Now.ToString();
-            dateTimeDelete = DateTime.Now.ToString();
-            txtUrAdminId.Text = adminId;
-            this.adminId = adminId;
-            this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+            dateTimeDelete = DateTime.Now;  // set deleted date
+            txtCurrentDate.Value = DateTime.Now; // set current date
+            txtCurrentDate.Enabled = false; // disable editing
+
+            txtUrAdminId.Text = adminId; // set own admin id
+            this.adminId = adminId; // set admin id to global variable
+
+            this.Width = Screen.PrimaryScreen.WorkingArea.Width; // set form width
+
+            // hide deleted at column
             animeGridView.Columns["deletedatDataGridViewTextBoxColumn"].Visible = false;
-            this.CenterToScreen();
+            this.CenterToScreen(); // center form
         }
-        // Regex contstraints
+        // Regex constraints
         static Regex LINK_REGEX = new Regex(@"^(https?\:\/\/)?(www\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)|(\&[\w\-]+)(\S+)?$");
         static Regex DURATION_REGEX = new Regex(@"^\d{1,2}\s((min|sec|hour|hr){1})\s((per){1}|(\d{1,2}))\s((ep|min){1})?$");
         private void AnimeForm_Load(object sender, EventArgs e)
         {
             db = new animeEntities();
-            db.animes.Load();
-            animeBindingSource.DataSource = db.animes.Local;
-            pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text));
+            db.animes.Load(); // load from database
+            animeBindingSource.DataSource = db.animes.Local.ToBindingList().Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
+            pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text)); // load anime poster
+            
+            /* Load seasons to combo box */
             var season = db.seasons;
             cbbSeason.DataSource = season.ToList();
-            for (int i = 0; i < animeGridView.Rows.Count - 1; i++)
-            {
-                if (animeGridView.Rows[i].Cells[14].Value == null)
-                {
-                    animeGridView.Rows[i].Visible = true;
-                }
-                else if (animeGridView.Rows.Cast<DataGridViewRow>()
-     .Any(c => string.IsNullOrWhiteSpace(c.Cells[14].Value?.ToString())))
-                {
-                    CurrencyManager currencyManager1 = (CurrencyManager)animeGridView.BindingContext[animeGridView.DataSource];
-                    currencyManager1.SuspendBinding();
-                    animeGridView.Rows[i].Visible = false;
-                    currencyManager1.ResumeBinding();
-                }
-            }
+
+     //       for (int i = 0; i < animeGridView.Rows.Count - 1; i++)
+     //       {
+     //           if (animeGridView.Rows[i].Cells[14].Value == null)
+     //           {
+     //               animeGridView.Rows[i].Visible = true;
+     //           }
+     //           else if (animeGridView.Rows.Cast<DataGridViewRow>()
+     //.Any(c => string.IsNullOrWhiteSpace(c.Cells[14].Value?.ToString())))
+     //           {
+     //               CurrencyManager currencyManager1 = (CurrencyManager)animeGridView.BindingContext[animeGridView.DataSource];
+     //               currencyManager1.SuspendBinding();
+     //               animeGridView.Rows[i].Visible = false;
+     //               currencyManager1.ResumeBinding();
+     //           }
+     //       }
         }
 
         private void txtName_Validating(object sender, EventArgs e)
@@ -80,7 +85,7 @@ namespace FMSAPP
         {
             if (txtEpi.Text.Length >= 4)
             {
-                MessageBox.Show("Episode is too big (Not longer than 9999");
+                MessageBox.Show("Episode is too big! (Not bigger than 9999)");
                 check_valid2 = 1;
             }
             else
@@ -145,15 +150,17 @@ namespace FMSAPP
                 obj.episodes = txtEpi.Text;
                 db.animes.Add(obj);
                 db.SaveChanges();
+                animeBindingSource.DataSource = db.animes.Local.ToBindingList();
+                MessageBox.Show("You have successfully added the anime " + txtName.Text + "!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void txtTrailer_Validating(object sender, EventArgs e)
         {
-            if (!LINK_REGEX.IsMatch(txtTrailer.Text))
+            if (!LINK_REGEX.IsMatch(txtTrailer.Text) && !txtTrailer.Text.Equals(""))
             {
                 // Incorrect link format
-                MessageBox.Show("A valid URL must be like this: https://www.youtube.com/embed/41Gj4Dri8wo?enablejsapi=1&wmode=opaque&autoplay=1");
+                MessageBox.Show("A valid URL must be like this: https://www.youtube.com/embed/41Gj4Dri8wo?enablejsapi=1&wmode=opaque&autoplay=1 \n(or be left empty)");
                 check_valid4 = 1;
             }
             else
@@ -164,10 +171,10 @@ namespace FMSAPP
 
         private void txtDura_Validating(object sender, EventArgs e)
         {
-            if (!DURATION_REGEX.IsMatch(txtDura.Text))
+            if (!DURATION_REGEX.IsMatch(txtDura.Text) && !txtDura.Text.Equals("Unknown"))
             {
                 // Incorrect password format
-                MessageBox.Show("The duration must begin with number . Ex:01 sec|min|hour per ep");
+                MessageBox.Show("The duration must begin with number or be \"Unknown\".\nEx: 01 sec|min|hour per ep or \"Unknown\"");
                 check_valid4 = 2;
             }
             else
@@ -202,14 +209,14 @@ namespace FMSAPP
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(this.txtFind.Text))
+            if (string.IsNullOrEmpty(txtFind.Text))
             {
                 this.animeBindingSource.DataSource = db.animes.Local.ToBindingList();
             }
             else
             {
-                var filteredData = db.animes.Local.ToBindingList()
-                    .Where(x => x.name.Contains(this.txtFind.Text));
+                IEnumerable<anime> filteredData = db.animes.Local.ToBindingList()
+                    .Where(x => x.name.Contains(txtFind.Text));
                 this.animeBindingSource.DataSource = filteredData.Count() > 0 ?
                     filteredData : filteredData.ToArray();
             }
@@ -237,14 +244,37 @@ namespace FMSAPP
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (animeGridView.CurrentRow == null) {
+                MessageBox.Show("Please select an anime to delete!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             int n = animeGridView.CurrentRow.Index;
-            animeGridView.Rows[n].Cells[14].Value = dateTimeDelete;
+
+            int deletedId = Convert.ToInt32(animeGridView.Rows[n].Cells[0].Value);
+            anime deletedAnime = db.animes.FirstOrDefault(a => a.AnimeID == deletedId);
+            deletedAnime.deleted_at = dateTimeDelete;
             CurrencyManager currencyManager1 = (CurrencyManager)animeGridView.BindingContext[animeGridView.DataSource];
             currencyManager1.SuspendBinding();
             animeGridView.Rows[n].Visible = false;
             currencyManager1.ResumeBinding();
+            db.animes.AddOrUpdate(deletedAnime);
             db.SaveChanges();
             MessageBox.Show("The selected anime has been successfully deleted!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            txtAnimeId.Text = "";
+            txtAdminId.Text = "";
+            txtName.Text = "";
+            txtEpi.Text = "";
+            txtDura.Text = "";
+            txtDes.Text = "";
+            txtTrailer.Text = "";
+            cbbSeason.SelectedIndex = 0;
+            cbbRating.SelectedIndex = 0;
+            cbbStatus.SelectedIndex = 0;
+            cbbType.SelectedIndex = 0;
+            txtReleaseDate.Text = "";
+            txtPos.Text = "";
+            pbPoster.Image = null;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -256,8 +286,14 @@ namespace FMSAPP
             }
             else
             {
+                if (animeGridView.CurrentRow == null)
+                {
+                    MessageBox.Show("Please select an anime to update!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
                 int n = animeGridView.CurrentRow.Index;
-                //dataGridView1.Rows[n].Cells[15].Value = dateTimeUpdate;
+
                 db.SaveChanges();
                 MessageBox.Show("Your data has been successfully saved", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
