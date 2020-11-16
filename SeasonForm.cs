@@ -106,5 +106,15 @@ namespace FMSAPP
             txtCreated_at.Text = null;
             btnAdd.Enabled = true;
         }
+
+        private void separatorControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

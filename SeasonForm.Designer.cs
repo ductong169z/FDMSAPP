@@ -40,12 +40,18 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
+            this.searchDate = new System.Windows.Forms.DateTimePicker();
             this.seasonIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deletedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.seasonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seasonBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,16 +64,15 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.seasonIDDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
-            this.createdatDataGridViewTextBoxColumn,
-            this.deletedatDataGridViewTextBoxColumn});
+            this.createdatDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.seasonBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(489, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(488, 12);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(299, 331);
+            this.dataGridView1.Size = new System.Drawing.Size(300, 348);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -162,6 +167,46 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(112, 29);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(157, 20);
+            this.txtSearch.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Name";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Created_at";
+            // 
+            // separatorControl1
+            // 
+            this.separatorControl1.Location = new System.Drawing.Point(13, 100);
+            this.separatorControl1.Name = "separatorControl1";
+            this.separatorControl1.Size = new System.Drawing.Size(469, 23);
+            this.separatorControl1.TabIndex = 24;
+            // 
+            // searchDate
+            // 
+            this.searchDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.searchDate.Location = new System.Drawing.Point(112, 74);
+            this.searchDate.Name = "searchDate";
+            this.searchDate.Size = new System.Drawing.Size(157, 20);
+            this.searchDate.TabIndex = 25;
+            // 
             // seasonIDDataGridViewTextBoxColumn
             // 
             this.seasonIDDataGridViewTextBoxColumn.DataPropertyName = "SeasonID";
@@ -183,22 +228,32 @@
             this.createdatDataGridViewTextBoxColumn.Name = "createdatDataGridViewTextBoxColumn";
             this.createdatDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // deletedatDataGridViewTextBoxColumn
-            // 
-            this.deletedatDataGridViewTextBoxColumn.DataPropertyName = "deleted_at";
-            this.deletedatDataGridViewTextBoxColumn.HeaderText = "deleted_at";
-            this.deletedatDataGridViewTextBoxColumn.Name = "deletedatDataGridViewTextBoxColumn";
-            this.deletedatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // seasonBindingSource
             // 
             this.seasonBindingSource.DataSource = typeof(FMSAPP.season);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Enabled = false;
+            this.btnSearch.Location = new System.Drawing.Point(309, 70);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(89, 28);
+            this.btnSearch.TabIndex = 26;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // SeasonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.searchDate);
+            this.Controls.Add(this.separatorControl1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtCreated_at);
             this.Controls.Add(this.label3);
@@ -215,6 +270,7 @@
             this.Text = "SeasonForm";
             this.Load += new System.EventHandler(this.SeasonForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seasonBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,10 +280,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn seasonIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn createdatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deletedatDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource seasonBindingSource;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txtCreated_at;
@@ -239,5 +291,14 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn seasonIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createdatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
+        private System.Windows.Forms.DateTimePicker searchDate;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
