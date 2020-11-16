@@ -67,22 +67,8 @@ namespace FMSAPP
         {
             db = new animeEntities();
 
-            // By default, no errors
+            // By default, show no errors
             lblError.Text = "";
-
-            if (String.IsNullOrWhiteSpace(txtUsername.Text))
-            {
-                // Show error
-                lblError.Text = "Username cannot be null or empty!";
-                return;
-            }
-
-            if (String.IsNullOrWhiteSpace(txtPassword.Text))
-            {
-                // Show error
-                lblError.Text = "Password cannot be null or empty!";
-                return;
-            }
 
             var exituser = db.accounts.FirstOrDefault(a => a.username.Equals(txtUsername.Text));
             if (exituser != null)

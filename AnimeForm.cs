@@ -26,7 +26,8 @@ namespace FMSAPP
             dateTimeAdd.Value = DateTime.Now;
             dateTimeUpdate = DateTime.Now.ToString();
             dateTimeDelete = DateTime.Now.ToString();
-            this.WindowState = FormWindowState.Maximized;
+            this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+            this.CenterToScreen();
         }
         // Regex contstraints
         static Regex LINK_REGEX = new Regex(@"^(https?\:\/\/)?(www\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)|(\&[\w\-]+)(\S+)?$");

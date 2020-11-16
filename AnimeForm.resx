@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dataGridView1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
   <data name="animeIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>AnimeID</value>
   </data>
@@ -264,6 +260,7 @@
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>905, 19</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dataGridView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
@@ -271,7 +268,7 @@
     <value>51</value>
   </data>
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 524</value>
+    <value>981, 524</value>
   </data>
   <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1111,7 +1108,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnFind.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1082, 641</value>
+    <value>1595, 568</value>
   </data>
   <data name="btnFind.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -1144,7 +1141,7 @@
     <value>NoControl</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>578, 649</value>
+    <value>1091, 576</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 20</value>
@@ -1171,7 +1168,7 @@
     <value>5</value>
   </data>
   <data name="txtFind.Location" type="System.Drawing.Point, System.Drawing">
-    <value>754, 646</value>
+    <value>1267, 573</value>
   </data>
   <data name="txtFind.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -1312,19 +1309,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 20</value>
+    <value>144, 144</value>
   </data>
   <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1230, 734</value>
+    <value>1898, 734</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
