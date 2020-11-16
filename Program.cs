@@ -16,7 +16,7 @@ namespace FMSAPP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminLoginForm());
+            Application.Run(new SeasonForm());
         }
     }
 }
