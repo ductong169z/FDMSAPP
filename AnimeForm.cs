@@ -44,8 +44,9 @@ namespace FMSAPP
         {
             db = new animeEntities();
             db.animes.Load(); // load from database
-            animeBindingSource.DataSource = db.animes.Local.ToBindingList().Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
-            pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text)); // load anime poster
+            animeBindingSource.DataSource = db.animes.Local.Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
+            animeBindingSource.RaiseListChangedEvents = true;
+            //pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text)); // load anime poster
             
             /* Load seasons to combo box */
             var season = db.seasons;
@@ -150,7 +151,8 @@ namespace FMSAPP
                 obj.episodes = txtEpi.Text;
                 db.animes.Add(obj);
                 db.SaveChanges();
-                animeBindingSource.DataSource = db.animes.Local.ToBindingList();
+
+                //animeBindingSource.DataSource = db.animes.; // load animes to data source (that are not deleted)
                 MessageBox.Show("You have successfully added the anime " + txtName.Text + "!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
