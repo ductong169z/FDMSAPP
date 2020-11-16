@@ -391,12 +391,14 @@
             // 
             // cbbSeason
             // 
-            this.cbbSeason.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "SeasonID", true));
-            this.cbbSeason.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.seasonBindingSource, "SeasonID", true));
+            this.cbbSeason.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.animeBindingSource, "SeasonID", true));
+            this.cbbSeason.DataSource = this.seasonBindingSource;
+            this.cbbSeason.DisplayMember = "name";
             this.cbbSeason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSeason.FormattingEnabled = true;
             resources.ApplyResources(this.cbbSeason, "cbbSeason");
             this.cbbSeason.Name = "cbbSeason";
+            this.cbbSeason.ValueMember = "SeasonID";
             // 
             // seasonBindingSource
             // 
@@ -430,6 +432,7 @@
             this.txtIDAdmin.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "AccountID", true));
             resources.ApplyResources(this.txtIDAdmin, "txtIDAdmin");
             this.txtIDAdmin.Name = "txtIDAdmin";
+            this.txtIDAdmin.ReadOnly = true;
             // 
             // openFileDialog1
             // 

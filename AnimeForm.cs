@@ -38,7 +38,6 @@ namespace FMSAPP
             animeBindingSource.DataSource = db.animes.Local;
             testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPoster.Text));
             var season = db.seasons;
-            cbbSeason.DisplayMember = "SeasonID";
             cbbSeason.DataSource = season.ToList();
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
@@ -87,7 +86,7 @@ namespace FMSAPP
         {
             if (txtEpi.Text.Length >= 4)
             {
-                MessageBox.Show("Episode is too big (Not longger than 9999");
+                MessageBox.Show("Episode is too big (Not longer than 9999");
                 check_valid2 = 1;
             }
             else

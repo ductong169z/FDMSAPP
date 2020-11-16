@@ -29,7 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new FMSAPP.CustomDataGridView();
+            this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avatarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deletedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbRoleID = new System.Windows.Forms.ComboBox();
@@ -54,25 +64,14 @@
             this.btnRefesh = new System.Windows.Forms.Button();
             this.btnChoose = new System.Windows.Forms.Button();
             this.testpicturebox = new System.Windows.Forms.PictureBox();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avatarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deletedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.updatedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnFind = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testpicturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -90,260 +89,17 @@
             this.emailDataGridViewTextBoxColumn,
             this.genderDataGridViewTextBoxColumn,
             this.createdatDataGridViewTextBoxColumn,
-            this.deletedatDataGridViewTextBoxColumn,
-            this.updatedatDataGridViewTextBoxColumn});
+            this.deletedatDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.accountBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(606, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(682, 15);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(442, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(497, 532);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
-            this.label1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "roleID:";
-            // 
-            // cbbRoleID
-            // 
-            this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "RoleID", true));
-            this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roleBindingSource, "RoleID", true));
-            this.cbbRoleID.FormattingEnabled = true;
-            this.cbbRoleID.Location = new System.Drawing.Point(95, 63);
-            this.cbbRoleID.Name = "cbbRoleID";
-            this.cbbRoleID.Size = new System.Drawing.Size(174, 24);
-            this.cbbRoleID.TabIndex = 6;
-            // 
-            // roleBindingSource
-            // 
-            this.roleBindingSource.DataMember = "role";
-            this.roleBindingSource.DataSource = this.animeDataSet1;
-            // 
-            // animeDataSet1
-            // 
-            this.animeDataSet1.DataSetName = "animeDataSet1";
-            this.animeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "fullname:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "fullname", true));
-            this.textBox2.Location = new System.Drawing.Point(95, 104);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 22);
-            this.textBox2.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 17);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "avatar:";
-            // 
-            // txtAvatar
-            // 
-            this.txtAvatar.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "avatar", true));
-            this.txtAvatar.Location = new System.Drawing.Point(95, 146);
-            this.txtAvatar.Name = "txtAvatar";
-            this.txtAvatar.Size = new System.Drawing.Size(174, 22);
-            this.txtAvatar.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 189);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 17);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "email:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "email", true));
-            this.textBox5.Location = new System.Drawing.Point(95, 186);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(174, 22);
-            this.textBox5.TabIndex = 11;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "gender", true));
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.accountBindingSource, "gender", true));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "0",
-            "1"});
-            this.comboBox2.Location = new System.Drawing.Point(95, 232);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(174, 24);
-            this.comboBox2.TabIndex = 16;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 232);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Gender:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(116, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 24);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "USERFORM";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.GhostWhite;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCancel.Location = new System.Drawing.Point(158, 365);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 32);
-            this.btnCancel.TabIndex = 22;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Aqua;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnUpdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnUpdate.Location = new System.Drawing.Point(21, 365);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 32);
-            this.btnUpdate.TabIndex = 21;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDelete.Location = new System.Drawing.Point(158, 298);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 32);
-            this.btnDelete.TabIndex = 20;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Plum;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAdd.Location = new System.Drawing.Point(21, 298);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 32);
-            this.btnAdd.TabIndex = 19;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // roleTableAdapter
-            // 
-            this.roleTableAdapter.ClearBeforeFill = true;
-            // 
-            // dateTimeUpdate
-            // 
-            this.dateTimeUpdate.Location = new System.Drawing.Point(527, 269);
-            this.dateTimeUpdate.Name = "dateTimeUpdate";
-            this.dateTimeUpdate.Size = new System.Drawing.Size(200, 22);
-            this.dateTimeUpdate.TabIndex = 35;
-            this.dateTimeUpdate.Value = new System.DateTime(2020, 11, 1, 0, 0, 0, 0);
-            this.dateTimeUpdate.Visible = false;
-            // 
-            // dateTimeDelete
-            // 
-            this.dateTimeDelete.Location = new System.Drawing.Point(502, 201);
-            this.dateTimeDelete.Name = "dateTimeDelete";
-            this.dateTimeDelete.Size = new System.Drawing.Size(200, 22);
-            this.dateTimeDelete.TabIndex = 34;
-            this.dateTimeDelete.Value = new System.DateTime(2020, 11, 1, 0, 0, 0, 0);
-            this.dateTimeDelete.Visible = false;
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnRefesh.FlatAppearance.BorderSize = 0;
-            this.btnRefesh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefesh.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnRefesh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRefesh.Location = new System.Drawing.Point(85, 416);
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Size = new System.Drawing.Size(75, 32);
-            this.btnRefesh.TabIndex = 36;
-            this.btnRefesh.Text = "Refesh";
-            this.btnRefesh.UseVisualStyleBackColor = false;
-            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
-            // 
-            // btnChoose
-            // 
-            this.btnChoose.Location = new System.Drawing.Point(275, 143);
-            this.btnChoose.Name = "btnChoose";
-            this.btnChoose.Size = new System.Drawing.Size(43, 28);
-            this.btnChoose.TabIndex = 37;
-            this.btnChoose.Text = "C";
-            this.btnChoose.UseVisualStyleBackColor = true;
-            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
-            // 
-            // testpicturebox
-            // 
-            this.testpicturebox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.testpicturebox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.testpicturebox.Location = new System.Drawing.Point(308, 32);
-            this.testpicturebox.Name = "testpicturebox";
-            this.testpicturebox.Size = new System.Drawing.Size(292, 375);
-            this.testpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.testpicturebox.TabIndex = 38;
-            this.testpicturebox.TabStop = false;
-            // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataSource = typeof(FMSAPP.account);
             // 
             // accountIDDataGridViewTextBoxColumn
             // 
@@ -426,37 +182,282 @@
             this.deletedatDataGridViewTextBoxColumn.ReadOnly = true;
             this.deletedatDataGridViewTextBoxColumn.Width = 125;
             // 
-            // updatedatDataGridViewTextBoxColumn
+            // accountBindingSource
             // 
-            this.updatedatDataGridViewTextBoxColumn.DataPropertyName = "updated_at";
-            this.updatedatDataGridViewTextBoxColumn.HeaderText = "updated_at";
-            this.updatedatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.updatedatDataGridViewTextBoxColumn.Name = "updatedatDataGridViewTextBoxColumn";
-            this.updatedatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.updatedatDataGridViewTextBoxColumn.Width = 125;
+            this.accountBindingSource.DataSource = typeof(FMSAPP.account);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 20);
+            this.label1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Role ID:";
+            // 
+            // cbbRoleID
+            // 
+            this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "RoleID", true));
+            this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roleBindingSource, "RoleID", true));
+            this.cbbRoleID.FormattingEnabled = true;
+            this.cbbRoleID.Location = new System.Drawing.Point(107, 79);
+            this.cbbRoleID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbbRoleID.Name = "cbbRoleID";
+            this.cbbRoleID.Size = new System.Drawing.Size(195, 28);
+            this.cbbRoleID.TabIndex = 6;
+            // 
+            // roleBindingSource
+            // 
+            this.roleBindingSource.DataMember = "role";
+            this.roleBindingSource.DataSource = this.animeDataSet1;
+            // 
+            // animeDataSet1
+            // 
+            this.animeDataSet1.DataSetName = "animeDataSet1";
+            this.animeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 133);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Full Name:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "fullname", true));
+            this.textBox2.Location = new System.Drawing.Point(107, 130);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(195, 26);
+            this.textBox2.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 186);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Avatar:";
+            // 
+            // txtAvatar
+            // 
+            this.txtAvatar.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "avatar", true));
+            this.txtAvatar.Location = new System.Drawing.Point(107, 182);
+            this.txtAvatar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAvatar.Name = "txtAvatar";
+            this.txtAvatar.Size = new System.Drawing.Size(195, 26);
+            this.txtAvatar.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 236);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 20);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Email:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "email", true));
+            this.textBox5.Location = new System.Drawing.Point(107, 232);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(195, 26);
+            this.textBox5.TabIndex = 11;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "gender", true));
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.accountBindingSource, "gender", true));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.comboBox2.Location = new System.Drawing.Point(107, 290);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(195, 28);
+            this.comboBox2.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 290);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Gender:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(125, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(144, 26);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "USER FORM";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnCancel.Location = new System.Drawing.Point(202, 456);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(84, 40);
+            this.btnCancel.TabIndex = 22;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Aqua;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnUpdate.Location = new System.Drawing.Point(47, 456);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(84, 40);
+            this.btnUpdate.TabIndex = 21;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnDelete.Location = new System.Drawing.Point(202, 372);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(84, 40);
+            this.btnDelete.TabIndex = 20;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnAdd.Location = new System.Drawing.Point(47, 372);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(84, 40);
+            this.btnAdd.TabIndex = 19;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // roleTableAdapter
+            // 
+            this.roleTableAdapter.ClearBeforeFill = true;
+            // 
+            // dateTimeUpdate
+            // 
+            this.dateTimeUpdate.Location = new System.Drawing.Point(382, 445);
+            this.dateTimeUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimeUpdate.Name = "dateTimeUpdate";
+            this.dateTimeUpdate.Size = new System.Drawing.Size(224, 26);
+            this.dateTimeUpdate.TabIndex = 35;
+            this.dateTimeUpdate.Value = new System.DateTime(2020, 11, 1, 0, 0, 0, 0);
+            this.dateTimeUpdate.Visible = false;
+            // 
+            // dateTimeDelete
+            // 
+            this.dateTimeDelete.Location = new System.Drawing.Point(382, 386);
+            this.dateTimeDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimeDelete.Name = "dateTimeDelete";
+            this.dateTimeDelete.Size = new System.Drawing.Size(224, 26);
+            this.dateTimeDelete.TabIndex = 34;
+            this.dateTimeDelete.Value = new System.DateTime(2020, 11, 1, 0, 0, 0, 0);
+            this.dateTimeDelete.Visible = false;
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRefesh.FlatAppearance.BorderSize = 0;
+            this.btnRefesh.ForeColor = System.Drawing.Color.Black;
+            this.btnRefesh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnRefesh.Location = new System.Drawing.Point(120, 520);
+            this.btnRefesh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Size = new System.Drawing.Size(84, 40);
+            this.btnRefesh.TabIndex = 36;
+            this.btnRefesh.Text = "Refresh";
+            this.btnRefesh.UseVisualStyleBackColor = true;
+            this.btnRefesh.Click += new System.EventHandler(this.btnRefesh_Click);
+            // 
+            // btnChoose
+            // 
+            this.btnChoose.Location = new System.Drawing.Point(428, 15);
+            this.btnChoose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChoose.Name = "btnChoose";
+            this.btnChoose.Size = new System.Drawing.Size(48, 35);
+            this.btnChoose.TabIndex = 37;
+            this.btnChoose.Text = "C";
+            this.btnChoose.UseVisualStyleBackColor = true;
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
+            // 
+            // testpicturebox
+            // 
+            this.testpicturebox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.testpicturebox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.testpicturebox.Location = new System.Drawing.Point(399, 58);
+            this.testpicturebox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.testpicturebox.Name = "testpicturebox";
+            this.testpicturebox.Size = new System.Drawing.Size(203, 282);
+            this.testpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.testpicturebox.TabIndex = 38;
+            this.testpicturebox.TabStop = false;
             // 
             // txtFind
             // 
-            this.txtFind.Location = new System.Drawing.Point(340, 421);
+            this.txtFind.Location = new System.Drawing.Point(382, 526);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(149, 22);
+            this.txtFind.Size = new System.Drawing.Size(167, 26);
             this.txtFind.TabIndex = 39;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(219, 424);
+            this.label8.Location = new System.Drawing.Point(225, 529);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 17);
+            this.label8.Size = new System.Drawing.Size(142, 20);
             this.label8.TabIndex = 40;
-            this.label8.Text = "FindbyUsername:";
+            this.label8.Text = "Find by Username:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(495, 420);
+            this.btnFind.Location = new System.Drawing.Point(557, 525);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(75, 23);
+            this.btnFind.Size = new System.Drawing.Size(84, 29);
             this.btnFind.TabIndex = 41;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;
@@ -464,9 +465,9 @@
             // 
             // UserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 450);
+            this.ClientSize = new System.Drawing.Size(1192, 562);
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtFind);
@@ -492,16 +493,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "UserForm";
             this.Text = "UserForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserForm_FormClosing);
             this.Load += new System.EventHandler(this.UserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testpicturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,7 +511,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private CustomDataGridView dataGridView1;
         private System.Windows.Forms.BindingSource accountBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn accountIDDataGridViewTextBoxColumn;
