@@ -136,7 +136,8 @@ namespace FMSAPP
         /// <param name="e"></param>
         private void btnGenre_Click(object sender, EventArgs e)
         {
-
+            GenreForm gf = new GenreForm();
+            gf.Show();
         }
 
         /// <summary>
@@ -146,7 +147,8 @@ namespace FMSAPP
         /// <param name="e"></param>
         private void btnStudio_Click(object sender, EventArgs e)
         {
-
+            StudioForm sf = new StudioForm();
+            sf.Show();
         }
 
         /// <summary>
@@ -156,7 +158,8 @@ namespace FMSAPP
         /// <param name="e"></param>
         private void btnUserReport_Click(object sender, EventArgs e)
         {
-
+            FormReportUser fru = new FormReportUser();
+            fru.Show();
         }
 
         /// <summary>
@@ -166,7 +169,8 @@ namespace FMSAPP
         /// <param name="e"></param>
         private void btnAnimeReport_Click(object sender, EventArgs e)
         {
-
+            FormReportAnime fra = new FormReportAnime();
+            fra.Show();
         }
     }
 }
