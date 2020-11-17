@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -15,25 +16,30 @@ namespace FMSAPP
     public partial class UserForm : Form
     {
         animeEntities db;
+        OpenFileDialog open; 
         public UserForm()
         {
             InitializeComponent();
-            DateTimePicker dt = new DateTimePicker();
-            currentDate.Value = DateTime.Now;
-            this.WindowState = FormWindowState.Normal;
-            this.CenterToScreen();
+            currentDate.Value = DateTime.Now; // set current date
+
+            this.CenterToScreen(); // center the form
         }
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            db = new animeEntities();
-            db.accounts.Load();
-            accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null && a.RoleID == 2);
+            db = new animeEntities(); // instantiate new database context
+            db.accounts.Load(); // load from database
+            accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null && a.RoleID == 2); // load users to data source (that are not deleted)
 
-            //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+            // loads if there is avatar
+            if (txtAvatar.Text != null && txtAvatar.Text != "")
+            {
+                pbAvatar.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+            }
+
+            /* Load roles to combobox */
             var roleid = db.roles;
             cbbRoleID.DataSource = roleid.ToList();
-            cbbRoleID.DisplayMember = "RoleID";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -44,43 +50,70 @@ namespace FMSAPP
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int n = userGridView.CurrentRow.Index;
-            CurrencyManager currencyManager1 = (CurrencyManager)userGridView.BindingContext[userGridView.DataSource];
-            currencyManager1.SuspendBinding();
-            userGridView.Rows[n].Visible = false;
-            currencyManager1.ResumeBinding();
-            db.SaveChanges();
-            MessageBox.Show("Your data has been successfully deleted!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // check if user has selected a row
+            if (userGridView.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a user to delete!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int n = userGridView.CurrentRow.Index; // get current row index
+
+            try
+            {
+                int deletedId = Convert.ToInt32(userGridView.Rows[n].Cells[0].Value); // get account ID
+                account deletedUser = db.accounts.FirstOrDefault(a => a.AccountID == deletedId); // get account object using ID
+                deletedUser.deleted_at = DateTime.Now; // update deleted_at date
+
+                /* Updates to database */
+                db.accounts.AddOrUpdate(deletedUser);
+                db.SaveChanges();
+
+                /* Empty the input fields and reset combo box to default value */
+                cbbRoleID.SelectedIndex = 0;
+                txtFullName.Text = "";
+                txtEmail.Text = "";
+                cbbGender.Text = "Male";
+                txtAvatar.Text = "";
+                pbAvatar.Image = null;
+
+                // update binding source data
+                accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null && a.RoleID == 2); // load users to data source (that are not deleted)
+
+                /* Indicates successful deletion */
+                MessageBox.Show("The user \"" + deletedUser.fullname + "\" has been successfully deleted!", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot delete the selected user! Please try again!", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int n = userGridView.CurrentRow.Index;
+            // check if user has selected a row
+            if (userGridView.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a user to update!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             db.SaveChanges();
-            MessageBox.Show("Your data has been successfully saved", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // update binding source data
+            accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null && a.RoleID == 2); // load users to data source (that are not deleted)
+
+            MessageBox.Show("Selected user info has been successfully updated!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-            var changed = db.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged).ToList();
-            foreach (var obj in changed)
-            {
-                switch (obj.State)
-                {
-                    case EntityState.Modified:
-                        obj.CurrentValues.SetValues(obj.OriginalValues);
-                        obj.State = EntityState.Unchanged;
-                        break;
-                    case EntityState.Added:
-                        obj.State = EntityState.Detached;
-                        break;
-                    case EntityState.Deleted:
-                        obj.State = EntityState.Unchanged;
-                        break;
-
-                }
-            }
-            accountBindingSource.ResetBindings(false);
+            /* Empty the input fields and reset combo box to default value */
+            cbbRoleID.SelectedIndex = 0;
+            txtFullName.Text = "";
+            txtEmail.Text = "";
+            cbbGender.Text = "Male";
+            txtAvatar.Text = "";
+            pbAvatar.Image = null;
         }
 
         private void UserForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -88,11 +121,11 @@ namespace FMSAPP
             db.Dispose();
         }
 
-        private void btnRefesh_Click(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
             userGridView.Refresh();
         }
-        OpenFileDialog open;
+
         private void btnChoose_Click(object sender, EventArgs e)
         {
             open = new OpenFileDialog();
@@ -115,6 +148,15 @@ namespace FMSAPP
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (cbbGender.Text == "1")
+            {
+                cbbGender.Text = "Male";
+            }
+            else if (cbbGender.Text == "2")
+            {
+                cbbGender.Text = "Female";
+            }
+
             if (txtAvatar.Text == "")
             {
                 pbAvatar.Image = null;
@@ -137,12 +179,12 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
         {
             if (string.IsNullOrEmpty(this.txtFind.Text))
             {
-                this.accountBindingSource.DataSource = db.accounts.Local.ToBindingList();
+                this.accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null && a.RoleID == 2); // load all users to data source (that are not deleted)
             }
             else
             {
                 var filteredData = db.accounts.Local.ToBindingList()
-                    .Where(x => x.username.Contains(this.txtFind.Text));
+                    .Where(x => x.username.Contains(this.txtFind.Text) && x.deleted_at == null && x.RoleID == 2);
                 this.accountBindingSource.DataSource = filteredData.Count() > 0 ?
                     filteredData : filteredData.ToArray();
             }

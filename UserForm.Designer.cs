@@ -30,14 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.userGridView = new FMSAPP.CustomDataGridView();
-            this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avatarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.lbRoleId = new System.Windows.Forms.Label();
@@ -52,7 +44,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.cbbGender = new System.Windows.Forms.ComboBox();
             this.lbGender = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -65,6 +57,14 @@
             this.lbFind = new System.Windows.Forms.Label();
             this.btnFind = new System.Windows.Forms.Button();
             this.lblCurrentDate = new System.Windows.Forms.Label();
+            this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avatarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.userGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
@@ -102,78 +102,6 @@
             this.userGridView.TabIndex = 0;
             this.userGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // accountIDDataGridViewTextBoxColumn
-            // 
-            this.accountIDDataGridViewTextBoxColumn.DataPropertyName = "AccountID";
-            this.accountIDDataGridViewTextBoxColumn.HeaderText = "AccountID";
-            this.accountIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.accountIDDataGridViewTextBoxColumn.Name = "accountIDDataGridViewTextBoxColumn";
-            this.accountIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.accountIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.usernameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // roleIDDataGridViewTextBoxColumn
-            // 
-            this.roleIDDataGridViewTextBoxColumn.DataPropertyName = "RoleID";
-            this.roleIDDataGridViewTextBoxColumn.HeaderText = "RoleID";
-            this.roleIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.roleIDDataGridViewTextBoxColumn.Name = "roleIDDataGridViewTextBoxColumn";
-            this.roleIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roleIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // fullnameDataGridViewTextBoxColumn
-            // 
-            this.fullnameDataGridViewTextBoxColumn.DataPropertyName = "fullname";
-            this.fullnameDataGridViewTextBoxColumn.HeaderText = "fullname";
-            this.fullnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
-            this.fullnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fullnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // avatarDataGridViewTextBoxColumn
-            // 
-            this.avatarDataGridViewTextBoxColumn.DataPropertyName = "avatar";
-            this.avatarDataGridViewTextBoxColumn.HeaderText = "avatar";
-            this.avatarDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.avatarDataGridViewTextBoxColumn.Name = "avatarDataGridViewTextBoxColumn";
-            this.avatarDataGridViewTextBoxColumn.ReadOnly = true;
-            this.avatarDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
-            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.ReadOnly = true;
-            this.genderDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // createdatDataGridViewTextBoxColumn
-            // 
-            this.createdatDataGridViewTextBoxColumn.DataPropertyName = "created_at";
-            this.createdatDataGridViewTextBoxColumn.HeaderText = "created_at";
-            this.createdatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.createdatDataGridViewTextBoxColumn.Name = "createdatDataGridViewTextBoxColumn";
-            this.createdatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.createdatDataGridViewTextBoxColumn.Width = 125;
-            // 
             // accountBindingSource
             // 
             this.accountBindingSource.DataSource = typeof(FMSAPP.account);
@@ -198,13 +126,16 @@
             // cbbRoleID
             // 
             this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "RoleID", true));
-            this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roleBindingSource, "RoleID", true));
+            this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.accountBindingSource, "RoleID", true));
+            this.cbbRoleID.DataSource = this.roleBindingSource;
+            this.cbbRoleID.DisplayMember = "name";
             this.cbbRoleID.FormattingEnabled = true;
             this.cbbRoleID.Location = new System.Drawing.Point(107, 19);
             this.cbbRoleID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbRoleID.Name = "cbbRoleID";
             this.cbbRoleID.Size = new System.Drawing.Size(195, 28);
             this.cbbRoleID.TabIndex = 6;
+            this.cbbRoleID.ValueMember = "RoleID";
             // 
             // roleBindingSource
             // 
@@ -274,15 +205,15 @@
             // 
             this.cbbGender.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "gender", true));
             this.cbbGender.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.accountBindingSource, "gender", true));
+            this.cbbGender.DataSource = this.accountBindingSource;
+            this.cbbGender.DisplayMember = "gender";
             this.cbbGender.FormattingEnabled = true;
-            this.cbbGender.Items.AddRange(new object[] {
-            "0",
-            "1"});
             this.cbbGender.Location = new System.Drawing.Point(107, 175);
             this.cbbGender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbGender.Name = "cbbGender";
             this.cbbGender.Size = new System.Drawing.Size(195, 28);
             this.cbbGender.TabIndex = 16;
+            this.cbbGender.ValueMember = "gender";
             // 
             // lbGender
             // 
@@ -293,20 +224,19 @@
             this.lbGender.TabIndex = 15;
             this.lbGender.Text = "Gender:";
             // 
-            // btnCancel
+            // btnClear
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.GhostWhite;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCancel.Location = new System.Drawing.Point(358, 376);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(84, 40);
-            this.btnCancel.TabIndex = 22;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnClear.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            this.btnClear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnClear.Location = new System.Drawing.Point(358, 376);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(84, 40);
+            this.btnClear.TabIndex = 22;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // btnUpdate
             // 
@@ -359,13 +289,13 @@
             // 
             // currentDate
             // 
+            this.currentDate.Enabled = false;
             this.currentDate.Location = new System.Drawing.Point(24, 283);
             this.currentDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.currentDate.Name = "currentDate";
             this.currentDate.Size = new System.Drawing.Size(314, 26);
             this.currentDate.TabIndex = 35;
-            this.currentDate.Value = new System.DateTime(2020, 11, 1, 0, 0, 0, 0);
-            this.currentDate.Visible = false;
+            this.currentDate.Value = new System.DateTime(2020, 11, 15, 0, 0, 0, 0);
             // 
             // btnRefresh
             // 
@@ -380,7 +310,7 @@
             this.btnRefresh.TabIndex = 36;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefesh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnChoose
             // 
@@ -445,6 +375,78 @@
             this.lblCurrentDate.Text = "Current Date:";
             this.lblCurrentDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // accountIDDataGridViewTextBoxColumn
+            // 
+            this.accountIDDataGridViewTextBoxColumn.DataPropertyName = "AccountID";
+            this.accountIDDataGridViewTextBoxColumn.HeaderText = "Account ID";
+            this.accountIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.accountIDDataGridViewTextBoxColumn.Name = "accountIDDataGridViewTextBoxColumn";
+            this.accountIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.accountIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "User Name";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.usernameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // roleIDDataGridViewTextBoxColumn
+            // 
+            this.roleIDDataGridViewTextBoxColumn.DataPropertyName = "RoleID";
+            this.roleIDDataGridViewTextBoxColumn.HeaderText = "Role ID";
+            this.roleIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.roleIDDataGridViewTextBoxColumn.Name = "roleIDDataGridViewTextBoxColumn";
+            this.roleIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roleIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // fullnameDataGridViewTextBoxColumn
+            // 
+            this.fullnameDataGridViewTextBoxColumn.DataPropertyName = "fullname";
+            this.fullnameDataGridViewTextBoxColumn.HeaderText = "Full Name";
+            this.fullnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
+            this.fullnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fullnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // avatarDataGridViewTextBoxColumn
+            // 
+            this.avatarDataGridViewTextBoxColumn.DataPropertyName = "avatar";
+            this.avatarDataGridViewTextBoxColumn.HeaderText = "Avatar";
+            this.avatarDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.avatarDataGridViewTextBoxColumn.Name = "avatarDataGridViewTextBoxColumn";
+            this.avatarDataGridViewTextBoxColumn.ReadOnly = true;
+            this.avatarDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.ReadOnly = true;
+            this.genderDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // createdatDataGridViewTextBoxColumn
+            // 
+            this.createdatDataGridViewTextBoxColumn.DataPropertyName = "created_at";
+            this.createdatDataGridViewTextBoxColumn.HeaderText = "Created At";
+            this.createdatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.createdatDataGridViewTextBoxColumn.Name = "createdatDataGridViewTextBoxColumn";
+            this.createdatDataGridViewTextBoxColumn.ReadOnly = true;
+            this.createdatDataGridViewTextBoxColumn.Width = 125;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -458,7 +460,7 @@
             this.Controls.Add(this.btnChoose);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.currentDate);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
@@ -495,14 +497,6 @@
         private CustomDataGridView userGridView;
         private System.Windows.Forms.BindingSource accountBindingSource;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accountIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roleIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn avatarDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn createdatDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lbRoleId;
         private System.Windows.Forms.ComboBox cbbRoleID;
         private System.Windows.Forms.Label lbFullName;
@@ -513,7 +507,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.ComboBox cbbGender;
         private System.Windows.Forms.Label lbGender;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
@@ -528,5 +522,13 @@
         private System.Windows.Forms.Label lbFind;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.Label lblCurrentDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accountIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roleIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn avatarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createdatDataGridViewTextBoxColumn;
     }
 }
