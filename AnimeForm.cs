@@ -399,7 +399,7 @@ namespace FMSAPP
             }
             else
             {
-                // obtain list of animes contain find value and are not deleted
+                // obtain list of animes whose names contain find value and are not deleted
                 IEnumerable<anime> filteredData = db.animes.Local.ToBindingList()
                     .Where(x => x.name.Contains(txtFind.Text) && x.deleted_at == null);
 
@@ -425,7 +425,7 @@ namespace FMSAPP
             {
                 try
                 {
-                    // update anime poster to picture box
+                    // update anime poster to picture box to display
                     pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text));
                 }
                 catch (Exception ex)
@@ -442,7 +442,8 @@ namespace FMSAPP
         /// <param name="e"></param>
         private void btnChoose_Click(object sender, EventArgs e)
         {
-            open = new OpenFileDialog();
+            open = new OpenFileDialog(); // instantiate new instance
+            /* Set some default properties */
             open.Filter = "Images|*.jpg;*.jpeg;*.png";
             open.InitialDirectory = @"C:\";
             open.Title = "Please select an image to add or update";

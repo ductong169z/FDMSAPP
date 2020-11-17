@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.userGridView = new FMSAPP.CustomDataGridView();
+            this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avatarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.lbRoleId = new System.Windows.Forms.Label();
@@ -57,14 +65,6 @@
             this.lbFind = new System.Windows.Forms.Label();
             this.btnFind = new System.Windows.Forms.Button();
             this.lblCurrentDate = new System.Windows.Forms.Label();
-            this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avatarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.userGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
@@ -101,6 +101,79 @@
             this.userGridView.Size = new System.Drawing.Size(573, 343);
             this.userGridView.TabIndex = 0;
             this.userGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.userGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.userGridView_CellFormatting);
+            // 
+            // accountIDDataGridViewTextBoxColumn
+            // 
+            this.accountIDDataGridViewTextBoxColumn.DataPropertyName = "AccountID";
+            this.accountIDDataGridViewTextBoxColumn.HeaderText = "Account ID";
+            this.accountIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.accountIDDataGridViewTextBoxColumn.Name = "accountIDDataGridViewTextBoxColumn";
+            this.accountIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.accountIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "User Name";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.usernameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // roleIDDataGridViewTextBoxColumn
+            // 
+            this.roleIDDataGridViewTextBoxColumn.DataPropertyName = "RoleID";
+            this.roleIDDataGridViewTextBoxColumn.HeaderText = "Role ID";
+            this.roleIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.roleIDDataGridViewTextBoxColumn.Name = "roleIDDataGridViewTextBoxColumn";
+            this.roleIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roleIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // fullnameDataGridViewTextBoxColumn
+            // 
+            this.fullnameDataGridViewTextBoxColumn.DataPropertyName = "fullname";
+            this.fullnameDataGridViewTextBoxColumn.HeaderText = "Full Name";
+            this.fullnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
+            this.fullnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fullnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // avatarDataGridViewTextBoxColumn
+            // 
+            this.avatarDataGridViewTextBoxColumn.DataPropertyName = "avatar";
+            this.avatarDataGridViewTextBoxColumn.HeaderText = "Avatar";
+            this.avatarDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.avatarDataGridViewTextBoxColumn.Name = "avatarDataGridViewTextBoxColumn";
+            this.avatarDataGridViewTextBoxColumn.ReadOnly = true;
+            this.avatarDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.ReadOnly = true;
+            this.genderDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // createdatDataGridViewTextBoxColumn
+            // 
+            this.createdatDataGridViewTextBoxColumn.DataPropertyName = "created_at";
+            this.createdatDataGridViewTextBoxColumn.HeaderText = "Created At";
+            this.createdatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.createdatDataGridViewTextBoxColumn.Name = "createdatDataGridViewTextBoxColumn";
+            this.createdatDataGridViewTextBoxColumn.ReadOnly = true;
+            this.createdatDataGridViewTextBoxColumn.Width = 125;
             // 
             // accountBindingSource
             // 
@@ -374,78 +447,6 @@
             this.lblCurrentDate.TabIndex = 42;
             this.lblCurrentDate.Text = "Current Date:";
             this.lblCurrentDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // accountIDDataGridViewTextBoxColumn
-            // 
-            this.accountIDDataGridViewTextBoxColumn.DataPropertyName = "AccountID";
-            this.accountIDDataGridViewTextBoxColumn.HeaderText = "Account ID";
-            this.accountIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.accountIDDataGridViewTextBoxColumn.Name = "accountIDDataGridViewTextBoxColumn";
-            this.accountIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.accountIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "User Name";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.usernameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // roleIDDataGridViewTextBoxColumn
-            // 
-            this.roleIDDataGridViewTextBoxColumn.DataPropertyName = "RoleID";
-            this.roleIDDataGridViewTextBoxColumn.HeaderText = "Role ID";
-            this.roleIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.roleIDDataGridViewTextBoxColumn.Name = "roleIDDataGridViewTextBoxColumn";
-            this.roleIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roleIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // fullnameDataGridViewTextBoxColumn
-            // 
-            this.fullnameDataGridViewTextBoxColumn.DataPropertyName = "fullname";
-            this.fullnameDataGridViewTextBoxColumn.HeaderText = "Full Name";
-            this.fullnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
-            this.fullnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fullnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // avatarDataGridViewTextBoxColumn
-            // 
-            this.avatarDataGridViewTextBoxColumn.DataPropertyName = "avatar";
-            this.avatarDataGridViewTextBoxColumn.HeaderText = "Avatar";
-            this.avatarDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.avatarDataGridViewTextBoxColumn.Name = "avatarDataGridViewTextBoxColumn";
-            this.avatarDataGridViewTextBoxColumn.ReadOnly = true;
-            this.avatarDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.ReadOnly = true;
-            this.genderDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // createdatDataGridViewTextBoxColumn
-            // 
-            this.createdatDataGridViewTextBoxColumn.DataPropertyName = "created_at";
-            this.createdatDataGridViewTextBoxColumn.HeaderText = "Created At";
-            this.createdatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.createdatDataGridViewTextBoxColumn.Name = "createdatDataGridViewTextBoxColumn";
-            this.createdatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.createdatDataGridViewTextBoxColumn.Width = 125;
             // 
             // UserForm
             // 

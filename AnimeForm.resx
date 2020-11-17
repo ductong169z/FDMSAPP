@@ -682,13 +682,13 @@
     <value>10, 443</value>
   </data>
   <data name="lbSea.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 20</value>
+    <value>68, 20</value>
   </data>
   <data name="lbSea.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="lbSea.Text" xml:space="preserve">
-    <value>SeasonID:</value>
+    <value>Season:</value>
   </data>
   <data name="&gt;&gt;lbSea.Name" xml:space="preserve">
     <value>lbSea</value>
