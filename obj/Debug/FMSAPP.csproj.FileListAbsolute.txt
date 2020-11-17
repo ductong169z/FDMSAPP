@@ -31,7 +31,6 @@ D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Buffers.xml
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Memory.xml
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Numerics.Vectors.xml
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csprojAssemblyReference.cache
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.Properties.Resources.resources
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csproj.GenerateResource.cache
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csproj.CoreCompileInputs.cache
@@ -192,3 +191,6 @@ D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\es\DevExpress.Pdf.v20.1.Core.
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.SeasonForm.resources
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.GenreForm.resources
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.StudioForm.resources
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csprojAssemblyReference.cache
