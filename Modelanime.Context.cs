@@ -13,44 +13,44 @@
 namespace FMSAPP
 {
 
-using System;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
 
 
-public partial class animeEntities : DbContext
-{
-    public animeEntities()
-        : base("name=animeEntities")
+    public partial class animeEntities : DbContext
     {
+        public animeEntities()
+            : base("name=animeEntities")
+        {
+            this.Configuration.ProxyCreationEnabled = false; // disable proxy creation
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
+
+
+        public virtual DbSet<account> accounts { get; set; }
+
+        public virtual DbSet<anime> animes { get; set; }
+
+        public virtual DbSet<genre> genres { get; set; }
+
+        public virtual DbSet<list> lists { get; set; }
+
+        public virtual DbSet<role> roles { get; set; }
+
+        public virtual DbSet<season> seasons { get; set; }
+
+        public virtual DbSet<studio> studios { get; set; }
+
+        public virtual DbSet<anime_studio> anime_studio { get; set; }
+
+        public virtual DbSet<genre_anime> genre_anime { get; set; }
 
     }
-
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    {
-        throw new UnintentionalCodeFirstException();
-    }
-
-
-    public virtual DbSet<account> accounts { get; set; }
-
-    public virtual DbSet<anime> animes { get; set; }
-
-    public virtual DbSet<genre> genres { get; set; }
-
-    public virtual DbSet<list> lists { get; set; }
-
-    public virtual DbSet<role> roles { get; set; }
-
-    public virtual DbSet<season> seasons { get; set; }
-
-    public virtual DbSet<studio> studios { get; set; }
-
-    public virtual DbSet<anime_studio> anime_studio { get; set; }
-
-    public virtual DbSet<genre_anime> genre_anime { get; set; }
-
-}
 
 }
 

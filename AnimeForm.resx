@@ -125,7 +125,7 @@
     <value>6</value>
   </data>
   <data name="animeIDDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>65</value>
   </data>
   <data name="accountIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>AccountID</value>
@@ -134,7 +134,7 @@
     <value>6</value>
   </data>
   <data name="accountIDDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>65</value>
   </data>
   <data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Name</value>
@@ -143,7 +143,7 @@
     <value>6</value>
   </data>
   <data name="nameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>66</value>
   </data>
   <data name="episodesDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Episodes</value>
@@ -152,7 +152,7 @@
     <value>6</value>
   </data>
   <data name="episodesDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>65</value>
   </data>
   <data name="durationDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Duration</value>
@@ -161,7 +161,7 @@
     <value>6</value>
   </data>
   <data name="durationDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>65</value>
   </data>
   <data name="descriptionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Description</value>
@@ -170,7 +170,7 @@
     <value>6</value>
   </data>
   <data name="descriptionDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>65</value>
   </data>
   <data name="trailerDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Trailer</value>
@@ -179,7 +179,7 @@
     <value>6</value>
   </data>
   <data name="trailerDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>65</value>
   </data>
   <data name="seasonIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>SeasonID</value>
@@ -188,7 +188,7 @@
     <value>6</value>
   </data>
   <data name="seasonIDDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>66</value>
   </data>
   <data name="typeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Type</value>
@@ -197,7 +197,7 @@
     <value>6</value>
   </data>
   <data name="typeDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>65</value>
   </data>
   <data name="ratingDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Rating</value>
@@ -206,7 +206,7 @@
     <value>6</value>
   </data>
   <data name="ratingDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>65</value>
   </data>
   <data name="statusDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Status</value>
@@ -215,7 +215,7 @@
     <value>6</value>
   </data>
   <data name="statusDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>65</value>
   </data>
   <data name="posterDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Poster</value>
@@ -224,7 +224,7 @@
     <value>6</value>
   </data>
   <data name="posterDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>65</value>
   </data>
   <data name="releaseDateDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Release Date</value>
@@ -233,7 +233,7 @@
     <value>6</value>
   </data>
   <data name="releaseDateDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>66</value>
   </data>
   <data name="createdatDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Created At</value>
@@ -242,16 +242,7 @@
     <value>6</value>
   </data>
   <data name="createdatDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="deletedatDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>deleted_at</value>
-  </data>
-  <data name="deletedatDataGridViewTextBoxColumn.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="deletedatDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>65</value>
   </data>
   <metadata name="animeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -1434,24 +1425,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>AnimeForm</value>
   </data>
-  <data name="&gt;&gt;animeBindingSource.Name" xml:space="preserve">
-    <value>animeBindingSource</value>
-  </data>
-  <data name="&gt;&gt;animeBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;seasonBindingSource.Name" xml:space="preserve">
-    <value>seasonBindingSource</value>
-  </data>
-  <data name="&gt;&gt;seasonBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
-    <value>openFileDialog1</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;animeIDDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>animeIDDataGridViewTextBoxColumn</value>
   </data>
@@ -1536,11 +1509,23 @@
   <data name="&gt;&gt;createdatDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;deletedatDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>deletedatDataGridViewTextBoxColumn</value>
+  <data name="&gt;&gt;animeBindingSource.Name" xml:space="preserve">
+    <value>animeBindingSource</value>
   </data>
-  <data name="&gt;&gt;deletedatDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;animeBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;seasonBindingSource.Name" xml:space="preserve">
+    <value>seasonBindingSource</value>
+  </data>
+  <data name="&gt;&gt;seasonBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AnimeForm</value>

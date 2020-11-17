@@ -31,6 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnimeForm));
             this.animeGridView = new FMSAPP.CustomDataGridView();
+            this.animeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.episodesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.durationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trailerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seasonIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ratingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.posterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.releaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.animeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAdd = new System.Windows.Forms.Button();
             this.lbName = new System.Windows.Forms.Label();
@@ -73,21 +87,6 @@
             this.txtUrAdminId = new System.Windows.Forms.TextBox();
             this.lbAnimeId = new System.Windows.Forms.Label();
             this.txtAnimeId = new System.Windows.Forms.TextBox();
-            this.animeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.episodesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.durationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trailerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.seasonIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ratingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.posterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.releaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deletedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.animeGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seasonBindingSource)).BeginInit();
@@ -98,6 +97,7 @@
             // 
             this.animeGridView.AllowUserToAddRows = false;
             this.animeGridView.AutoGenerateColumns = false;
+            this.animeGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.animeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.animeGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.animeIDDataGridViewTextBoxColumn,
@@ -113,8 +113,7 @@
             this.statusDataGridViewTextBoxColumn,
             this.posterDataGridViewTextBoxColumn,
             this.releaseDateDataGridViewTextBoxColumn,
-            this.createdatDataGridViewTextBoxColumn,
-            this.deletedatDataGridViewTextBoxColumn});
+            this.createdatDataGridViewTextBoxColumn});
             this.animeGridView.DataSource = this.animeBindingSource;
             resources.ApplyResources(this.animeGridView, "animeGridView");
             this.animeGridView.Name = "animeGridView";
@@ -123,6 +122,104 @@
             this.animeGridView.RowTemplate.Height = 24;
             this.animeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.animeGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // animeIDDataGridViewTextBoxColumn
+            // 
+            this.animeIDDataGridViewTextBoxColumn.DataPropertyName = "AnimeID";
+            resources.ApplyResources(this.animeIDDataGridViewTextBoxColumn, "animeIDDataGridViewTextBoxColumn");
+            this.animeIDDataGridViewTextBoxColumn.Name = "animeIDDataGridViewTextBoxColumn";
+            this.animeIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // accountIDDataGridViewTextBoxColumn
+            // 
+            this.accountIDDataGridViewTextBoxColumn.DataPropertyName = "AccountID";
+            resources.ApplyResources(this.accountIDDataGridViewTextBoxColumn, "accountIDDataGridViewTextBoxColumn");
+            this.accountIDDataGridViewTextBoxColumn.Name = "accountIDDataGridViewTextBoxColumn";
+            this.accountIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // episodesDataGridViewTextBoxColumn
+            // 
+            this.episodesDataGridViewTextBoxColumn.DataPropertyName = "episodes";
+            resources.ApplyResources(this.episodesDataGridViewTextBoxColumn, "episodesDataGridViewTextBoxColumn");
+            this.episodesDataGridViewTextBoxColumn.Name = "episodesDataGridViewTextBoxColumn";
+            this.episodesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // durationDataGridViewTextBoxColumn
+            // 
+            this.durationDataGridViewTextBoxColumn.DataPropertyName = "duration";
+            resources.ApplyResources(this.durationDataGridViewTextBoxColumn, "durationDataGridViewTextBoxColumn");
+            this.durationDataGridViewTextBoxColumn.Name = "durationDataGridViewTextBoxColumn";
+            this.durationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
+            resources.ApplyResources(this.descriptionDataGridViewTextBoxColumn, "descriptionDataGridViewTextBoxColumn");
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // trailerDataGridViewTextBoxColumn
+            // 
+            this.trailerDataGridViewTextBoxColumn.DataPropertyName = "trailer";
+            resources.ApplyResources(this.trailerDataGridViewTextBoxColumn, "trailerDataGridViewTextBoxColumn");
+            this.trailerDataGridViewTextBoxColumn.Name = "trailerDataGridViewTextBoxColumn";
+            this.trailerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // seasonIDDataGridViewTextBoxColumn
+            // 
+            this.seasonIDDataGridViewTextBoxColumn.DataPropertyName = "SeasonID";
+            resources.ApplyResources(this.seasonIDDataGridViewTextBoxColumn, "seasonIDDataGridViewTextBoxColumn");
+            this.seasonIDDataGridViewTextBoxColumn.Name = "seasonIDDataGridViewTextBoxColumn";
+            this.seasonIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
+            resources.ApplyResources(this.typeDataGridViewTextBoxColumn, "typeDataGridViewTextBoxColumn");
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ratingDataGridViewTextBoxColumn
+            // 
+            this.ratingDataGridViewTextBoxColumn.DataPropertyName = "rating";
+            resources.ApplyResources(this.ratingDataGridViewTextBoxColumn, "ratingDataGridViewTextBoxColumn");
+            this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
+            this.ratingDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            resources.ApplyResources(this.statusDataGridViewTextBoxColumn, "statusDataGridViewTextBoxColumn");
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // posterDataGridViewTextBoxColumn
+            // 
+            this.posterDataGridViewTextBoxColumn.DataPropertyName = "poster";
+            resources.ApplyResources(this.posterDataGridViewTextBoxColumn, "posterDataGridViewTextBoxColumn");
+            this.posterDataGridViewTextBoxColumn.Name = "posterDataGridViewTextBoxColumn";
+            this.posterDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // releaseDateDataGridViewTextBoxColumn
+            // 
+            this.releaseDateDataGridViewTextBoxColumn.DataPropertyName = "releaseDate";
+            resources.ApplyResources(this.releaseDateDataGridViewTextBoxColumn, "releaseDateDataGridViewTextBoxColumn");
+            this.releaseDateDataGridViewTextBoxColumn.Name = "releaseDateDataGridViewTextBoxColumn";
+            this.releaseDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // createdatDataGridViewTextBoxColumn
+            // 
+            this.createdatDataGridViewTextBoxColumn.DataPropertyName = "created_at";
+            resources.ApplyResources(this.createdatDataGridViewTextBoxColumn, "createdatDataGridViewTextBoxColumn");
+            this.createdatDataGridViewTextBoxColumn.Name = "createdatDataGridViewTextBoxColumn";
+            this.createdatDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // animeBindingSource
             // 
@@ -409,111 +506,6 @@
             this.txtAnimeId.Name = "txtAnimeId";
             this.txtAnimeId.ReadOnly = true;
             // 
-            // animeIDDataGridViewTextBoxColumn
-            // 
-            this.animeIDDataGridViewTextBoxColumn.DataPropertyName = "AnimeID";
-            resources.ApplyResources(this.animeIDDataGridViewTextBoxColumn, "animeIDDataGridViewTextBoxColumn");
-            this.animeIDDataGridViewTextBoxColumn.Name = "animeIDDataGridViewTextBoxColumn";
-            this.animeIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // accountIDDataGridViewTextBoxColumn
-            // 
-            this.accountIDDataGridViewTextBoxColumn.DataPropertyName = "AccountID";
-            resources.ApplyResources(this.accountIDDataGridViewTextBoxColumn, "accountIDDataGridViewTextBoxColumn");
-            this.accountIDDataGridViewTextBoxColumn.Name = "accountIDDataGridViewTextBoxColumn";
-            this.accountIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // episodesDataGridViewTextBoxColumn
-            // 
-            this.episodesDataGridViewTextBoxColumn.DataPropertyName = "episodes";
-            resources.ApplyResources(this.episodesDataGridViewTextBoxColumn, "episodesDataGridViewTextBoxColumn");
-            this.episodesDataGridViewTextBoxColumn.Name = "episodesDataGridViewTextBoxColumn";
-            this.episodesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // durationDataGridViewTextBoxColumn
-            // 
-            this.durationDataGridViewTextBoxColumn.DataPropertyName = "duration";
-            resources.ApplyResources(this.durationDataGridViewTextBoxColumn, "durationDataGridViewTextBoxColumn");
-            this.durationDataGridViewTextBoxColumn.Name = "durationDataGridViewTextBoxColumn";
-            this.durationDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            resources.ApplyResources(this.descriptionDataGridViewTextBoxColumn, "descriptionDataGridViewTextBoxColumn");
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // trailerDataGridViewTextBoxColumn
-            // 
-            this.trailerDataGridViewTextBoxColumn.DataPropertyName = "trailer";
-            resources.ApplyResources(this.trailerDataGridViewTextBoxColumn, "trailerDataGridViewTextBoxColumn");
-            this.trailerDataGridViewTextBoxColumn.Name = "trailerDataGridViewTextBoxColumn";
-            this.trailerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // seasonIDDataGridViewTextBoxColumn
-            // 
-            this.seasonIDDataGridViewTextBoxColumn.DataPropertyName = "SeasonID";
-            resources.ApplyResources(this.seasonIDDataGridViewTextBoxColumn, "seasonIDDataGridViewTextBoxColumn");
-            this.seasonIDDataGridViewTextBoxColumn.Name = "seasonIDDataGridViewTextBoxColumn";
-            this.seasonIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
-            resources.ApplyResources(this.typeDataGridViewTextBoxColumn, "typeDataGridViewTextBoxColumn");
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ratingDataGridViewTextBoxColumn
-            // 
-            this.ratingDataGridViewTextBoxColumn.DataPropertyName = "rating";
-            resources.ApplyResources(this.ratingDataGridViewTextBoxColumn, "ratingDataGridViewTextBoxColumn");
-            this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
-            this.ratingDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            resources.ApplyResources(this.statusDataGridViewTextBoxColumn, "statusDataGridViewTextBoxColumn");
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // posterDataGridViewTextBoxColumn
-            // 
-            this.posterDataGridViewTextBoxColumn.DataPropertyName = "poster";
-            resources.ApplyResources(this.posterDataGridViewTextBoxColumn, "posterDataGridViewTextBoxColumn");
-            this.posterDataGridViewTextBoxColumn.Name = "posterDataGridViewTextBoxColumn";
-            this.posterDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // releaseDateDataGridViewTextBoxColumn
-            // 
-            this.releaseDateDataGridViewTextBoxColumn.DataPropertyName = "releaseDate";
-            resources.ApplyResources(this.releaseDateDataGridViewTextBoxColumn, "releaseDateDataGridViewTextBoxColumn");
-            this.releaseDateDataGridViewTextBoxColumn.Name = "releaseDateDataGridViewTextBoxColumn";
-            this.releaseDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // createdatDataGridViewTextBoxColumn
-            // 
-            this.createdatDataGridViewTextBoxColumn.DataPropertyName = "created_at";
-            resources.ApplyResources(this.createdatDataGridViewTextBoxColumn, "createdatDataGridViewTextBoxColumn");
-            this.createdatDataGridViewTextBoxColumn.Name = "createdatDataGridViewTextBoxColumn";
-            this.createdatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // deletedatDataGridViewTextBoxColumn
-            // 
-            this.deletedatDataGridViewTextBoxColumn.DataPropertyName = "deleted_at";
-            resources.ApplyResources(this.deletedatDataGridViewTextBoxColumn, "deletedatDataGridViewTextBoxColumn");
-            this.deletedatDataGridViewTextBoxColumn.Name = "deletedatDataGridViewTextBoxColumn";
-            this.deletedatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // AnimeForm
             // 
             resources.ApplyResources(this, "$this");
@@ -629,6 +621,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn posterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn releaseDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createdatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deletedatDataGridViewTextBoxColumn;
     }
 }

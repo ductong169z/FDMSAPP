@@ -38,7 +38,6 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deletedatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
@@ -60,8 +59,7 @@
             this.avatarDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.genderDataGridViewTextBoxColumn,
-            this.createdatDataGridViewTextBoxColumn,
-            this.deletedatDataGridViewTextBoxColumn});
+            this.createdatDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.accountBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 12);
             this.dataGridView1.Name = "dataGridView1";
@@ -143,15 +141,6 @@
             this.createdatDataGridViewTextBoxColumn.ReadOnly = true;
             this.createdatDataGridViewTextBoxColumn.Width = 125;
             // 
-            // deletedatDataGridViewTextBoxColumn
-            // 
-            this.deletedatDataGridViewTextBoxColumn.DataPropertyName = "deleted_at";
-            this.deletedatDataGridViewTextBoxColumn.HeaderText = "deleted_at";
-            this.deletedatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.deletedatDataGridViewTextBoxColumn.Name = "deletedatDataGridViewTextBoxColumn";
-            this.deletedatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deletedatDataGridViewTextBoxColumn.Width = 125;
-            // 
             // accountBindingSource
             // 
             this.accountBindingSource.DataSource = typeof(FMSAPP.account);
@@ -183,6 +172,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createdatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deletedatDataGridViewTextBoxColumn;
     }
 }

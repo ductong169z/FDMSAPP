@@ -33,8 +33,6 @@ namespace FMSAPP
 
             this.Width = Screen.PrimaryScreen.WorkingArea.Width; // set form width
 
-            // hide deleted at column
-            animeGridView.Columns["deletedatDataGridViewTextBoxColumn"].Visible = false;
             this.CenterToScreen(); // center form
         }
         // Regex constraints
@@ -45,28 +43,11 @@ namespace FMSAPP
             db = new animeEntities();
             db.animes.Load(); // load from database
             animeBindingSource.DataSource = db.animes.Local.Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
-            animeBindingSource.RaiseListChangedEvents = true;
-            //pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text)); // load anime poster
-            
+                                                                                              //pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text)); // load anime poster
+
             /* Load seasons to combo box */
             var season = db.seasons;
             cbbSeason.DataSource = season.ToList();
-
-     //       for (int i = 0; i < animeGridView.Rows.Count - 1; i++)
-     //       {
-     //           if (animeGridView.Rows[i].Cells[14].Value == null)
-     //           {
-     //               animeGridView.Rows[i].Visible = true;
-     //           }
-     //           else if (animeGridView.Rows.Cast<DataGridViewRow>()
-     //.Any(c => string.IsNullOrWhiteSpace(c.Cells[14].Value?.ToString())))
-     //           {
-     //               CurrencyManager currencyManager1 = (CurrencyManager)animeGridView.BindingContext[animeGridView.DataSource];
-     //               currencyManager1.SuspendBinding();
-     //               animeGridView.Rows[i].Visible = false;
-     //               currencyManager1.ResumeBinding();
-     //           }
-     //       }
         }
 
         private void txtName_Validating(object sender, EventArgs e)
@@ -84,7 +65,7 @@ namespace FMSAPP
 
         private void txtEpi_Validating(object sender, EventArgs e)
         {
-            if (txtEpi.Text.Length >= 4)
+            if (txtEpi.Text.Length > 4)
             {
                 MessageBox.Show("Episode is too big! (Not bigger than 9999)");
                 check_valid2 = 1;
@@ -151,8 +132,7 @@ namespace FMSAPP
                 obj.episodes = txtEpi.Text;
                 db.animes.Add(obj);
                 db.SaveChanges();
-
-                //animeBindingSource.DataSource = db.animes.; // load animes to data source (that are not deleted)
+                animeBindingSource.DataSource = db.animes.Local.ToBindingList().Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
                 MessageBox.Show("You have successfully added the anime " + txtName.Text + "!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -185,10 +165,6 @@ namespace FMSAPP
             }
         }
         OpenFileDialog open;
-        private void btnChoose_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -246,7 +222,8 @@ namespace FMSAPP
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (animeGridView.CurrentRow == null) {
+            if (animeGridView.CurrentRow == null)
+            {
                 MessageBox.Show("Please select an anime to delete!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -262,7 +239,7 @@ namespace FMSAPP
             db.animes.AddOrUpdate(deletedAnime);
             db.SaveChanges();
             MessageBox.Show("The selected anime has been successfully deleted!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+
             txtAnimeId.Text = "";
             txtAdminId.Text = "";
             txtName.Text = "";
