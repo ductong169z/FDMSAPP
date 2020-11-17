@@ -39,12 +39,14 @@
             this.dateTimeAdd = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.studioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.txtCreated_at = new System.Windows.Forms.TextBox();
+            this.lblCreatedAt = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.animestudioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studioBindingSource1)).BeginInit();
@@ -120,11 +122,10 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(247, 22);
             this.txtName.TabIndex = 9;
-            this.txtName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // dateTimeAdd
             // 
-            this.dateTimeAdd.Location = new System.Drawing.Point(149, 169);
+            this.dateTimeAdd.Location = new System.Drawing.Point(684, 226);
             this.dateTimeAdd.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimeAdd.Name = "dateTimeAdd";
             this.dateTimeAdd.Size = new System.Drawing.Size(265, 22);
@@ -147,10 +148,26 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(544, 185);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // studioBindingSource1
+            // txtCreated_at
             // 
-            this.studioBindingSource1.DataSource = typeof(FMSAPP.studio);
+            this.txtCreated_at.Location = new System.Drawing.Point(167, 170);
+            this.txtCreated_at.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCreated_at.Name = "txtCreated_at";
+            this.txtCreated_at.ReadOnly = true;
+            this.txtCreated_at.Size = new System.Drawing.Size(208, 22);
+            this.txtCreated_at.TabIndex = 19;
+            // 
+            // lblCreatedAt
+            // 
+            this.lblCreatedAt.AutoSize = true;
+            this.lblCreatedAt.Location = new System.Drawing.Point(45, 174);
+            this.lblCreatedAt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCreatedAt.Name = "lblCreatedAt";
+            this.lblCreatedAt.Size = new System.Drawing.Size(75, 17);
+            this.lblCreatedAt.TabIndex = 20;
+            this.lblCreatedAt.Text = "Created At";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -192,11 +209,17 @@
             this.animestudioDataGridViewTextBoxColumn.Name = "animestudioDataGridViewTextBoxColumn";
             this.animestudioDataGridViewTextBoxColumn.Width = 125;
             // 
+            // studioBindingSource1
+            // 
+            this.studioBindingSource1.DataSource = typeof(FMSAPP.studio);
+            // 
             // StudioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 331);
+            this.Controls.Add(this.txtCreated_at);
+            this.Controls.Add(this.lblCreatedAt);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimeAdd);
             this.Controls.Add(this.txtName);
@@ -235,5 +258,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn animestudioDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource studioBindingSource1;
+        private System.Windows.Forms.TextBox txtCreated_at;
+        private System.Windows.Forms.Label lblCreatedAt;
     }
 }

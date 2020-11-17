@@ -111,5 +111,13 @@ namespace FMSAPP
             genreBindingSource2.DataSource = db.genres.Local;
             
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /* Bind data from cell to text boxes manually */
+            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtCreated_at.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
     }
 }

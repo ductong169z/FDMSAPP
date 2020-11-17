@@ -39,18 +39,18 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.genreBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtCreated_at = new System.Windows.Forms.TextBox();
+            this.lblCreatedAt = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genreBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.genreBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtCreated_at = new System.Windows.Forms.TextBox();
-            this.lblCreatedAt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -116,7 +116,6 @@
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.genreBindingSource1, "GenreID", true));
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(121, 67);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -126,7 +125,6 @@
             // 
             // txtName
             // 
-            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.genreBindingSource1, "name", true));
             this.txtName.Location = new System.Drawing.Point(121, 136);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
@@ -149,6 +147,26 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(479, 241);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // txtCreated_at
+            // 
+            this.txtCreated_at.Location = new System.Drawing.Point(121, 196);
+            this.txtCreated_at.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCreated_at.Name = "txtCreated_at";
+            this.txtCreated_at.ReadOnly = true;
+            this.txtCreated_at.Size = new System.Drawing.Size(208, 22);
+            this.txtCreated_at.TabIndex = 19;
+            // 
+            // lblCreatedAt
+            // 
+            this.lblCreatedAt.AutoSize = true;
+            this.lblCreatedAt.Location = new System.Drawing.Point(13, 201);
+            this.lblCreatedAt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCreatedAt.Name = "lblCreatedAt";
+            this.lblCreatedAt.Size = new System.Drawing.Size(75, 17);
+            this.lblCreatedAt.TabIndex = 20;
+            this.lblCreatedAt.Text = "Created At";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -186,25 +204,6 @@
             // 
             this.genreBindingSource2.DataSource = typeof(FMSAPP.genre);
             // 
-            // txtCreated_at
-            // 
-            this.txtCreated_at.Location = new System.Drawing.Point(121, 196);
-            this.txtCreated_at.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCreated_at.Name = "txtCreated_at";
-            this.txtCreated_at.ReadOnly = true;
-            this.txtCreated_at.Size = new System.Drawing.Size(208, 22);
-            this.txtCreated_at.TabIndex = 19;
-            // 
-            // lblCreatedAt
-            // 
-            this.lblCreatedAt.AutoSize = true;
-            this.lblCreatedAt.Location = new System.Drawing.Point(13, 201);
-            this.lblCreatedAt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCreatedAt.Name = "lblCreatedAt";
-            this.lblCreatedAt.Size = new System.Drawing.Size(75, 17);
-            this.lblCreatedAt.TabIndex = 20;
-            this.lblCreatedAt.Text = "Created At";
-            // 
             // GenreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -227,8 +226,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

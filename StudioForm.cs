@@ -14,7 +14,6 @@ namespace FMSAPP
     public partial class StudioForm : Form
     {
         animeEntities db;
-        int check_valid1, check_valid;
         public StudioForm()
         {
             InitializeComponent();
@@ -29,20 +28,52 @@ namespace FMSAPP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            check_valid_all();
-            if (check_valid != 0)
+            // check if name is null or empty 
+            if (String.IsNullOrEmpty(txtName.Text))
             {
-                MessageBox.Show("Have something wrong in input! Plz check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Name field cannot be empty!", "Required !");
+                return;
             }
-            else
-            {
-                studioBindingSource.AddNew();
-            }
+            // create new object of season
+            studio studios = new studio();
+
+            // set value for object by value from text boxes
+            studios.name = txtName.Text;
+            studios.created_at = DateTime.Today;
+
+            // add new new data to datasource
+            db.studios.Add(studios);
+
+            // save changes to database
+            db.SaveChanges();
+            MessageBox.Show("Insert successful", "Sucessful");
+
+            studioBindingSource1.DataSource = db.studios.ToList(); // update datasource
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // check if studio is null or empty
+            if (String.IsNullOrEmpty(txtName.Text))
+            {
+                MessageBox.Show("Name field cannot be empty!", "Required!");
+                return;
+            }
+
+            int id = Convert.ToInt32(textBox1.Text); // cast value to int and set to ID
+            studio studios = new studio(); // create new object of season
+            studios = db.studios.FirstOrDefault(ss => ss.StudioID == id); // get the object season to update
+
+            /* Update season properties */
+            studios.StudioID = id;
+            studios.name = txtName.Text;
+            studios.created_at = Convert.ToDateTime(txtCreated_at.Text);
+
+            // save changes to database
             db.SaveChanges();
+            MessageBox.Show("Update successful", "Sucessful");
+
+            studioBindingSource1.DataSource = db.studios.ToList(); // update datasource
         }
 
         private void Form3_Load_1(object sender, EventArgs e)
@@ -61,26 +92,37 @@ namespace FMSAPP
 
         private void button3_Click(object sender, EventArgs e)
         {
-            studioBindingSource1.RemoveCurrent();
-        }
+            int id = Convert.ToInt32(textBox1.Text); // cast value to int and set to ID
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            if (txtName.Text == string.Empty)
+            // create new object of season
+            studio studios = new studio();
+            studios = db.studios.FirstOrDefault(ss => ss.StudioID == id);
+
+            // find obj in datasource exist or not
+            if (studios != null)
             {
-                MessageBox.Show("Name is empty");
-                check_valid1 = 1;
+                // call function remove
+                db.studios.Remove(studios);
             }
             else
             {
-                check_valid1 = 0;
+                MessageBox.Show("Please enter another ID that doesn't exist in database!", "Not found ID!");
+                return;
             }
+            MessageBox.Show("Delete successful!", "Successful!");
+
+            // save changes to database
+            db.SaveChanges();
+
+            studioBindingSource1.DataSource = db.studios.ToList(); // update datasource
         }
 
-        public int check_valid_all()
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            check_valid = check_valid1;
-            return check_valid;
+            /* Bind data from cell to text boxes manually */
+            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtCreated_at.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }
