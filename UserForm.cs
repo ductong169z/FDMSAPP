@@ -19,7 +19,6 @@ namespace FMSAPP
         {
             InitializeComponent();
             DateTimePicker dt = new DateTimePicker();
-            dateTimeDelete.Value = DateTime.Now;
             currentDate.Value = DateTime.Now;
             this.WindowState = FormWindowState.Normal;
             this.CenterToScreen();
@@ -46,7 +45,6 @@ namespace FMSAPP
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int n = userGridView.CurrentRow.Index;
-            userGridView.Rows[n].Cells[8].Value = dateTimeDelete.Value.ToString();
             CurrencyManager currencyManager1 = (CurrencyManager)userGridView.BindingContext[userGridView.DataSource];
             currencyManager1.SuspendBinding();
             userGridView.Rows[n].Visible = false;
@@ -58,7 +56,6 @@ namespace FMSAPP
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             int n = userGridView.CurrentRow.Index;
-            userGridView.Rows[n].Cells[9].Value = currentDate.Value.ToString();
             db.SaveChanges();
             MessageBox.Show("Your data has been successfully saved", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

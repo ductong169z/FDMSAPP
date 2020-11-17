@@ -116,6 +116,7 @@
             this.createdatDataGridViewTextBoxColumn});
             this.animeGridView.DataSource = this.animeBindingSource;
             resources.ApplyResources(this.animeGridView, "animeGridView");
+            this.animeGridView.MultiSelect = false;
             this.animeGridView.Name = "animeGridView";
             this.animeGridView.ReadOnly = true;
             this.animeGridView.RowHeadersVisible = false;

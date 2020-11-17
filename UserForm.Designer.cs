@@ -77,6 +77,7 @@
             this.userGridView.AllowUserToAddRows = false;
             this.userGridView.AllowUserToDeleteRows = false;
             this.userGridView.AutoGenerateColumns = false;
+            this.userGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.userGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.userGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.accountIDDataGridViewTextBoxColumn,
@@ -88,13 +89,16 @@
             this.genderDataGridViewTextBoxColumn,
             this.createdatDataGridViewTextBoxColumn});
             this.userGridView.DataSource = this.accountBindingSource;
-            this.userGridView.Location = new System.Drawing.Point(606, 15);
+            this.userGridView.Location = new System.Drawing.Point(607, 73);
             this.userGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userGridView.MultiSelect = false;
             this.userGridView.Name = "userGridView";
             this.userGridView.ReadOnly = true;
+            this.userGridView.RowHeadersVisible = false;
             this.userGridView.RowHeadersWidth = 51;
             this.userGridView.RowTemplate.Height = 24;
-            this.userGridView.Size = new System.Drawing.Size(573, 416);
+            this.userGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.userGridView.Size = new System.Drawing.Size(573, 343);
             this.userGridView.TabIndex = 0;
             this.userGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -295,7 +299,7 @@
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCancel.Location = new System.Drawing.Point(218, 336);
+            this.btnCancel.Location = new System.Drawing.Point(358, 376);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(84, 40);
@@ -310,7 +314,7 @@
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
             this.btnUpdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnUpdate.Location = new System.Drawing.Point(218, 252);
+            this.btnUpdate.Location = new System.Drawing.Point(133, 376);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(84, 40);
@@ -325,7 +329,7 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDelete.Location = new System.Drawing.Point(63, 336);
+            this.btnDelete.Location = new System.Drawing.Point(244, 376);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(84, 40);
@@ -340,7 +344,7 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
             this.btnAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnAdd.Location = new System.Drawing.Point(63, 252);
+            this.btnAdd.Location = new System.Drawing.Point(24, 376);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(84, 40);
@@ -355,7 +359,7 @@
             // 
             // currentDate
             // 
-            this.currentDate.Location = new System.Drawing.Point(265, 405);
+            this.currentDate.Location = new System.Drawing.Point(24, 283);
             this.currentDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.currentDate.Name = "currentDate";
             this.currentDate.Size = new System.Drawing.Size(314, 26);
@@ -369,7 +373,7 @@
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.ForeColor = System.Drawing.Color.Black;
             this.btnRefresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnRefresh.Location = new System.Drawing.Point(120, 520);
+            this.btnRefresh.Location = new System.Drawing.Point(465, 376);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(84, 40);
@@ -397,23 +401,23 @@
             this.pbAvatar.Location = new System.Drawing.Point(377, 122);
             this.pbAvatar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Size = new System.Drawing.Size(172, 217);
+            this.pbAvatar.Size = new System.Drawing.Size(172, 228);
             this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAvatar.TabIndex = 38;
             this.pbAvatar.TabStop = false;
             // 
             // txtFind
             // 
-            this.txtFind.Location = new System.Drawing.Point(382, 526);
+            this.txtFind.Location = new System.Drawing.Point(751, 19);
             this.txtFind.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(167, 26);
+            this.txtFind.Size = new System.Drawing.Size(232, 26);
             this.txtFind.TabIndex = 39;
             // 
             // lbFind
             // 
             this.lbFind.AutoSize = true;
-            this.lbFind.Location = new System.Drawing.Point(225, 529);
+            this.lbFind.Location = new System.Drawing.Point(603, 22);
             this.lbFind.Name = "lbFind";
             this.lbFind.Size = new System.Drawing.Size(142, 20);
             this.lbFind.TabIndex = 40;
@@ -422,7 +426,7 @@
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(557, 525);
+            this.btnFind.Location = new System.Drawing.Point(1000, 18);
             this.btnFind.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(84, 29);
@@ -434,18 +438,18 @@
             // lblCurrentDate
             // 
             this.lblCurrentDate.AutoSize = true;
-            this.lblCurrentDate.Location = new System.Drawing.Point(396, 368);
+            this.lblCurrentDate.Location = new System.Drawing.Point(129, 246);
             this.lblCurrentDate.Name = "lblCurrentDate";
-            this.lblCurrentDate.Size = new System.Drawing.Size(142, 20);
+            this.lblCurrentDate.Size = new System.Drawing.Size(105, 20);
             this.lblCurrentDate.TabIndex = 42;
-            this.lblCurrentDate.Text = "Find by Username:";
+            this.lblCurrentDate.Text = "Current Date:";
             this.lblCurrentDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 562);
+            this.ClientSize = new System.Drawing.Size(1192, 436);
             this.Controls.Add(this.lblCurrentDate);
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.lbFind);
