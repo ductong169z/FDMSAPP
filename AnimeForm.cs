@@ -451,14 +451,19 @@ namespace FMSAPP
             // if user clicks OK, load the image
             if (open.ShowDialog() == DialogResult.OK)
             {
-                txtPos.Text = Path.GetFileName(open.FileName);
-                try
+                int count = 1;
+
+                string fileNameOnly = Path.GetFileNameWithoutExtension(open.FileName);
+                string extension = Path.GetExtension(open.FileName);
+                string path = Path.GetDirectoryName(open.FileName);
+                string newFullPath = open.FileName;
+
+                while (File.Exists(newFullPath))
                 {
-                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(open.FileName), true);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Don't change picture from the source file!", "This admin is trying to change picture in source", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                    newFullPath = Path.Combine(path, tempFileName + extension);
+                    txtPos.Text = Path.GetFileName(newFullPath);
+                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(newFullPath));
                 }
             }
         }
