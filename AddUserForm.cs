@@ -40,7 +40,7 @@ namespace FMSAPP
         {
             db = new animeEntities(); // instantiate database context
             db.accounts.Load(); // load data to database
-            accountBindingSource.DataSource = db.accounts.Local.ToBindingList(); // load data to data source
+            accountBindingSource.DataSource = db.accounts.Local; // load data to data source
 
             /* Load data to role combo box */
             var roleid = db.roles;
@@ -115,9 +115,6 @@ namespace FMSAPP
                 db.accounts.Add(obj);
                 db.SaveChanges();
 
-                // update binding source data
-                accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
-
                 MessageBox.Show("New user has been successfully added to database!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
             }
@@ -166,7 +163,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
             txtusername_Validating(sender, e);
             txtPassword_Validating(sender, e);
             txtre_pass_Validating(sender, e);
-            txtusername_Validating(sender, e);
+            txtemail_Validating(sender, e);
             check_valid = check_valid1 + check_valid2 + check_valid3 + check_valid4;
             return check_valid;
         }
@@ -176,7 +173,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void txtusername_Validating(object sender, CancelEventArgs e)
+        private void txtusername_Validating(object sender, EventArgs e)
         {
             /* Check if username is empty or has less than 5 characters */
             if (txtusername.Text == string.Empty)
@@ -200,7 +197,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        private void txtPassword_Validating(object sender, EventArgs e)
         {
             /* Check if password is empty or not match regex */
             if (txtPassword.Text == string.Empty)
@@ -225,7 +222,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void txtre_pass_Validating(object sender, CancelEventArgs e)
+        private void txtre_pass_Validating(object sender, EventArgs e)
         {
             /* Check if re-password is empty or doesn't match password */
             if (txtre_pass.Text != txtPassword.Text)
@@ -249,7 +246,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void txtemail_Validating(object sender, CancelEventArgs e)
+        private void txtemail_Validating(object sender, EventArgs e)
         {
             /* Check if email doesn't match regex */
             if (!EMAIL_REGEX.IsMatch(txtemail.Text) && txtemail.Text != "")

@@ -87,7 +87,6 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(235, 26);
             this.txtemail.TabIndex = 25;
-            this.txtemail.Validating += new System.ComponentModel.CancelEventHandler(this.txtemail_Validating);
             // 
             // accountBindingSource
             // 
@@ -146,7 +145,6 @@
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(235, 26);
             this.txtusername.TabIndex = 18;
-            this.txtusername.Validating += new System.ComponentModel.CancelEventHandler(this.txtusername_Validating);
             // 
             // txtPassword
             // 
@@ -157,7 +155,6 @@
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(235, 25);
             this.txtPassword.TabIndex = 29;
-            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
             // lblpass
             // 
@@ -186,7 +183,6 @@
             this.txtre_pass.PasswordChar = '•';
             this.txtre_pass.Size = new System.Drawing.Size(235, 25);
             this.txtre_pass.TabIndex = 31;
-            this.txtre_pass.Validating += new System.ComponentModel.CancelEventHandler(this.txtre_pass_Validating);
             // 
             // cbbRoleID
             // 
@@ -217,13 +213,7 @@
             // 
             // cmbgender
             // 
-            this.cmbgender.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "gender", true));
-            this.cmbgender.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.accountBindingSource, "gender", true));
-            this.cmbgender.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.accountBindingSource, "gender", true));
             this.cmbgender.FormattingEnabled = true;
-            this.cmbgender.Items.AddRange(new object[] {
-            "0",
-            "1"});
             this.cmbgender.Location = new System.Drawing.Point(206, 378);
             this.cmbgender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbgender.Name = "cmbgender";

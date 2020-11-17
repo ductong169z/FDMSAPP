@@ -46,12 +46,9 @@ namespace FMSAPP
                 pbAvatar.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
             }
 
-            ///* Load roles to combobox */
-            //cbbRoleID.DisplayMember = "name";
-            //cbbRoleID.ValueMember = "RoleID";
+            /* Load roles to combobox */
             var roleid = db.roles;
             cbbRoleID.DataSource = roleid.ToList();
-
         }
 
         /// <summary>
@@ -173,14 +170,16 @@ namespace FMSAPP
         }
 
         /// <summary>
-        /// Refresh user grid view
+        /// Refresh user grid view and reload database
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            userGridView.Refresh();
-            MessageBox.Show("The grid view has been refreshed!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            userGridView.Refresh(); // refresh data grid view
+            db.accounts.Load(); // reload database
+            accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null); // load accounts to data source (that are not deleted)
+            MessageBox.Show("The grid view has been refreshed and data has been reloaded!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         /// <summary>
