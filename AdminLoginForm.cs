@@ -14,20 +14,29 @@ namespace FMSAPP
     using System.Security.Cryptography;
     public partial class AdminLoginForm : Form
     {
-        animeEntities db;
-        // Constructor
+        animeEntities db; // database context to use
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public AdminLoginForm()
         {
             InitializeComponent();
-            this.AcceptButton = btnLogin;
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            this.CenterToScreen();
+            this.AcceptButton = btnLogin; // bind Enter to Login button
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // set picture box size mode
+            this.CenterToScreen(); // center the form
+
+            // close this form equals exit the app
             this.FormClosing += delegate
             {
                 Application.Exit();
             };
         }
-        // Get MD5 from given string
+
+        /// <summary>
+        /// Get MD5 from given string
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static string GetMD5(string s)
         {
             byte[] encodedPassword = new UTF8Encoding().GetBytes(s);
@@ -39,67 +48,47 @@ namespace FMSAPP
                 .ToLower();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            
-        }
-        // Reset input password
-        public void ResetPassword()
-        {
-            txtPassword.Text = "";
-        }
-        private void AdminLoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblUsername_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // On Login button click
+        /// <summary>
+        /// Login the Admin
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            db = new animeEntities();
+            db = new animeEntities(); // instantiate new database context
 
-            // By default, show no errors
+            // by default, show no errors
             lblError.Text = "";
 
-            var existUser = db.accounts.FirstOrDefault(a => a.username.Equals(txtUsername.Text));
+            var existUser = db.accounts.FirstOrDefault(a => a.username.Equals(txtUsername.Text)); // check if user exists in database
+
+            // if user exists in database
             if (existUser != null)
             {
-                System.Diagnostics.Debug.WriteLine(existUser.password);
-                System.Diagnostics.Debug.WriteLine(existUser.username);
+                // if password matches one in database
                 if (existUser.password.Equals(GetMD5(txtPassword.Text)))
                 {
-                    System.Diagnostics.Debug.WriteLine("CORRECT!");
+                    // if user is admin
                     if (existUser.RoleID.Equals(1))
                     {
-                        //show id existUser
+                        // show message indicates successful login
                         MessageBox.Show("You have been logged in!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // Hide this form
+                        
+                        // hide the form
                         this.Hide();
+
+                        /* Instantiate and show dash board */
                         DashBoard db = new DashBoard(existUser.AccountID.ToString());
-                        //show form MDI
-                        //MDIParent1 mp = new MDIParent1(existUser.AccountID.ToString());
-                        // Show info form
                         db.Show();
-                        //this.Close();// This line stops the hidden form from running in the background, which can lead to memory leaks and performance issues.
                     }
                     else
                     {
-                        // Show error
+                        // show error
                         lblError.Text = "Username or Password is incorrect!";
                     }
                 }
             }
-            // Show error
+            // show error
             lblError.Text = "Username or Password is incorrect!";
         }
     }
