@@ -71,7 +71,6 @@
             this.lblPassword.Size = new System.Drawing.Size(112, 32);
             this.lblPassword.TabIndex = 5;
             this.lblPassword.Text = "Password";
-            this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
             // 
             // lblUsername
             // 
@@ -83,12 +82,12 @@
             this.lblUsername.Size = new System.Drawing.Size(122, 32);
             this.lblUsername.TabIndex = 4;
             this.lblUsername.Text = "Username";
-            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::FMSAPP.Properties.Resources._10_2_anime_png_images;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(90, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -152,8 +151,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AdminLoginForm";
-            this.Text = "AdminLoginForm";
-            this.Load += new System.EventHandler(this.AdminLoginForm_Load);
+            this.Text = "Admin Login Form";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

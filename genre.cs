@@ -22,7 +22,7 @@ public partial class genre
 
     public string name { get; set; }
 
-    public Nullable<System.DateTime> created_at { get; set; }
+    public System.DateTime created_at { get; set; }
 
     public Nullable<System.DateTime> deleted_at { get; set; }
 

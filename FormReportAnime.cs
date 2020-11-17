@@ -28,7 +28,7 @@ namespace FMSAPP
             public string name { get; set; }
             public string releaseDate { get; set; }
             public string rating { get; set; }
-            public int episodes { get; set; }
+            public string episodes { get; set; }
             public string status { get; set; }
             public string duration { get; set; }
             public string description { get; set; }
@@ -48,9 +48,9 @@ namespace FMSAPP
                 SeasonID = p.SeasonID ?? -1,
                 type = p.type,
                 name = p.name,
-                releaseDate = p.releaseDate,
+                releaseDate = p.releaseDate.ToString(),
                 rating = p.rating,
-                episodes = p.episodes ?? -1,
+                episodes = p.episodes,
                 status = p.status,
                 duration = p.duration,
                 description = p.description,
