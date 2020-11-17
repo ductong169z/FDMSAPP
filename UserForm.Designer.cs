@@ -463,7 +463,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.userGridView);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximizeBox = false;
             this.Name = "UserForm";
             this.Text = "User Management Form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserForm_FormClosing);

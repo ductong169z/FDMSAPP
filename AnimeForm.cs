@@ -59,11 +59,8 @@ namespace FMSAPP
             db.animes.Load(); // load from database
             animeBindingSource.DataSource = db.animes.Local.Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)                                                                   
 
-            
-                // update anime poster to picture box
-                pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text));
-           
-          
+            // update anime poster to picture box
+            pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text));
 
             /* Load seasons to combo box */
             var season = db.seasons;
