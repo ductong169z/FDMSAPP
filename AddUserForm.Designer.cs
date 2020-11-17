@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbAddNewUser = new System.Windows.Forms.Label();
             this.lblemail = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -44,31 +44,31 @@
             this.lblre_pass = new System.Windows.Forms.Label();
             this.txtre_pass = new System.Windows.Forms.TextBox();
             this.cbbRoleID = new System.Windows.Forms.ComboBox();
+            this.roleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblRoleId = new System.Windows.Forms.Label();
             this.cmbgender = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbGender = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.currentDate = new System.Windows.Forms.DateTimePicker();
             this.accountBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnChoose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.roleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label6
+            // lbAddNewUser
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(135, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 29);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "ADD NEW USER";
+            this.lbAddNewUser.AutoSize = true;
+            this.lbAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAddNewUser.Location = new System.Drawing.Point(135, 26);
+            this.lbAddNewUser.Name = "lbAddNewUser";
+            this.lbAddNewUser.Size = new System.Drawing.Size(196, 29);
+            this.lbAddNewUser.TabIndex = 18;
+            this.lbAddNewUser.Text = "ADD NEW USER";
             // 
             // lblemail
             // 
@@ -204,14 +204,18 @@
             this.cbbRoleID.TabIndex = 34;
             this.cbbRoleID.ValueMember = "RoleID";
             // 
-            // label3
+            // roleBindingSource1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 526);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 20);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Role ID (required):";
+            this.roleBindingSource1.DataSource = typeof(FMSAPP.role);
+            // 
+            // lblRoleId
+            // 
+            this.lblRoleId.AutoSize = true;
+            this.lblRoleId.Location = new System.Drawing.Point(14, 526);
+            this.lblRoleId.Name = "lblRoleId";
+            this.lblRoleId.Size = new System.Drawing.Size(139, 20);
+            this.lblRoleId.TabIndex = 33;
+            this.lblRoleId.Text = "Role ID (required):";
             // 
             // cmbgender
             // 
@@ -228,14 +232,14 @@
             this.cmbgender.Size = new System.Drawing.Size(235, 28);
             this.cmbgender.TabIndex = 36;
             // 
-            // label2
+            // lbGender
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 381);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 20);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Gender:";
+            this.lbGender.AutoSize = true;
+            this.lbGender.Location = new System.Drawing.Point(14, 381);
+            this.lbGender.Name = "lbGender";
+            this.lbGender.Size = new System.Drawing.Size(67, 20);
+            this.lbGender.TabIndex = 35;
+            this.lbGender.Text = "Gender:";
             // 
             // btnAdd
             // 
@@ -284,10 +288,6 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Current Date:";
             // 
-            // roleBindingSource1
-            // 
-            this.roleBindingSource1.DataSource = typeof(FMSAPP.role);
-            // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -298,9 +298,9 @@
             this.Controls.Add(this.currentDate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cmbgender);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbGender);
             this.Controls.Add(this.cbbRoleID);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblRoleId);
             this.Controls.Add(this.lblre_pass);
             this.Controls.Add(this.txtre_pass);
             this.Controls.Add(this.lblpass);
@@ -313,7 +313,7 @@
             this.Controls.Add(this.txtavatar);
             this.Controls.Add(this.lblfullname);
             this.Controls.Add(this.txtfullname);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbAddNewUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
@@ -322,9 +322,9 @@
             this.Text = "AddUserForm";
             this.Load += new System.EventHandler(this.AddUserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,7 +332,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbAddNewUser;
         private System.Windows.Forms.Label lblemail;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label lblavatar;
@@ -346,9 +346,9 @@
         private System.Windows.Forms.Label lblre_pass;
         private System.Windows.Forms.TextBox txtre_pass;
         private System.Windows.Forms.ComboBox cbbRoleID;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblRoleId;
         private System.Windows.Forms.ComboBox cmbgender;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbGender;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.BindingSource accountBindingSource;
         private System.Windows.Forms.BindingSource accountBindingSource1;
