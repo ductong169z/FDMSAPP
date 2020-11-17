@@ -123,7 +123,8 @@ namespace FMSAPP
 
         private void bnt_searchdate_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = db.seasons.Where(x => x.created_at.Value).ToList();
+            DateTime dt = searchDate.Value;
+            dataGridView1.DataSource = db.seasons.Where(t => DbFunctions.TruncateTime(t.created_at) >= dt);
             
         }
     }
