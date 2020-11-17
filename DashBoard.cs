@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace FMSAPP
 {
+    /// <summary>
+    /// Dashboard Form
+    /// </summary>
     public partial class DashBoard : Form
     {
         animeEntities db; // database context to use
@@ -47,23 +50,23 @@ namespace FMSAPP
             //count user
             var countuser = db.accounts.Count(t => t.RoleID == 2 && t.deleted_at == null);
             lbUser.Text = countuser.ToString();
-            
+
             //count admin
             var countadmin = db.accounts.Count(t => t.RoleID == 1 && t.deleted_at == null);
             lbAdmin.Text = countadmin.ToString();
-            
+
             //count genre
             Int32 countgenre = db.genres.Count();
             lbGenre.Text = countgenre.ToString();
-            
+
             //count season
             Int32 countseason = db.seasons.Count();
             lbSeason.Text = countseason.ToString();
-            
+
             //count studio
             Int32 countstudio = db.studios.Count();
             lbStudio.Text = countstudio.ToString();
-            
+
             //count anime
             Int32 countanime = db.animes.Count(t => t.deleted_at == null);
             lbAnime.Text = countanime.ToString();

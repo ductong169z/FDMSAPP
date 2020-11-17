@@ -57,10 +57,17 @@ namespace FMSAPP
         {
             db = new animeEntities(); // instantiate new database context
             db.animes.Load(); // load from database
-            animeBindingSource.DataSource = db.animes.Local.Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)                                                                   
+            animeBindingSource.DataSource = db.animes.Local.Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
 
-            // update anime poster to picture box
-            pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text));
+            try
+            {
+                // update anime poster to picture box
+                pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot load anime poster", "Loading Poster Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             /* Load seasons to combo box */
             var season = db.seasons;
@@ -278,8 +285,20 @@ namespace FMSAPP
                     return;
                 }
 
+
+
                 try
                 {
+                    db.SaveChanges(); // save changes to database
+
+                    /* Updates poster */
+                    int n = animeGridView.CurrentRow.Index; // selected row index
+                    int updateId = Convert.ToInt32(animeGridView.Rows[n].Cells[0].Value); // get anime ID
+                    anime updateAnime = db.animes.FirstOrDefault(a => a.AnimeID == updateId); // get anime object using ID
+
+                    updateAnime.poster = txtPos.Text;
+                    /* Updates to database */
+                    db.animes.AddOrUpdate(updateAnime);
                     db.SaveChanges(); // save changes to database
 
                     // update binding source data
@@ -377,11 +396,6 @@ namespace FMSAPP
             pbPoster.Image = null;
         }
 
-        private void pbPoster_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         /// <summary>
         /// Find animes having find value in name
@@ -449,15 +463,25 @@ namespace FMSAPP
             // if user clicks OK, load the image
             if (open.ShowDialog() == DialogResult.OK)
             {
-                txtPos.Text = Path.GetFileName(open.FileName);
-                try
+                int count = 1;
+
+                string fileNameOnly = Path.GetFileNameWithoutExtension(open.FileName);
+                string extension = Path.GetExtension(open.FileName);
+                string path = Path.GetDirectoryName(open.FileName);
+                string newFullPath = open.FileName;
+                if (txtPos.Text == "")
                 {
-                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(open.FileName), true);
+                    txtPos.Text = Path.GetFileName(open.FileName);
                 }
-                catch (Exception ex)
+                while (File.Exists(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text)))
                 {
-                    MessageBox.Show("Don't change picture from the source file!", "This admin is trying to change picture in source", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                    newFullPath = Path.Combine(@"../../../FDMSWEB/Content/Images/Posters/", tempFileName + extension);
+                    txtPos.Text = Path.GetFileName(newFullPath);
+                    newFullPath = Path.Combine(path, tempFileName + extension);
+                    txtPos.Text = Path.GetFileName(newFullPath);
                 }
+                File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(newFullPath));
             }
         }
 
