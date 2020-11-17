@@ -57,7 +57,7 @@ namespace FMSAPP
         {
             db = new animeEntities(); // instantiate new database context
             db.animes.Load(); // load from database
-            animeBindingSource.DataSource = db.animes.Local.Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)                                                                   
+            animeBindingSource.DataSource = db.animes.Local.Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
 
             try
             {
@@ -285,8 +285,20 @@ namespace FMSAPP
                     return;
                 }
 
+
+
                 try
                 {
+                    db.SaveChanges(); // save changes to database
+
+                    /* Updates poster */
+                    int n = animeGridView.CurrentRow.Index; // selected row index
+                    int updateId = Convert.ToInt32(animeGridView.Rows[n].Cells[0].Value); // get anime ID
+                    anime updateAnime = db.animes.FirstOrDefault(a => a.AnimeID == updateId); // get anime object using ID
+
+                    updateAnime.poster = txtPos.Text;
+                    /* Updates to database */
+                    db.animes.AddOrUpdate(updateAnime);
                     db.SaveChanges(); // save changes to database
 
                     // update binding source data
@@ -466,6 +478,8 @@ namespace FMSAPP
                     string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
                     newFullPath = Path.Combine(@"../../../FDMSWEB/Content/Images/Posters/", tempFileName + extension);
                     txtPos.Text = Path.GetFileName(newFullPath);         
+                    newFullPath = Path.Combine(path, tempFileName + extension);
+                    txtPos.Text = Path.GetFileName(newFullPath);
                 }
                 File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(newFullPath));
             }
