@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace FMSAPP
 {
+    /// <summary>
+    /// Dashboard Form
+    /// </summary>
     public partial class DashBoard : Form
     {
         animeEntities db; // database context to use
