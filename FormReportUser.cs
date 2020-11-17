@@ -58,7 +58,8 @@ namespace FMSAPP
         {
             db = new animeEntities();
             string id = textBox1.Text.ToString();
-            //"Select * from  account where AccountID = `" + id + "`"
+            string tipe = textBox1.Text.ToString();
+         
             db.accounts.Load();
             CrystalReportUser user = new CrystalReportUser();
             user.SetDataSource(db.accounts.Select(p => new UserRemake
@@ -73,7 +74,29 @@ namespace FMSAPP
             }).ToList());
             crystalReportViewer1.ReportSource = user;
             crystalReportViewer1.SelectionFormula = "{account.AccountID} =" +id;
+            crystalReportViewer1.SelectionFormula = "{account.RoleID} =" + tipe ;
             crystalReportViewer1.RefreshReport();
+        }
+        public void LoadGridData()
+        {
+            db = new animeEntities();
+            db.accounts.Load();
+            CrystalReportUser user = new CrystalReportUser();
+            user.SetDataSource(db.accounts.Select(p => new UserRemake
+            {
+                AccountID = p.AccountID,
+                RoleID = p.RoleID,
+                username = p.username,
+                fullname = p.fullname,
+                avatar = p.avatar,
+                email = p.email,
+                gender = p.gender ?? 0
+            }).ToList());
+            crystalReportViewer1.ReportSource = user;
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoadGridData();
         }
     }
 }
