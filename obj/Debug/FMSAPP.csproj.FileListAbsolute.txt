@@ -193,4 +193,3 @@ D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.SeasonForm.resources
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.GenreForm.resources
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.StudioForm.resources
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csprojAssemblyReference.cache

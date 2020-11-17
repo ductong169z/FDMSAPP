@@ -9,15 +9,14 @@
         <EntityTypeShape EntityType="animeModel.anime" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="animeModel.genre" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="animeModel.list" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="animeModel.list_history" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="animeModel.review" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="animeModel.role" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="animeModel.season" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="animeModel.studio" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="animeModel.anime_studio" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="animeModel.genre_anime" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="animeModel.Admin" ManuallyRouted="false" />
-        <AssociationConnector Association="animeModel.FKAccount758290" />
-        <AssociationConnector Association="animeModel.FKAnime_Stud329273" />
-        <AssociationConnector Association="animeModel.FKAnime_Stud650632" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

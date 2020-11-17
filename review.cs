@@ -12,11 +12,14 @@ namespace FMSAPP
     using System;
     using System.Collections.Generic;
     
-    public partial class season
+    public partial class review
     {
-        public int SeasonID { get; set; }
-        public string name { get; set; }
-        public Nullable<System.DateTime> created_at { get; set; }
+        public long ReviewID { get; set; }
+        public int AnimeID { get; set; }
+        public int AccountID { get; set; }
+        public int score { get; set; }
+        public string content { get; set; }
+        public System.DateTime created_at { get; set; }
         public Nullable<System.DateTime> deleted_at { get; set; }
     }
 }
