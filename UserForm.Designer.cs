@@ -42,8 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbRoleId = new System.Windows.Forms.Label();
             this.cbbRoleID = new System.Windows.Forms.ComboBox();
-            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.animeDataSet1 = new FMSAPP.animeDataSet1();
             this.lbFullName = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.lbAvatar = new System.Windows.Forms.Label();
@@ -56,7 +54,6 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.roleTableAdapter = new FMSAPP.animeDataSet1TableAdapters.roleTableAdapter();
             this.currentDate = new System.Windows.Forms.DateTimePicker();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnChoose = new System.Windows.Forms.Button();
@@ -68,8 +65,6 @@
             this.roleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.userGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -211,16 +206,6 @@
             this.cbbRoleID.TabIndex = 6;
             this.cbbRoleID.ValueMember = "RoleID";
             // 
-            // roleBindingSource
-            // 
-            this.roleBindingSource.DataMember = "role";
-            this.roleBindingSource.DataSource = this.animeDataSet1;
-            // 
-            // animeDataSet1
-            // 
-            this.animeDataSet1.DataSetName = "animeDataSet1";
-            this.animeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // lbFullName
             // 
             this.lbFullName.AutoSize = true;
@@ -355,10 +340,6 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // roleTableAdapter
-            // 
-            this.roleTableAdapter.ClearBeforeFill = true;
-            // 
             // currentDate
             // 
             this.currentDate.Enabled = false;
@@ -488,8 +469,6 @@
             this.Load += new System.EventHandler(this.UserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -516,9 +495,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
-        private animeDataSet1 animeDataSet1;
-        private System.Windows.Forms.BindingSource roleBindingSource;
-        private animeDataSet1TableAdapters.roleTableAdapter roleTableAdapter;
         private System.Windows.Forms.DateTimePicker currentDate;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnChoose;
