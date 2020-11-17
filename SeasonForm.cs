@@ -40,16 +40,13 @@ namespace FMSAPP
             txtName.Text = seasonGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtCreated_at.Text = seasonGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
-<<<<<<< HEAD
         DataTable dt = new DataTable("Season");
-=======
 
         /// <summary>
         /// Load data to form when form loads
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
->>>>>>> 05fad2fdaf1d104d71d83cf7bbec4e826e45b7c0
         private void SeasonForm_Load(object sender, EventArgs e)
         {
             db = new animeEntities(); // instantiate new database context
@@ -162,33 +159,21 @@ namespace FMSAPP
             btnAdd.Enabled = true;
         }
 
-<<<<<<< HEAD
         private void bntSearch_Click(object sender, EventArgs e)
         {
             if (!txtSearch.Text.Equals(""))
             {
-                dataGridView1.DataSource = db.seasons.Where(x => x.name.Contains(txtSearch.Text)).ToList();
+                seasonGridView.DataSource = db.seasons.Where(x => x.name.Contains(txtSearch.Text)).ToList();
             }
-            else
-            {
-                MessageBox.Show("Input in search name is null ! Please enter the name of season !!");
-            }
+          
             
             
         }
 
         private void bnt_searchdate_Click(object sender, EventArgs e)
-=======
-        /// <summary>
-        /// Search for a season
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnSearch_Click(object sender, EventArgs e)
->>>>>>> 05fad2fdaf1d104d71d83cf7bbec4e826e45b7c0
         {
             DateTime dt = searchDate.Value;
-            dataGridView1.DataSource = db.seasons.Where(t => DbFunctions.TruncateTime(t.created_at) >= dt);
+            seasonGridView.DataSource = db.seasons.Where(t => DbFunctions.TruncateTime(t.created_at) >= dt);
             
         }
     }

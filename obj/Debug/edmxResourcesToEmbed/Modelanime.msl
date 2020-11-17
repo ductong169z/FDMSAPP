@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="animeModelStoreContainer" CdmEntityContainer="animeEntities">
+    <EntitySetMapping Name="accounts">
+      <EntityTypeMapping TypeName="animeModel.account">
+        <MappingFragment StoreEntitySet="account">
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="animes">
+      <EntityTypeMapping TypeName="animeModel.anime">
+        <MappingFragment StoreEntitySet="anime">
+          <ScalarProperty Name="AnimeID" ColumnName="AnimeID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="SeasonID" ColumnName="SeasonID" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="releaseDate" ColumnName="releaseDate" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="episodes" ColumnName="episodes" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="poster" ColumnName="poster" />
+          <ScalarProperty Name="trailer" ColumnName="trailer" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genres">
+      <EntityTypeMapping TypeName="animeModel.genre">
+        <MappingFragment StoreEntitySet="genre">
+          <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lists">
+      <EntityTypeMapping TypeName="animeModel.list">
+        <MappingFragment StoreEntitySet="list">
+          <ScalarProperty Name="AnimeID" ColumnName="AnimeID" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="progress" ColumnName="progress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="animeModel.role">
+        <MappingFragment StoreEntitySet="role">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="slug" ColumnName="slug" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seasons">
+      <EntityTypeMapping TypeName="animeModel.season">
+        <MappingFragment StoreEntitySet="season">
+          <ScalarProperty Name="SeasonID" ColumnName="SeasonID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="studios">
+      <EntityTypeMapping TypeName="animeModel.studio">
+        <MappingFragment StoreEntitySet="studio">
+          <ScalarProperty Name="StudioID" ColumnName="StudioID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="anime_studio">
+      <EntityTypeMapping TypeName="animeModel.anime_studio">
+        <MappingFragment StoreEntitySet="anime_studio">
+          <ScalarProperty Name="AnimeID" ColumnName="AnimeID" />
+          <ScalarProperty Name="StudioID" ColumnName="StudioID" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genre_anime">
+      <EntityTypeMapping TypeName="animeModel.genre_anime">
+        <MappingFragment StoreEntitySet="genre_anime">
+          <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+          <ScalarProperty Name="AnimeID" ColumnName="AnimeID" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
