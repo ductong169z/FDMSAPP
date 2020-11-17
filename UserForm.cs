@@ -20,7 +20,7 @@ namespace FMSAPP
             InitializeComponent();
             DateTimePicker dt = new DateTimePicker();
             dateTimeDelete.Value = DateTime.Now;
-            dateTimeUpdate.Value = DateTime.Now;
+            currentDate.Value = DateTime.Now;
             this.WindowState = FormWindowState.Normal;
             this.CenterToScreen();
         }
@@ -45,11 +45,11 @@ namespace FMSAPP
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int n = dataGridView1.CurrentRow.Index;
-            dataGridView1.Rows[n].Cells[8].Value = dateTimeDelete.Value.ToString();
-            CurrencyManager currencyManager1 = (CurrencyManager)dataGridView1.BindingContext[dataGridView1.DataSource];
+            int n = userGridView.CurrentRow.Index;
+            userGridView.Rows[n].Cells[8].Value = dateTimeDelete.Value.ToString();
+            CurrencyManager currencyManager1 = (CurrencyManager)userGridView.BindingContext[userGridView.DataSource];
             currencyManager1.SuspendBinding();
-            dataGridView1.Rows[n].Visible = false;
+            userGridView.Rows[n].Visible = false;
             currencyManager1.ResumeBinding();
             db.SaveChanges();
             MessageBox.Show("Your data has been successfully deleted!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -57,8 +57,8 @@ namespace FMSAPP
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int n = dataGridView1.CurrentRow.Index;
-            dataGridView1.Rows[n].Cells[9].Value = dateTimeUpdate.Value.ToString();
+            int n = userGridView.CurrentRow.Index;
+            userGridView.Rows[n].Cells[9].Value = currentDate.Value.ToString();
             db.SaveChanges();
             MessageBox.Show("Your data has been successfully saved", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -93,7 +93,7 @@ namespace FMSAPP
 
         private void btnRefesh_Click(object sender, EventArgs e)
         {
-            dataGridView1.Refresh();
+            userGridView.Refresh();
         }
         OpenFileDialog open;
         private void btnChoose_Click(object sender, EventArgs e)
@@ -120,13 +120,13 @@ namespace FMSAPP
         {
             if (txtAvatar.Text == "")
             {
-                testpicturebox.Image = null;
+                pbAvatar.Image = null;
             }
             else
             {
                 try
                 {
-                    testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+                    pbAvatar.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
                 }
                 catch (Exception exc)
                 {
