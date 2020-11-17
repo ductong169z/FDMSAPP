@@ -40,7 +40,7 @@ namespace FMSAPP
         {
             db = new animeEntities(); // instantiate database context
             db.accounts.Load(); // load data to database
-            accountBindingSource.DataSource = db.accounts.Local; // load data to data source
+            accountBindingSource.DataSource = db.accounts.Local.ToBindingList(); // load data to data source
 
             /* Load data to role combo box */
             var roleid = db.roles;

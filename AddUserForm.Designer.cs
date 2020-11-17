@@ -81,7 +81,6 @@
             // 
             // txtemail
             // 
-            this.txtemail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "email", true));
             this.txtemail.Location = new System.Drawing.Point(206, 337);
             this.txtemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtemail.Name = "txtemail";
@@ -103,7 +102,6 @@
             // 
             // txtavatar
             // 
-            this.txtavatar.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "avatar", true));
             this.txtavatar.Location = new System.Drawing.Point(206, 287);
             this.txtavatar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtavatar.Name = "txtavatar";
@@ -121,7 +119,6 @@
             // 
             // txtfullname
             // 
-            this.txtfullname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "fullname", true));
             this.txtfullname.Location = new System.Drawing.Point(206, 234);
             this.txtfullname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtfullname.Name = "txtfullname";
@@ -139,7 +136,6 @@
             // 
             // txtusername
             // 
-            this.txtusername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "username", true));
             this.txtusername.Location = new System.Drawing.Point(206, 184);
             this.txtusername.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtusername.Name = "txtusername";
@@ -187,7 +183,6 @@
             // cbbRoleID
             // 
             this.cbbRoleID.BackColor = System.Drawing.SystemColors.Window;
-            this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.accountBindingSource, "RoleID", true));
             this.cbbRoleID.DataSource = this.roleBindingSource1;
             this.cbbRoleID.DisplayMember = "name";
             this.cbbRoleID.FormattingEnabled = true;

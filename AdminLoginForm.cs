@@ -74,8 +74,11 @@ namespace FMSAPP
             var existUser = db.accounts.FirstOrDefault(a => a.username.Equals(txtUsername.Text));
             if (existUser != null)
             {
+                System.Diagnostics.Debug.WriteLine(existUser.password);
+                System.Diagnostics.Debug.WriteLine(existUser.username);
                 if (existUser.password.Equals(GetMD5(txtPassword.Text)))
                 {
+                    System.Diagnostics.Debug.WriteLine("CORRECT!");
                     if (existUser.RoleID.Equals(1))
                     {
                         //show id existUser
