@@ -13,30 +13,51 @@ namespace FMSAPP
 {
     public partial class AdminForm : Form
     {
-        animeEntities db;
+        animeEntities db; // database context to use
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public AdminForm()
         {
             InitializeComponent();
+
+            this.CenterToScreen(); // center the form
         }
 
+        /// <summary>
+        /// Triggers when the form loads
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            db = new animeEntities();
-            db.accounts.Load();
-            accountBindingSource.DataSource = db.accounts.Local;
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            db = new animeEntities(); // instantiate new database context
+            db.accounts.Load(); // load from database
+            accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null && a.RoleID == 1); // load all admins that are not deleted
+        }
+
+        /// <summary>
+        /// Format all numeric gender values to corresponding strings to display
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void adminGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // check if the column is gender
+            if (this.adminGridView.Columns[e.ColumnIndex].Index == 6)
             {
-                if (dataGridView1.Rows[i].Cells[8].Value == null && dataGridView1.Rows[i].Cells[1].Value?.ToString() == "1")
+                if (e.Value.ToString().Equals("1"))
                 {
-                    dataGridView1.Rows[i].Visible = true;
+                    e.Value = "Male";
                 }
-                else if (dataGridView1.Rows.Cast<DataGridViewRow>()
-.Any(c => string.IsNullOrWhiteSpace(c.Cells[8].Value?.ToString())))
+                else if (e.Value.ToString().Equals("2"))
                 {
-                    CurrencyManager currencyManager1 = (CurrencyManager)dataGridView1.BindingContext[dataGridView1.DataSource];
-                    currencyManager1.SuspendBinding();
-                    dataGridView1.Rows[i].Visible = false;
-                    currencyManager1.ResumeBinding();
+                    e.Value = "Female";
+                }
+                else
+                {
+                    e.Value = "Other";
                 }
             }
         }

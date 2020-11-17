@@ -29,29 +29,12 @@ namespace FMSAPP
         {
             db = new animeEntities();
             db.accounts.Load();
-            accountBindingSource.DataSource = db.accounts.Local;
+            accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null && a.RoleID == 2);
 
             //testpicturebox.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
             var roleid = db.roles;
             cbbRoleID.DataSource = roleid.ToList();
             cbbRoleID.DisplayMember = "RoleID";
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                if (dataGridView1.Rows[i].Cells[8].Value == null && dataGridView1.Rows[i].Cells[2].Value?.ToString() == "2")
-                /* if (dataGridView1.Rows.Cast<DataGridViewRow>()
-      .Any(c => string.IsNullOrWhiteSpace(c.Cells[13].Value?.ToString())))*/
-                {
-                    dataGridView1.Rows[i].Visible = true;
-                }
-                else if (dataGridView1.Rows.Cast<DataGridViewRow>()
-     .Any(c => string.IsNullOrWhiteSpace(c.Cells[8].Value?.ToString())))
-                {
-                    CurrencyManager currencyManager1 = (CurrencyManager)dataGridView1.BindingContext[dataGridView1.DataSource];
-                    currencyManager1.SuspendBinding();
-                    dataGridView1.Rows[i].Visible = false;
-                    currencyManager1.ResumeBinding();
-                }
-            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

@@ -134,3 +134,4 @@ C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csproj.CoreCompileInputs.cac
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csproj.CopyComplete
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.exe
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.pdb
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csprojAssemblyReference.cache

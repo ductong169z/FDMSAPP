@@ -15,11 +15,14 @@ using System.Windows.Forms.VisualStyles;
 
 namespace FMSAPP
 {
+    /// <summary>
+    /// Anime Form Class
+    /// </summary>
     public partial class AnimeForm : Form
     {
         DateTime dateTimeDelete; // deleted date
         string adminId; // current logged in admin id
-        animeEntities db; // database context
+        animeEntities db; // database context to use
         int check_valid1, check_valid2, check_valid3, check_valid4, check_valid; // validate inputs
         /* Regex constraints */
         static Regex LINK_REGEX = new Regex(@"^(https?\:\/\/)?(www\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)|(\&[\w\-]+)(\S+)?$");
@@ -40,7 +43,7 @@ namespace FMSAPP
             txtUrAdminId.Text = adminId; // set own admin id
             this.adminId = adminId; // set admin id to global variable
 
-            this.Width = Screen.PrimaryScreen.WorkingArea.Width; // set form width
+            this.Width = Screen.PrimaryScreen.WorkingArea.Width; // set form width to cover screen width
 
             this.CenterToScreen(); // center form
         }
