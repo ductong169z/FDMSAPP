@@ -11,74 +11,121 @@ using System.Windows.Forms;
 
 namespace FMSAPP
 {
+    /// <summary>
+    /// Class for Season Form
+    /// </summary>
     public partial class SeasonForm : Form
     {
-        animeEntities db;
+        animeEntities db; // database context to use
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public SeasonForm()
         {
             InitializeComponent();
+
+            this.CenterToScreen(); // center the form
         }
 
+        /// <summary>
+        /// Load data from cell to text boxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtCreated_at.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            /* Bind data from cell to text boxes manually */
+            txtID.Text = seasonGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtName.Text = seasonGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtCreated_at.Text = seasonGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
 
+        /// <summary>
+        /// Load data to form when form loads
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SeasonForm_Load(object sender, EventArgs e)
         {
-
-            db = new animeEntities();
-            db.seasons.Load();
-            seasonBindingSource.DataSource = db.seasons.ToList();
+            db = new animeEntities(); // instantiate new database context
+            db.seasons.Load(); // load seasons to form
+            seasonBindingSource.DataSource = db.seasons.ToList(); // update binding source data source
         }
 
+        /// <summary>
+        /// Add new season to database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            // check if name is null or empty 
             if (String.IsNullOrEmpty(txtName.Text))
             {
                 MessageBox.Show("Name field cannot be empty!", "Required !");
                 return;
             }
-            //create new object of season
+            // create new object of season
             season seasons = new season();
-            // set value for object by value from texeditor
-            //cast value to int and set to ID
+
+            // set value for object by value from text boxes
             seasons.name = txtName.Text;
             seasons.created_at = DateTime.Today;
-            //add new new data to datasource
+
+            // add new new data to datasource
             db.seasons.Add(seasons);
-            //save change action
+
+            // save changes to database
             db.SaveChanges();
-            MessageBox.Show("Insert successfull", "Sucessfull");
-            dataGridView1.DataSource = db.seasons.ToList();
+            MessageBox.Show("Insert successful", "Sucessful");
+
+            seasonGridView.DataSource = db.seasons.ToList(); // update datasource
         }
 
+        /// <summary>
+        /// Update a season
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtName.Text)) 
-                {
-                MessageBox.Show("Name field cannot be empty!", "Required !");
+            // check if season is null or empty
+            if (String.IsNullOrEmpty(txtName.Text))
+            {
+                MessageBox.Show("Name field cannot be empty!", "Required!");
                 return;
             }
-            int id = Convert.ToInt32(txtID.Text);
-            season seasons = new season();
-            seasons = db.seasons.FirstOrDefault(ss => ss.SeasonID == id);
+
+            int id = Convert.ToInt32(txtID.Text); // cast value to int and set to ID
+            season seasons = new season(); // create new object of season
+            seasons = db.seasons.FirstOrDefault(ss => ss.SeasonID == id); // get the object season to update
+            
+            /* Update season properties */
             seasons.SeasonID = id;
             seasons.name = txtName.Text;
             seasons.created_at = Convert.ToDateTime(txtCreated_at.Text);
+
+            // save changes to database
             db.SaveChanges();
-            dataGridView1.DataSource = db.seasons.ToList();
+            MessageBox.Show("Update successful", "Sucessful");
+
+            seasonGridView.DataSource = db.seasons.ToList(); // update datasource
         }
 
+        /// <summary>
+        /// Delete a season
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtID.Text);
-            //create new object of season
+            int id = Convert.ToInt32(txtID.Text); // cast value to int and set to ID
+            
+            // create new object of season
             season seasons = new season();
             seasons = db.seasons.FirstOrDefault(ss => ss.SeasonID == id);
+
             // find obj in datasource exist or not
             if (seasons != null)
             {
@@ -89,16 +136,20 @@ namespace FMSAPP
             {
                 MessageBox.Show("Please enter another ID that doesn't exist in database!", "Not found ID!");
                 return;
-
             }
-            MessageBox.Show("Delete successfull!", "Successfull!");
+            MessageBox.Show("Delete successful!", "Successful!");
 
-            //save change action
+            // save changes to database
             db.SaveChanges();
-            dataGridView1.DataSource = db.seasons.ToList();
 
+            seasonGridView.DataSource = db.seasons.ToList(); // update datasource
         }
 
+        /// <summary>
+        /// Clear all text boxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtID.Text = null;
@@ -107,11 +158,11 @@ namespace FMSAPP
             btnAdd.Enabled = true;
         }
 
-        private void separatorControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Search for a season
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSearch_Click(object sender, EventArgs e)
         {
 

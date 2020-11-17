@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.panel2 = new System.Windows.Forms.Panel();
             this.typeChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -57,6 +57,8 @@
             this.lbStudio = new System.Windows.Forms.Label();
             this.lbTotalStudios = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnUserReport = new System.Windows.Forms.Button();
+            this.btnAnimeReport = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -103,19 +105,19 @@
             // 
             // typeChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.typeChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.typeChart.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.typeChart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.typeChart.Legends.Add(legend4);
             this.typeChart.Location = new System.Drawing.Point(128, 0);
             this.typeChart.Name = "typeChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "s1";
-            series1.XValueMember = "type";
-            series1.YValueMembers = "0";
-            this.typeChart.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Legend = "Legend1";
+            series4.Name = "s1";
+            series4.XValueMember = "type";
+            series4.YValueMembers = "0";
+            this.typeChart.Series.Add(series4);
             this.typeChart.Size = new System.Drawing.Size(501, 319);
             this.typeChart.TabIndex = 5;
             this.typeChart.Text = "chart1";
@@ -167,6 +169,7 @@
             this.btnStudio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnStudio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnStudio.UseVisualStyleBackColor = true;
+            this.btnStudio.Click += new System.EventHandler(this.btnStudio_Click);
             // 
             // btnGenre
             // 
@@ -183,6 +186,7 @@
             this.btnGenre.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGenre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnGenre.UseVisualStyleBackColor = true;
+            this.btnGenre.Click += new System.EventHandler(this.btnGenre_Click);
             // 
             // btnAnime
             // 
@@ -257,7 +261,6 @@
             this.lbDashboard.TabIndex = 0;
             this.lbDashboard.Text = "Admin\r\nDashboard\r\n";
             this.lbDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbDashboard.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbAnime
             // 
@@ -394,12 +397,49 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.Controls.Add(this.btnUserReport);
+            this.panel4.Controls.Add(this.btnAnimeReport);
             this.panel4.Controls.Add(this.btnLogout);
             this.panel4.Location = new System.Drawing.Point(172, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(733, 55);
             this.panel4.TabIndex = 21;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // btnUserReport
+            // 
+            this.btnUserReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnUserReport.FlatAppearance.BorderSize = 0;
+            this.btnUserReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserReport.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnUserReport.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnUserReport.Image = ((System.Drawing.Image)(resources.GetObject("btnUserReport.Image")));
+            this.btnUserReport.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnUserReport.Location = new System.Drawing.Point(38, 3);
+            this.btnUserReport.Name = "btnUserReport";
+            this.btnUserReport.Size = new System.Drawing.Size(202, 49);
+            this.btnUserReport.TabIndex = 2;
+            this.btnUserReport.Text = "User Report";
+            this.btnUserReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnUserReport.UseVisualStyleBackColor = true;
+            this.btnUserReport.Click += new System.EventHandler(this.btnUserReport_Click);
+            // 
+            // btnAnimeReport
+            // 
+            this.btnAnimeReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnAnimeReport.FlatAppearance.BorderSize = 0;
+            this.btnAnimeReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnimeReport.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnAnimeReport.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAnimeReport.Image = ((System.Drawing.Image)(resources.GetObject("btnAnimeReport.Image")));
+            this.btnAnimeReport.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnAnimeReport.Location = new System.Drawing.Point(283, 3);
+            this.btnAnimeReport.Name = "btnAnimeReport";
+            this.btnAnimeReport.Size = new System.Drawing.Size(222, 49);
+            this.btnAnimeReport.TabIndex = 1;
+            this.btnAnimeReport.Text = "Anime Report";
+            this.btnAnimeReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAnimeReport.UseVisualStyleBackColor = true;
+            this.btnAnimeReport.Click += new System.EventHandler(this.btnAnimeReport_Click);
             // 
             // btnLogout
             // 
@@ -417,7 +457,7 @@
             this.btnLogout.Text = "Log Out";
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnAdmin1_Click);
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panel5
             // 
@@ -495,7 +535,6 @@
             this.pbAnime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbAnime.TabIndex = 24;
             this.pbAnime.TabStop = false;
-            this.pbAnime.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pbSeasons
             // 
@@ -518,7 +557,6 @@
             this.pbStudios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbStudios.TabIndex = 21;
             this.pbStudios.TabStop = false;
-            this.pbStudios.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pbGenres
             // 
@@ -654,5 +692,7 @@
         private System.Windows.Forms.Button btnSeason;
         private System.Windows.Forms.Button btnStudio;
         private System.Windows.Forms.Button btnGenre;
+        private System.Windows.Forms.Button btnUserReport;
+        private System.Windows.Forms.Button btnAnimeReport;
     }
 }

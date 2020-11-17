@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.adminGridView = new System.Windows.Forms.DataGridView();
-            this.lbAllAdmin = new System.Windows.Forms.Label();
             this.accountIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +39,7 @@
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lbAllAdmin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.adminGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -65,24 +65,16 @@
             this.adminGridView.DataSource = this.accountBindingSource;
             this.adminGridView.Location = new System.Drawing.Point(0, 94);
             this.adminGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.adminGridView.MultiSelect = false;
             this.adminGridView.Name = "adminGridView";
             this.adminGridView.ReadOnly = true;
             this.adminGridView.RowHeadersVisible = false;
             this.adminGridView.RowHeadersWidth = 51;
             this.adminGridView.RowTemplate.Height = 24;
+            this.adminGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.adminGridView.Size = new System.Drawing.Size(904, 453);
             this.adminGridView.TabIndex = 0;
             this.adminGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.adminGridView_CellFormatting);
-            // 
-            // lbAllAdmin
-            // 
-            this.lbAllAdmin.AutoSize = true;
-            this.lbAllAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAllAdmin.Location = new System.Drawing.Point(280, 28);
-            this.lbAllAdmin.Name = "lbAllAdmin";
-            this.lbAllAdmin.Size = new System.Drawing.Size(340, 37);
-            this.lbAllAdmin.TabIndex = 1;
-            this.lbAllAdmin.Text = "All Admins Information";
             // 
             // accountIDDataGridViewTextBoxColumn
             // 
@@ -161,6 +153,16 @@
             // accountBindingSource
             // 
             this.accountBindingSource.DataSource = typeof(FMSAPP.account);
+            // 
+            // lbAllAdmin
+            // 
+            this.lbAllAdmin.AutoSize = true;
+            this.lbAllAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAllAdmin.Location = new System.Drawing.Point(280, 28);
+            this.lbAllAdmin.Name = "lbAllAdmin";
+            this.lbAllAdmin.Size = new System.Drawing.Size(340, 37);
+            this.lbAllAdmin.TabIndex = 1;
+            this.lbAllAdmin.Text = "All Admins Information";
             // 
             // AdminForm
             // 
