@@ -59,7 +59,7 @@
             this.lbTrailer = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.lbSea = new System.Windows.Forms.Label();
             this.lbType = new System.Windows.Forms.Label();
             this.lbRa = new System.Windows.Forms.Label();
@@ -244,12 +244,14 @@
             this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "name", true));
             resources.ApplyResources(this.txtName, "txtName");
             this.txtName.Name = "txtName";
+            this.txtName.Leave += new System.EventHandler(this.txtName_Validating);
             // 
             // txtEpi
             // 
             this.txtEpi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "episodes", true));
             resources.ApplyResources(this.txtEpi, "txtEpi");
             this.txtEpi.Name = "txtEpi";
+            this.txtEpi.Leave += new System.EventHandler(this.txtEpi_Validating);
             // 
             // lbEp
             // 
@@ -261,7 +263,7 @@
             this.txtDura.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "duration", true));
             resources.ApplyResources(this.txtDura, "txtDura");
             this.txtDura.Name = "txtDura";
-            this.txtDura.Validating += new System.ComponentModel.CancelEventHandler(this.txtDura_Validating);
+            this.txtDura.Leave += new System.EventHandler(this.txtDura_Validating);
             // 
             // lbDu
             // 
@@ -273,7 +275,7 @@
             this.txtDes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "description", true));
             resources.ApplyResources(this.txtDes, "txtDes");
             this.txtDes.Name = "txtDes";
-            this.txtDes.Validating += new System.ComponentModel.CancelEventHandler(this.txtDes_Validating);
+            this.txtDes.Leave += new System.EventHandler(this.txtDes_Validating);
             // 
             // lbDes
             // 
@@ -285,7 +287,7 @@
             this.txtTrailer.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "trailer", true));
             resources.ApplyResources(this.txtTrailer, "txtTrailer");
             this.txtTrailer.Name = "txtTrailer";
-            this.txtTrailer.Validating += new System.ComponentModel.CancelEventHandler(this.txtTrailer_Validating);
+            this.txtTrailer.Leave += new System.EventHandler(this.txtTrailer_Validating);
             // 
             // lbTrailer
             // 
@@ -312,15 +314,15 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnCancel
+            // btnClear
             // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.btnCancel, "btnCancel");
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnClear.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.btnClear, "btnClear");
+            this.btnClear.Name = "btnClear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // lbSea
             // 
@@ -465,7 +467,7 @@
             resources.ApplyResources(this.btnChoose, "btnChoose");
             this.btnChoose.Name = "btnChoose";
             this.btnChoose.UseVisualStyleBackColor = true;
-            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click_1);
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
             // 
             // txtPos
             // 
@@ -535,7 +537,7 @@
             this.Controls.Add(this.lbRa);
             this.Controls.Add(this.lbType);
             this.Controls.Add(this.lbSea);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtTrailer);
@@ -579,7 +581,7 @@
         private System.Windows.Forms.Label lbTrailer;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lbSea;
         private System.Windows.Forms.Label lbType;
         private System.Windows.Forms.Label lbRa;

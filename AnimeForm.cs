@@ -46,7 +46,7 @@ namespace FMSAPP
         }
 
         /// <summary>
-        /// 
+        /// Load data when form loads
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -55,6 +55,16 @@ namespace FMSAPP
             db = new animeEntities(); // instantiate new database context
             db.animes.Load(); // load from database
             animeBindingSource.DataSource = db.animes.Local.Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)                                                                   
+
+            try
+            {
+                // update anime poster to picture box
+                pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot load anime poster", "Loading Poster Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             /* Load seasons to combo box */
             var season = db.seasons;
@@ -72,8 +82,9 @@ namespace FMSAPP
             // name cannot be empty
             if (txtName.Text == string.Empty)
             {
-                MessageBox.Show("Anime name must not be empty!\n Please input anime name again!", "Invalid name input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Anime name must not be empty!\nPlease input anime name again!", "Invalid name input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 check_valid1 = 1;
+                txtName.Focus();
             }
             else
             {
@@ -93,6 +104,7 @@ namespace FMSAPP
             {
                 MessageBox.Show("The number of episodes is too big! (Not bigger than 9999)", "Invalid episode input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 check_valid2 = 1;
+                txtEpi.Focus();
             }
             else
             {
@@ -112,6 +124,7 @@ namespace FMSAPP
             {
                 MessageBox.Show("Description must not be empty!\nPlease input description again!", "Invalid description input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 check_valid3 = 1;
+                txtDes.Focus();
             }
             else
             {
@@ -131,6 +144,7 @@ namespace FMSAPP
             {
                 MessageBox.Show("A valid URL must be like this: https://www.youtube.com/embed/41Gj4Dri8wo?enablejsapi=1&wmode=opaque&autoplay=1 or be left empty!\nPlease input trailer again!", "Invalid trailer input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 check_valid4 = 1;
+                txtTrailer.Focus();
             }
             else
             {
@@ -149,7 +163,8 @@ namespace FMSAPP
             if (!DURATION_REGEX.IsMatch(txtDura.Text) && !txtDura.Text.Equals("Unknown"))
             {
                 MessageBox.Show("The duration must begin with number or be \"Unknown\".\nEx: 01 sec|min|hour per ep or \"Unknown\"\nPlease input duration again!", "Invalid duration input!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                check_valid4 = 2;
+                check_valid4 = 1;
+                txtDura.Focus();
             }
             else
             {
@@ -158,7 +173,7 @@ namespace FMSAPP
         }
 
         /// <summary>
-        /// Call all other validators
+        /// Call all other validators and check again if all inputs are valid
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -189,6 +204,7 @@ namespace FMSAPP
             // only add if validation succeeds
             if (check_valid != 0)
             {
+                MessageBox.Show("There is something wrong in input! Please check again!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
@@ -219,7 +235,7 @@ namespace FMSAPP
                     }
 
                     obj.type = cbbRating.GetItemText(cbbType.SelectedItem);
-                    obj.releaseDate = txtReleaseDate.Value;
+                    obj.releaseDate = DateTime.Now;
                     obj.status = cbbStatus.GetItemText(cbbStatus.SelectedItem);
                     obj.trailer = txtTrailer.Text;
                     obj.episodes = txtEpi.Text;
@@ -238,6 +254,155 @@ namespace FMSAPP
                 {
                     MessageBox.Show("Cannot add the anime! Please try again!", "Add Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+
+        /// <summary>
+        /// Update an anime in database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            check_valid_all(sender, e); // validate all input fields
+
+            // only update after all fields are validated
+            if (check_valid != 0)
+            {
+                MessageBox.Show("There is something wrong in input! Please check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                // check if user has selected a row
+                if (animeGridView.CurrentRow == null)
+                {
+                    MessageBox.Show("Please select an anime to update!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                try
+                {
+                    db.SaveChanges(); // save changes to database
+
+                    // update binding source data
+                    animeBindingSource.DataSource = db.animes.Local.ToBindingList().Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
+
+                    MessageBox.Show("The anime \"" + txtName.Text + "\" has been successfully updated!", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Cannot update the selected anime! Please try again!", "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Delete an anime in database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            // check if user has selected a row
+            if (animeGridView.CurrentRow == null)
+            {
+                MessageBox.Show("Please select an anime to delete!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            int n = animeGridView.CurrentRow.Index; // get current row index
+
+            try
+            {
+                int deletedId = Convert.ToInt32(animeGridView.Rows[n].Cells[0].Value); // get anime ID
+                anime deletedAnime = db.animes.FirstOrDefault(a => a.AnimeID == deletedId); // get anime object using ID
+                deletedAnime.deleted_at = dateTimeDelete; // update deleted_at date
+
+                /* Updates to database */
+                db.animes.AddOrUpdate(deletedAnime);
+                db.SaveChanges();
+
+                /* Empty the input fields and reset combo boxes to default value */
+                txtAnimeId.Text = "";
+                txtAdminId.Text = "";
+                txtName.Text = "";
+                txtEpi.Text = "";
+                txtDura.Text = "";
+                txtDes.Text = "";
+                txtTrailer.Text = "";
+                cbbSeason.SelectedIndex = 0;
+                cbbRating.SelectedIndex = 0;
+                cbbStatus.SelectedIndex = 0;
+                cbbType.SelectedIndex = 0;
+                txtReleaseDate.Text = "";
+                txtPos.Text = "";
+                pbPoster.Image = null;
+
+                // update binding source data
+                animeBindingSource.DataSource = db.animes.Local.ToBindingList().Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
+
+                /* Indicates successful deletion */
+                MessageBox.Show("The anime \"" + deletedAnime.name + "\" has been successfully deleted!", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot delete the selected anime! Please try again!", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // load next anime in list's poster
+            try
+            {
+                // update anime poster to picture box
+                pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot load anime poster", "Loading Poster Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            /* Empty the input fields and reset combo boxes to default value */
+            txtAnimeId.Text = "";
+            txtAdminId.Text = "";
+            txtName.Text = "";
+            txtEpi.Text = "";
+            txtDura.Text = "";
+            txtDes.Text = "";
+            txtTrailer.Text = "";
+            cbbSeason.SelectedIndex = 0;
+            cbbRating.SelectedIndex = 0;
+            cbbStatus.SelectedIndex = 0;
+            cbbType.SelectedIndex = 0;
+            txtReleaseDate.Text = "";
+            txtPos.Text = "";
+            pbPoster.Image = null;
+        }
+
+
+        /// <summary>
+        /// Find animes having find value in name
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            // if nothing is inputted, all animes are shown
+            if (string.IsNullOrEmpty(txtFind.Text))
+            {
+                this.animeBindingSource.DataSource = db.animes.Local.ToBindingList().Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
+            }
+            else
+            {
+                // obtain list of animes contain find value and are not deleted
+                IEnumerable<anime> filteredData = db.animes.Local.ToBindingList()
+                    .Where(x => x.name.Contains(txtFind.Text) && x.deleted_at == null);
+
+                // load filtered data to binding source
+                animeBindingSource.DataSource = filteredData.Count() > 0 ?
+                    filteredData : filteredData.ToArray();
             }
         }
 
@@ -268,33 +433,11 @@ namespace FMSAPP
         }
 
         /// <summary>
-        /// Find animes having find value in name
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnFind_Click(object sender, EventArgs e)
-        {
-            // if nothing is inputted, all animes are shown
-            if (string.IsNullOrEmpty(txtFind.Text))
-            {
-                this.animeBindingSource.DataSource = db.animes.Local.ToBindingList().Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)
-            }
-            else
-            {
-                // load filtered data to binding source
-                IEnumerable<anime> filteredData = db.animes.Local.ToBindingList()
-                    .Where(x => x.name.Contains(txtFind.Text));
-                animeBindingSource.DataSource = filteredData.Count() > 0 ?
-                    filteredData : filteredData.ToArray();
-            }
-        }
-
-        /// <summary>
         /// Open file chooser for users to choose poster to add
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnChoose_Click_1(object sender, EventArgs e)
+        private void btnChoose_Click(object sender, EventArgs e)
         {
             open = new OpenFileDialog();
             open.Filter = "Images|*.jpg;*.jpeg;*.png";
@@ -314,119 +457,6 @@ namespace FMSAPP
                     MessageBox.Show("Don't change picture from the source file!", "This admin is trying to change picture in source", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        /// <summary>
-        /// Delete an anime in database
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            // check if user has selected a row
-            if (animeGridView.CurrentRow == null)
-            {
-                MessageBox.Show("Please select an anime to delete!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            int n = animeGridView.CurrentRow.Index; // get current row index
-
-            try
-            {
-                int deletedId = Convert.ToInt32(animeGridView.Rows[n].Cells[0].Value); // get anime ID
-                anime deletedAnime = db.animes.FirstOrDefault(a => a.AnimeID == deletedId); // get anime object using ID
-                deletedAnime.deleted_at = dateTimeDelete; // update deleted_at date
-
-                /* Updates to database */
-                db.animes.AddOrUpdate(deletedAnime);
-                db.SaveChanges();
-
-                /* Indicates successful deletion */
-                MessageBox.Show("The selected anime has been successfully deleted!", "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                /* Empty the input fields */
-                txtAnimeId.Text = "";
-                txtAdminId.Text = "";
-                txtName.Text = "";
-                txtEpi.Text = "";
-                txtDura.Text = "";
-                txtDes.Text = "";
-                txtTrailer.Text = "";
-                cbbSeason.SelectedIndex = 0;
-                cbbRating.SelectedIndex = 0;
-                cbbStatus.SelectedIndex = 0;
-                cbbType.SelectedIndex = 0;
-                txtReleaseDate.Text = "";
-                txtPos.Text = "";
-                pbPoster.Image = null;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Cannot delete the selected anime! Please try again!", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
-        /// Update an anime in database
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            check_valid_all(sender, e); // validate all input fields
-
-            // only update after all fields are validated
-            if (check_valid != 0)
-            {
-                MessageBox.Show("There is something wrong in input! Please check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                // check if user has selected a row
-                if (animeGridView.CurrentRow == null)
-                {
-                    MessageBox.Show("Please select an anime to update!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-                try
-                {
-                    db.SaveChanges(); // save changes to database
-                    MessageBox.Show("The selected anime has been successfully updated!", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Cannot update the selected anime! Please try again!", "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Undo the changes made
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            var changed = db.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged).ToList();
-            foreach (var obj in changed)
-            {
-                switch (obj.State)
-                {
-                    case EntityState.Modified:
-                        obj.CurrentValues.SetValues(obj.OriginalValues);
-                        obj.State = EntityState.Unchanged;
-                        break;
-                    case EntityState.Added:
-                        obj.State = EntityState.Detached;
-                        break;
-                    case EntityState.Deleted:
-                        obj.State = EntityState.Unchanged;
-                        break;
-
-                }
-            }
-            animeBindingSource.ResetBindings(false);
         }
 
         /// <summary>

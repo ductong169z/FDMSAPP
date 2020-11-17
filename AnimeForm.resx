@@ -477,6 +477,9 @@
   <data name="txtDes.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="txtDes.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
   <data name="txtDes.Size" type="System.Drawing.Size, System.Drawing">
     <value>409, 155</value>
   </data>
@@ -639,34 +642,34 @@
   <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnClear.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
     <value>423, 639</value>
   </data>
-  <data name="btnCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 40</value>
   </data>
-  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>Clear</value>
   </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
+  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
+    <value>btnClear</value>
   </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
   <data name="lbSea.AutoSize" type="System.Boolean, mscorlib">
@@ -1183,19 +1186,19 @@
     <value>NoControl</value>
   </data>
   <data name="btnChoose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>701, 63</value>
+    <value>673, 63</value>
   </data>
   <data name="btnChoose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="btnChoose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 39</value>
+    <value>138, 39</value>
   </data>
   <data name="btnChoose.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
   <data name="btnChoose.Text" xml:space="preserve">
-    <value>Choose</value>
+    <value>Choose Poster</value>
   </data>
   <data name="&gt;&gt;btnChoose.Name" xml:space="preserve">
     <value>btnChoose</value>
