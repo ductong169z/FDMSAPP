@@ -211,8 +211,8 @@ namespace FMSAPP
                     string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
                     newFullPath = Path.Combine(path, tempFileName + extension);
                     txtAvatar.Text = Path.GetFileName(newFullPath);
-                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(newFullPath));
                 }
+                File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(newFullPath));
             }
         }
 

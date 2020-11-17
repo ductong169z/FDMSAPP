@@ -285,8 +285,20 @@ namespace FMSAPP
                     return;
                 }
 
+
+
                 try
                 {
+                    db.SaveChanges(); // save changes to database
+
+                    /* Updates poster */
+                    int n = animeGridView.CurrentRow.Index; // selected row index
+                    int updateId = Convert.ToInt32(animeGridView.Rows[n].Cells[0].Value); // get anime ID
+                    anime updateAnime = db.animes.FirstOrDefault(a => a.AnimeID == updateId); // get anime object using ID
+
+                    updateAnime.poster = txtPos.Text;
+                    /* Updates to database */
+                    db.animes.AddOrUpdate(updateAnime);
                     db.SaveChanges(); // save changes to database
 
                     // update binding source data
@@ -451,15 +463,20 @@ namespace FMSAPP
             // if user clicks OK, load the image
             if (open.ShowDialog() == DialogResult.OK)
             {
-                txtPos.Text = Path.GetFileName(open.FileName);
-                try
+                int count = 1;
+
+                string fileNameOnly = Path.GetFileNameWithoutExtension(open.FileName);
+                string extension = Path.GetExtension(open.FileName);
+                string path = Path.GetDirectoryName(open.FileName);
+                string newFullPath = open.FileName;
+
+                while (File.Exists(newFullPath))
                 {
-                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(open.FileName), true);
+                    string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                    newFullPath = Path.Combine(path, tempFileName + extension);
+                    txtPos.Text = Path.GetFileName(newFullPath);
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Don't change picture from the source file!", "This admin is trying to change picture in source", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(newFullPath));
             }
         }
 
