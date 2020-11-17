@@ -24,6 +24,12 @@ public partial class anime_studio
 
     public Nullable<System.DateTime> created_at { get; set; }
 
+
+
+    public virtual anime anime { get; set; }
+
+    public virtual studio studio { get; set; }
+
 }
 
 }

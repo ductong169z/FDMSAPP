@@ -20,6 +20,7 @@ namespace FMSAPP
         {
             InitializeComponent();
             this.AcceptButton = btnLogin;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             this.CenterToScreen();
             this.FormClosing += delegate
             {
@@ -67,39 +68,23 @@ namespace FMSAPP
         {
             db = new animeEntities();
 
-            // By default, no errors
+            // By default, show no errors
             lblError.Text = "";
 
-            if (String.IsNullOrWhiteSpace(txtUsername.Text))
+            var existUser = db.accounts.FirstOrDefault(a => a.username.Equals(txtUsername.Text));
+            if (existUser != null)
             {
-                // Show error
-                lblError.Text = "Username cannot be null or empty!";
-                return;
-            }
-
-            if (String.IsNullOrWhiteSpace(txtPassword.Text))
-            {
-                // Show error
-                lblError.Text = "Password cannot be null or empty!";
-                return;
-            }
-
-            var exituser = db.accounts.FirstOrDefault(a => a.username.Equals(txtUsername.Text));
-            if (exituser != null)
-            {
-                if (exituser.password.Equals(GetMD5(txtPassword.Text)))
+                if (existUser.password.Equals(GetMD5(txtPassword.Text)))
                 {
-                    if (exituser.RoleID.Equals(1))
+                    if (existUser.RoleID.Equals(1))
                     {
-                        ////show id admin
-                        //MessageBox.Show("Your Admin ID is: " + exituser.AccountID.ToString(), "Message ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //show id admin
+                        //show id existUser
                         MessageBox.Show("You have been logged in!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         // Hide this form
                         this.Hide();
-                        DashBoard db = new DashBoard();
+                        DashBoard db = new DashBoard(existUser.AccountID.ToString());
                         //show form MDI
-                        //MDIParent1 mp = new MDIParent1(exituser.AccountID.ToString());
+                        //MDIParent1 mp = new MDIParent1(existUser.AccountID.ToString());
                         // Show info form
                         db.Show();
                         //this.Close();// This line stops the hidden form from running in the background, which can lead to memory leaks and performance issues.

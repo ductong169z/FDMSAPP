@@ -17,24 +17,20 @@ namespace FMSAPP
     public partial class AddUserForm : Form
     {
         animeEntities db;
+        OpenFileDialog open;
         DateTime today = DateTime.Today;
         int check_valid1, check_valid2, check_valid3, check_valid4, check_valid5, check_valid;
-        public AddUserForm()
-        {
-            InitializeComponent();
-            DateTimePicker dt = new DateTimePicker();
-            dateTimeAdd.Value = DateTime.Now;
-            this.AcceptButton = btnAdd;
-            this.CenterToScreen();
-            this.FormClosing += delegate
-            {
-                Application.Exit();
-            };
-        }
-        // Regex contstraints
+        /* Regex constraints */
         static Regex EMAIL_REGEX = new Regex(@"[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
         static Regex PHONE_REGEX = new Regex(@"^[0-9]{10,11}$");
         static Regex PASS_REGEX = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$= %^&*-]).{8,32}$");
+        public AddUserForm()
+        {
+            InitializeComponent();
+            currentDate.Value = DateTime.Now;
+            this.AcceptButton = btnAdd;
+            this.CenterToScreen();
+        }
         public static string GetMD5(string s)
         {
             byte[] encodedPassword = new UTF8Encoding().GetBytes(s);
@@ -86,7 +82,7 @@ namespace FMSAPP
                 MessageBox.Show("Have something wrong in input! Plz check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        OpenFileDialog open;
+
         private void btnChoose_Click(object sender, EventArgs e)
         {
             open = new OpenFileDialog();
@@ -175,9 +171,9 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
                 check_valid4 = 0;
             }
         }
-        private void dateTimeAdd_Validating(object sender, CancelEventArgs e)
+        private void currentDate_Validating(object sender, CancelEventArgs e)
         {
-            if(DateTime.Compare(dateTimeAdd.Value, today) != 0) 
+            if(DateTime.Compare(currentDate.Value, today) != 0) 
             {
                 MessageBox.Show("Date Add not today, Plz choose again");
                 check_valid5 = 1;
