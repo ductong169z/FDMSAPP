@@ -15,7 +15,6 @@
     <Property Name="created_at" Type="DateTime" Nullable="false" />
     <Property Name="deleted_at" Type="DateTime" />
     <NavigationProperty Name="animes" Relationship="Self.Admin" FromRole="account" ToRole="anime" />
-    <NavigationProperty Name="role" Relationship="animeModel.FKAccount758290" FromRole="account" ToRole="role" />
   </EntityType>
   <EntityType Name="anime">
     <Key>
@@ -26,9 +25,9 @@
     <Property Name="SeasonID" Type="Int32" />
     <Property Name="type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="name" Type="String" MaxLength="135" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="releaseDate" Type="DateTime" />
+    <Property Name="releaseDate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="rating" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="episodes" Type="String" />
+    <Property Name="episodes" Type="Int32" />
     <Property Name="status" Type="String" MaxLength="17" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="duration" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="description" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
@@ -37,7 +36,6 @@
     <Property Name="created_at" Type="DateTime" Nullable="false" />
     <Property Name="deleted_at" Type="DateTime" />
     <NavigationProperty Name="account" Relationship="Self.Admin" FromRole="anime" ToRole="account" />
-    <NavigationProperty Name="anime_studio" Relationship="animeModel.FKAnime_Stud329273" FromRole="anime" ToRole="anime_studio" />
   </EntityType>
   <EntityType Name="genre">
     <Key>
@@ -45,7 +43,7 @@
     </Key>
     <Property Name="GenreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="created_at" Type="DateTime" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="true" />
     <Property Name="deleted_at" Type="DateTime" Nullable="true" />
   </EntityType>
   <EntityType Name="list">
@@ -58,22 +56,42 @@
     <Property Name="status" Type="Int32" Nullable="false" />
     <Property Name="progress" Type="Int32" Nullable="false" />
   </EntityType>
+  <EntityType Name="list_history">
+    <Key>
+      <PropertyRef Name="ListHistoryID" />
+    </Key>
+    <Property Name="ListHistoryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ListAnimeID" Type="Int32" Nullable="false" />
+    <Property Name="ListAccountID" Type="Int32" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="review">
+    <Key>
+      <PropertyRef Name="ReviewID" />
+    </Key>
+    <Property Name="ReviewID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnimeID" Type="Int32" Nullable="false" />
+    <Property Name="AccountID" Type="Int32" Nullable="false" />
+    <Property Name="score" Type="Int32" Nullable="false" />
+    <Property Name="content" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" />
+    <Property Name="deleted_at" Type="DateTime" />
+  </EntityType>
   <EntityType Name="role">
     <Key>
       <PropertyRef Name="RoleID" />
     </Key>
     <Property Name="RoleID" Type="Int32" Nullable="false" />
-    <Property Name="slug" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="accounts" Relationship="animeModel.FKAccount758290" FromRole="role" ToRole="account" />
+    <Property Name="slug" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="season">
     <Key>
       <PropertyRef Name="SeasonID" />
     </Key>
     <Property Name="SeasonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="created_at" Type="DateTime" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="created_at" Type="DateTime" />
     <Property Name="deleted_at" Type="DateTime" />
   </EntityType>
   <EntityType Name="studio">
@@ -84,7 +102,6 @@
     <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="created_at" Type="DateTime" Nullable="false" />
     <Property Name="deleted_at" Type="DateTime" />
-    <NavigationProperty Name="anime_studio" Relationship="animeModel.FKAnime_Stud650632" FromRole="studio" ToRole="anime_studio" />
   </EntityType>
   <EntityType Name="anime_studio">
     <Key>
@@ -94,8 +111,6 @@
     <Property Name="AnimeID" Type="Int32" Nullable="false" />
     <Property Name="StudioID" Type="Int32" Nullable="false" />
     <Property Name="created_at" Type="DateTime" />
-    <NavigationProperty Name="anime" Relationship="animeModel.FKAnime_Stud329273" FromRole="anime_studio" ToRole="anime" />
-    <NavigationProperty Name="studio" Relationship="animeModel.FKAnime_Stud650632" FromRole="anime_studio" ToRole="studio" />
   </EntityType>
   <EntityType Name="genre_anime">
     <Key>
@@ -125,6 +140,8 @@
     <EntitySet Name="animes" EntityType="Self.anime" />
     <EntitySet Name="genres" EntityType="Self.genre" />
     <EntitySet Name="lists" EntityType="Self.list" />
+    <EntitySet Name="list_history" EntityType="Self.list_history" />
+    <EntitySet Name="reviews" EntityType="Self.review" />
     <EntitySet Name="roles" EntityType="Self.role" />
     <EntitySet Name="seasons" EntityType="Self.season" />
     <EntitySet Name="studios" EntityType="Self.studio" />
@@ -134,53 +151,5 @@
       <End Role="account" EntitySet="accounts" />
       <End Role="anime" EntitySet="animes" />
     </AssociationSet>
-    <AssociationSet Name="FKAccount758290" Association="animeModel.FKAccount758290">
-      <End Role="role" EntitySet="roles" />
-      <End Role="account" EntitySet="accounts" />
-    </AssociationSet>
-    <AssociationSet Name="FKAnime_Stud329273" Association="animeModel.FKAnime_Stud329273">
-      <End Role="anime" EntitySet="animes" />
-      <End Role="anime_studio" EntitySet="anime_studio" />
-    </AssociationSet>
-    <AssociationSet Name="FKAnime_Stud650632" Association="animeModel.FKAnime_Stud650632">
-      <End Role="studio" EntitySet="studios" />
-      <End Role="anime_studio" EntitySet="anime_studio" />
-    </AssociationSet>
   </EntityContainer>
-  <Association Name="FKAccount758290">
-    <End Type="animeModel.role" Role="role" Multiplicity="1" />
-    <End Type="animeModel.account" Role="account" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="role">
-        <PropertyRef Name="RoleID" />
-      </Principal>
-      <Dependent Role="account">
-        <PropertyRef Name="RoleID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FKAnime_Stud329273">
-    <End Type="animeModel.anime" Role="anime" Multiplicity="1" />
-    <End Type="animeModel.anime_studio" Role="anime_studio" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="anime">
-        <PropertyRef Name="AnimeID" />
-      </Principal>
-      <Dependent Role="anime_studio">
-        <PropertyRef Name="AnimeID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FKAnime_Stud650632">
-    <End Type="animeModel.studio" Role="studio" Multiplicity="1" />
-    <End Type="animeModel.anime_studio" Role="anime_studio" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="studio">
-        <PropertyRef Name="StudioID" />
-      </Principal>
-      <Dependent Role="anime_studio">
-        <PropertyRef Name="StudioID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
 </Schema>

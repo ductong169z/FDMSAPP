@@ -14,6 +14,7 @@
     <Property Name="gender" Type="int" />
     <Property Name="created_at" Type="date" Nullable="false" />
     <Property Name="deleted_at" Type="date" />
+    <Property Name="updated_at" Type="datetime" Precision="0" />
   </EntityType>
   <EntityType Name="anime">
     <Key>
@@ -24,9 +25,9 @@
     <Property Name="SeasonID" Type="int" />
     <Property Name="type" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="name" Type="varchar" MaxLength="135" Nullable="false" />
-    <Property Name="releaseDate" Type="date" />
+    <Property Name="releaseDate" Type="varchar" MaxLength="255" />
     <Property Name="rating" Type="varchar" MaxLength="60" Nullable="false" />
-    <Property Name="episodes" Type="varchar" MaxLength="5" />
+    <Property Name="episodes" Type="int" />
     <Property Name="status" Type="varchar" MaxLength="17" Nullable="false" />
     <Property Name="duration" Type="varchar" MaxLength="20" />
     <Property Name="description" Type="text" Nullable="false" />
@@ -34,6 +35,7 @@
     <Property Name="trailer" Type="varchar" MaxLength="255" />
     <Property Name="created_at" Type="date" Nullable="false" />
     <Property Name="deleted_at" Type="date" />
+    <Property Name="updated_at" Type="datetime" Precision="0" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'def.anime.anime_studio' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -45,6 +47,7 @@ warning 6002: The table/view 'def.anime.anime_studio' does not have a primary ke
     <Property Name="AnimeID" Type="int" Nullable="false" />
     <Property Name="StudioID" Type="int" Nullable="false" />
     <Property Name="created_at" Type="date" />
+    <Property Name="updated_at" Type="datetime" Precision="0" />
   </EntityType>
   <EntityType Name="genre">
     <Key>
@@ -52,7 +55,7 @@ warning 6002: The table/view 'def.anime.anime_studio' does not have a primary ke
     </Key>
     <Property Name="GenreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="created_at" Type="date" Nullable="false" />
+    <Property Name="created_at" Type="date" />
     <Property Name="deleted_at" Type="date" />
   </EntityType>
   <!--Errors Found During Generation:
@@ -67,6 +70,7 @@ warning 6002: The table/view 'def.anime.genre_anime' does not have a primary key
     <Property Name="AnimeID" Type="int" Nullable="false" />
     <Property Name="created_at" Type="date" Nullable="false" />
     <Property Name="deleted_at" Type="date" />
+    <Property Name="updated_at" Type="datetime" Precision="0" />
   </EntityType>
   <EntityType Name="list">
     <Key>
@@ -78,21 +82,42 @@ warning 6002: The table/view 'def.anime.genre_anime' does not have a primary key
     <Property Name="status" Type="int" Nullable="false" />
     <Property Name="progress" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="list_history">
+    <Key>
+      <PropertyRef Name="ListHistoryID" />
+    </Key>
+    <Property Name="ListHistoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ListAnimeID" Type="int" Nullable="false" />
+    <Property Name="ListAccountID" Type="int" Nullable="false" />
+    <Property Name="created_at" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="review">
+    <Key>
+      <PropertyRef Name="ReviewID" />
+    </Key>
+    <Property Name="ReviewID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AnimeID" Type="int" Nullable="false" />
+    <Property Name="AccountID" Type="int" Nullable="false" />
+    <Property Name="score" Type="int" Nullable="false" />
+    <Property Name="content" Type="text" />
+    <Property Name="created_at" Type="date" Nullable="false" />
+    <Property Name="deleted_at" Type="date" />
+  </EntityType>
   <EntityType Name="role">
     <Key>
       <PropertyRef Name="RoleID" />
     </Key>
     <Property Name="RoleID" Type="int" Nullable="false" />
-    <Property Name="slug" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="name" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="slug" Type="varchar" MaxLength="255" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="season">
     <Key>
       <PropertyRef Name="SeasonID" />
     </Key>
     <Property Name="SeasonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="name" Type="varchar" MaxLength="12" Nullable="false" />
-    <Property Name="created_at" Type="date" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="12" />
+    <Property Name="created_at" Type="date" />
     <Property Name="deleted_at" Type="date" />
   </EntityType>
   <EntityType Name="studio">
@@ -103,6 +128,7 @@ warning 6002: The table/view 'def.anime.genre_anime' does not have a primary key
     <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="created_at" Type="date" Nullable="false" />
     <Property Name="deleted_at" Type="date" />
+    <Property Name="updated_at" Type="datetime" Precision="0" />
   </EntityType>
   <Association Name="Admin">
     <End Role="account" Type="Self.account" Multiplicity="1" />
@@ -116,47 +142,13 @@ warning 6002: The table/view 'def.anime.genre_anime' does not have a primary key
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FKAccount758290">
-    <End Role="role" Type="Self.role" Multiplicity="1" />
-    <End Role="account" Type="Self.account" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="role">
-        <PropertyRef Name="RoleID" />
-      </Principal>
-      <Dependent Role="account">
-        <PropertyRef Name="RoleID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FKAnime_Stud329273">
-    <End Role="anime" Type="Self.anime" Multiplicity="1" />
-    <End Role="anime_studio" Type="Self.anime_studio" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="anime">
-        <PropertyRef Name="AnimeID" />
-      </Principal>
-      <Dependent Role="anime_studio">
-        <PropertyRef Name="AnimeID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FKAnime_Stud650632">
-    <End Role="studio" Type="Self.studio" Multiplicity="1" />
-    <End Role="anime_studio" Type="Self.anime_studio" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="studio">
-        <PropertyRef Name="StudioID" />
-      </Principal>
-      <Dependent Role="anime_studio">
-        <PropertyRef Name="StudioID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="animeModelStoreContainer">
     <EntitySet Name="account" EntityType="Self.account" Schema="anime" store:Type="Tables" />
     <EntitySet Name="anime" EntityType="Self.anime" Schema="anime" store:Type="Tables" />
     <EntitySet Name="genre" EntityType="Self.genre" Schema="anime" store:Type="Tables" />
     <EntitySet Name="list" EntityType="Self.list" Schema="anime" store:Type="Tables" />
+    <EntitySet Name="list_history" EntityType="Self.list_history" Schema="anime" store:Type="Tables" />
+    <EntitySet Name="review" EntityType="Self.review" Schema="anime" store:Type="Tables" />
     <EntitySet Name="role" EntityType="Self.role" Schema="anime" store:Type="Tables" />
     <EntitySet Name="season" EntityType="Self.season" Schema="anime" store:Type="Tables" />
     <EntitySet Name="studio" EntityType="Self.studio" Schema="anime" store:Type="Tables" />
@@ -164,7 +156,8 @@ warning 6002: The table/view 'def.anime.genre_anime' does not have a primary key
       <DefiningQuery>SELECT
 `anime_studio`.`AnimeID`, 
 `anime_studio`.`StudioID`, 
-`anime_studio`.`created_at`
+`anime_studio`.`created_at`, 
+`anime_studio`.`updated_at`
 FROM `anime_studio` AS `anime_studio`</DefiningQuery>
     </EntitySet>
     <EntitySet Name="genre_anime" EntityType="Self.genre_anime" store:Type="Tables" store:Schema="anime">
@@ -172,24 +165,13 @@ FROM `anime_studio` AS `anime_studio`</DefiningQuery>
 `genre_anime`.`GenreID`, 
 `genre_anime`.`AnimeID`, 
 `genre_anime`.`created_at`, 
-`genre_anime`.`deleted_at`
+`genre_anime`.`deleted_at`, 
+`genre_anime`.`updated_at`
 FROM `genre_anime` AS `genre_anime`</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="Admin" Association="Self.Admin">
       <End Role="account" EntitySet="account" />
       <End Role="anime" EntitySet="anime" />
-    </AssociationSet>
-    <AssociationSet Name="FKAccount758290" Association="Self.FKAccount758290">
-      <End Role="role" EntitySet="role" />
-      <End Role="account" EntitySet="account" />
-    </AssociationSet>
-    <AssociationSet Name="FKAnime_Stud329273" Association="Self.FKAnime_Stud329273">
-      <End Role="anime" EntitySet="anime" />
-      <End Role="anime_studio" EntitySet="anime_studio" />
-    </AssociationSet>
-    <AssociationSet Name="FKAnime_Stud650632" Association="Self.FKAnime_Stud650632">
-      <End Role="studio" EntitySet="studio" />
-      <End Role="anime_studio" EntitySet="anime_studio" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -44,10 +44,6 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -72,7 +68,6 @@
     <Reference Include="MySql.Data.EntityFramework, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.EntityFramework.8.0.21\lib\net452\MySql.Data.EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationCore" />
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
@@ -99,7 +94,6 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
@@ -119,8 +113,6 @@
     <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.21\lib\net452\Ubiety.Dns.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UIAutomationClient" />
-    <Reference Include="WindowsBase" />
     <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.21\lib\net452\Zstandard.Net.dll</HintPath>
     </Reference>
@@ -150,6 +142,16 @@
     <Compile Include="anime.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>
     </Compile>
+    <Compile Include="animeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>animeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="animeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>animeDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AnimeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +179,12 @@
     <Compile Include="DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashBoardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoardAdmin.Designer.cs">
+      <DependentUpon>DashBoardAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReportAnime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +204,9 @@
       <DependentUpon>Modelanime.tt</DependentUpon>
     </Compile>
     <Compile Include="list.cs">
+      <DependentUpon>Modelanime.tt</DependentUpon>
+    </Compile>
+    <Compile Include="list_history.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelanime.Context.cs">
@@ -220,17 +231,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="review.cs">
+      <DependentUpon>Modelanime.tt</DependentUpon>
+    </Compile>
     <Compile Include="role.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>
     </Compile>
     <Compile Include="season.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SeasonForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SeasonForm.Designer.cs">
-      <DependentUpon>SeasonForm.cs</DependentUpon>
     </Compile>
     <Compile Include="studio.cs">
       <DependentUpon>Modelanime.tt</DependentUpon>
@@ -243,19 +251,15 @@
     </Compile>
     <EmbeddedResource Include="AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminLoginForm.resx">
       <DependentUpon>AdminLoginForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AnimeForm.resx">
       <DependentUpon>AnimeForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportAnime.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -267,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoardAdmin.resx">
+      <DependentUpon>DashBoardAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReportAnime.resx">
       <DependentUpon>FormReportAnime.cs</DependentUpon>
@@ -280,9 +287,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SeasonForm.resx">
-      <DependentUpon>SeasonForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,13 +294,34 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Modelanime.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="animeDataSet.xsc">
+      <DependentUpon>animeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="animeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>animeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="animeDataSet.xss">
+      <DependentUpon>animeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="animeDataSet1.xsc">
+      <DependentUpon>animeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="animeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>animeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="animeDataSet1.xss">
+      <DependentUpon>animeDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Modelanime.edmx.diagram">
       <DependentUpon>Modelanime.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\account.datasource" />
     <None Include="Properties\DataSources\anime.datasource" />
-    <None Include="Properties\DataSources\role.datasource" />
     <None Include="Properties\DataSources\season.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
