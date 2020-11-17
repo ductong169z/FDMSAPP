@@ -308,6 +308,7 @@
             // 
             this.pbAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.pbAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbAvatar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pbAvatar.Location = new System.Drawing.Point(377, 122);
             this.pbAvatar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

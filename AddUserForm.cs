@@ -17,20 +17,20 @@ namespace FMSAPP
     public partial class AddUserForm : Form
     {
         animeEntities db;
+        OpenFileDialog open;
         DateTime today = DateTime.Today;
         int check_valid1, check_valid2, check_valid3, check_valid4, check_valid5, check_valid;
+        /* Regex constraints */
+        static Regex EMAIL_REGEX = new Regex(@"[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
+        static Regex PHONE_REGEX = new Regex(@"^[0-9]{10,11}$");
+        static Regex PASS_REGEX = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$= %^&*-]).{8,32}$");
         public AddUserForm()
         {
             InitializeComponent();
-            DateTimePicker dt = new DateTimePicker();
             currentDate.Value = DateTime.Now;
             this.AcceptButton = btnAdd;
             this.CenterToScreen();
         }
-        // Regex contstraints
-        static Regex EMAIL_REGEX = new Regex(@"[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
-        static Regex PHONE_REGEX = new Regex(@"^[0-9]{10,11}$");
-        static Regex PASS_REGEX = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$= %^&*-]).{8,32}$");
         public static string GetMD5(string s)
         {
             byte[] encodedPassword = new UTF8Encoding().GetBytes(s);
@@ -82,7 +82,7 @@ namespace FMSAPP
                 MessageBox.Show("Have something wrong in input! Plz check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        OpenFileDialog open;
+
         private void btnChoose_Click(object sender, EventArgs e)
         {
             open = new OpenFileDialog();
