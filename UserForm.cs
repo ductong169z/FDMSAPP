@@ -44,15 +44,11 @@ namespace FMSAPP
             if (txtAvatar.Text != null && txtAvatar.Text != "")
             {
                 pbAvatar.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(txtAvatar.Text));
-
             }
 
-            ///* Load roles to combobox */
-            //cbbRoleID.DisplayMember = "name";
-            //cbbRoleID.ValueMember = "RoleID";
+            /* Load roles to combobox */
             var roleid = db.roles;
             cbbRoleID.DataSource = roleid.ToList();
-
         }
 
         /// <summary>
@@ -134,16 +130,15 @@ namespace FMSAPP
             if (cbbGender.Text == "Male")
             {
                 updateUser.gender = 1;
-            }
-            else if (cbbGender.Text == "Female")
+            } else if (cbbGender.Text == "Female")
             {
                 updateUser.gender = 2;
-            }
-            else
+            } else
             {
                 updateUser.gender = 3;
             }
 
+            updateUser.avatar = txtAvatar.Text;
             /* Updates to database */
             db.accounts.AddOrUpdate(updateUser);
             db.SaveChanges();
@@ -176,14 +171,16 @@ namespace FMSAPP
         }
 
         /// <summary>
-        /// Refresh user grid view
+        /// Refresh user grid view and reload database
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            userGridView.Refresh();
-            MessageBox.Show("The grid view has been refreshed!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            userGridView.Refresh(); // refresh data grid view
+            db.accounts.Load(); // reload database
+            accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null); // load accounts to data source (that are not deleted)
+            MessageBox.Show("The grid view has been refreshed and data has been reloaded!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         /// <summary>
@@ -208,25 +205,17 @@ namespace FMSAPP
                 string extension = Path.GetExtension(open.FileName);
                 string path = Path.GetDirectoryName(open.FileName);
                 string newFullPath = open.FileName;
-                if (txtAvatar.Text == "") 
+                if (txtAvatar.Text == "")
                 {
                     txtAvatar.Text = Path.GetFileName(open.FileName);
                 }
-                    while (File.Exists(@"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(txtAvatar.Text)))
+                while (File.Exists(@"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(txtAvatar.Text)))
                 {
                     string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
                     newFullPath = Path.Combine(@"../../../FDMSWEB/Content/Images/users/", tempFileName + extension);
                     txtAvatar.Text = Path.GetFileName(newFullPath);
                 }
                 File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(newFullPath));
-                /**  try
-                  {
-                      File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(open.FileName));
-                  }
-                  catch (Exception ex)
-                  {
-                      MessageBox.Show("Don't change picture from the source file", "This admin is trying to change picture in source", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                  } **/
             }
         }
 

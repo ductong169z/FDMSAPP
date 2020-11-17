@@ -469,7 +469,7 @@ namespace FMSAPP
                 string extension = Path.GetExtension(open.FileName);
                 string path = Path.GetDirectoryName(open.FileName);
                 string newFullPath = open.FileName;
-                if(txtPos.Text == "")
+                if (txtPos.Text == "")
                 {
                     txtPos.Text = Path.GetFileName(open.FileName);
                 }
@@ -477,7 +477,7 @@ namespace FMSAPP
                 {
                     string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
                     newFullPath = Path.Combine(@"../../../FDMSWEB/Content/Images/Posters/", tempFileName + extension);
-                    txtPos.Text = Path.GetFileName(newFullPath);         
+                    txtPos.Text = Path.GetFileName(newFullPath);
                     newFullPath = Path.Combine(path, tempFileName + extension);
                     txtPos.Text = Path.GetFileName(newFullPath);
                 }
