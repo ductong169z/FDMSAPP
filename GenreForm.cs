@@ -14,8 +14,6 @@ namespace FMSAPP
     public partial class GenreForm : Form
     {
         animeEntities db;
-        int check_valid1, check_valid2, check_valid3, check_valid4, check_valid;
-
         public GenreForm()
         {
             InitializeComponent();
@@ -31,30 +29,79 @@ namespace FMSAPP
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // check if genre is null or empty
+            if (String.IsNullOrEmpty(txtName.Text))
+            {
+                MessageBox.Show("Name field cannot be empty!", "Required!");
+                return;
+            }
+
+            int id = Convert.ToInt32(textBox1.Text); // cast value to int and set to ID
+            genre genres = new genre(); // create new object of season
+            genres = db.genres.FirstOrDefault(ss => ss.GenreID == id); // get the object season to update
+
+            /* Update season properties */
+            genres.GenreID = id;
+            genres.name = txtName.Text;
+            genres.created_at = Convert.ToDateTime(txtCreated_at.Text);
+
+            // save changes to database
             db.SaveChanges();
+            MessageBox.Show("Update successful", "Sucessful");
+
+            genreBindingSource2.DataSource = db.genres.ToList(); // update datasource
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            genreBindingSource2.RemoveCurrent();
-        }
+            int id = Convert.ToInt32(textBox1.Text); // cast value to int and set to ID
 
-        private void dateTimeAdd_ValueChanged(object sender, EventArgs e)
-        {
+            // create new object of season
+            genre genres = new genre();
+            genres = db.genres.FirstOrDefault(ss => ss.GenreID == id);
 
+            // find obj in datasource exist or not
+            if (genres != null)
+            {
+                // call function remove
+                db.genres.Remove(genres);
+            }
+            else
+            {
+                MessageBox.Show("Please enter another ID that doesn't exist in database!", "Not found ID!");
+                return;
+            }
+            MessageBox.Show("Delete successful!", "Successful!");
+
+            // save changes to database
+            db.SaveChanges();
+
+            genreBindingSource2.DataSource = db.genres.ToList(); // update datasource
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            check_valid_all();
-            if (check_valid != 0)
+            // check if name is null or empty 
+            if (String.IsNullOrEmpty(txtName.Text))
             {
-                MessageBox.Show("Have something wrong in input! Plz check again", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Name field cannot be empty!", "Required !");
+                return;
             }
-            else
-            {
-                genreBindingSource2.AddNew();
-            }
+            // create new object of genre
+            genre genres = new genre();
+
+            // set value for object by value from text boxes
+            genres.name = txtName.Text;
+            genres.created_at = DateTime.Today;
+
+            // add new new data to datasource
+            db.genres.Add(genres);
+
+            // save changes to database
+            db.SaveChanges();
+            MessageBox.Show("Insert successful", "Sucessful");
+
+            genreBindingSource2.DataSource = db.genres.ToList(); // update datasource
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,24 +110,6 @@ namespace FMSAPP
             db.genres.Load();
             genreBindingSource2.DataSource = db.genres.Local;
             
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-            if (txtName.Text == string.Empty)
-            {
-                MessageBox.Show("Name is empty");
-                check_valid1 = 1;
-            }
-            else
-            {
-                check_valid1 = 0;
-            }
-        }
-        public int check_valid_all()
-        {
-            check_valid = check_valid1 + check_valid2 + check_valid3 + check_valid4;
-            return check_valid;
         }
     }
 }

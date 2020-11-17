@@ -39,16 +39,18 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.genreBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.genreBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genreBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.genreBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtCreated_at = new System.Windows.Forms.TextBox();
+            this.lblCreatedAt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -86,18 +88,16 @@
             // 
             // dateTimeAdd
             // 
-            this.dateTimeAdd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.genreBindingSource1, "created_at", true));
-            this.dateTimeAdd.Location = new System.Drawing.Point(71, 209);
+            this.dateTimeAdd.Location = new System.Drawing.Point(524, 286);
             this.dateTimeAdd.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimeAdd.Name = "dateTimeAdd";
             this.dateTimeAdd.Size = new System.Drawing.Size(265, 22);
             this.dateTimeAdd.TabIndex = 4;
-            this.dateTimeAdd.ValueChanged += new System.EventHandler(this.dateTimeAdd_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 69);
+            this.label1.Location = new System.Drawing.Point(43, 71);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 17);
@@ -107,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 144);
+            this.label2.Location = new System.Drawing.Point(47, 146);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 17);
@@ -118,7 +118,7 @@
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.genreBindingSource1, "GenreID", true));
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(109, 65);
+            this.textBox1.Location = new System.Drawing.Point(121, 67);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(211, 22);
@@ -127,12 +127,11 @@
             // txtName
             // 
             this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.genreBindingSource1, "name", true));
-            this.txtName.Location = new System.Drawing.Point(109, 134);
+            this.txtName.Location = new System.Drawing.Point(121, 136);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(211, 22);
             this.txtName.TabIndex = 8;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // dataGridView1
             // 
@@ -150,10 +149,6 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(479, 241);
             this.dataGridView1.TabIndex = 9;
-            // 
-            // genreBindingSource2
-            // 
-            this.genreBindingSource2.DataSource = typeof(FMSAPP.genre);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -187,11 +182,36 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
+            // genreBindingSource2
+            // 
+            this.genreBindingSource2.DataSource = typeof(FMSAPP.genre);
+            // 
+            // txtCreated_at
+            // 
+            this.txtCreated_at.Location = new System.Drawing.Point(121, 196);
+            this.txtCreated_at.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCreated_at.Name = "txtCreated_at";
+            this.txtCreated_at.ReadOnly = true;
+            this.txtCreated_at.Size = new System.Drawing.Size(208, 22);
+            this.txtCreated_at.TabIndex = 19;
+            // 
+            // lblCreatedAt
+            // 
+            this.lblCreatedAt.AutoSize = true;
+            this.lblCreatedAt.Location = new System.Drawing.Point(13, 201);
+            this.lblCreatedAt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCreatedAt.Name = "lblCreatedAt";
+            this.lblCreatedAt.Size = new System.Drawing.Size(75, 17);
+            this.lblCreatedAt.TabIndex = 20;
+            this.lblCreatedAt.Text = "Created At";
+            // 
             // GenreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 366);
+            this.Controls.Add(this.txtCreated_at);
+            this.Controls.Add(this.lblCreatedAt);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.textBox1);
@@ -207,8 +227,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genreBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +252,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.BindingSource genreBindingSource2;
+        private System.Windows.Forms.TextBox txtCreated_at;
+        private System.Windows.Forms.Label lblCreatedAt;
     }
 }
