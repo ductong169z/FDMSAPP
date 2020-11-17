@@ -23,6 +23,10 @@ namespace FMSAPP
         static Regex EMAIL_REGEX = new Regex(@"[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
         static Regex PHONE_REGEX = new Regex(@"^[0-9]{10,11}$");
         static Regex PASS_REGEX = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$= %^&*-]).{8,32}$");
+        
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public AddUserForm()
         {
             InitializeComponent();
@@ -107,8 +111,9 @@ namespace FMSAPP
                 {
                     obj.gender = 3;
                 }
+
                 obj.password = GetMD5(txtPassword.Text);
-                obj.RoleID = cbbRoleID.Text == "Admin" ? 1 : 2;
+                obj.RoleID = cbbRoleID.Text == "Admin" ? 1 : 2; // check if admin or user is selected
                 obj.username = txtusername.Text;
 
                 // add to database and save changes
@@ -116,7 +121,7 @@ namespace FMSAPP
                 db.SaveChanges();
 
                 MessageBox.Show("New user has been successfully added to database!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
+                this.Hide(); // hide this form
             }
             else
             {
@@ -155,15 +160,18 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         /// <summary>
-        /// Calculate and check for all fields
+        /// Call other validators and calculate to check for all fields
         /// </summary>
         /// <returns></returns>
         public int check_valid_all(object sender, EventArgs e)
         {
+            /* Call other validators */
             txtusername_Validating(sender, e);
             txtPassword_Validating(sender, e);
             txtre_pass_Validating(sender, e);
             txtemail_Validating(sender, e);
+
+            // calculate and check
             check_valid = check_valid1 + check_valid2 + check_valid3 + check_valid4;
             return check_valid;
         }
