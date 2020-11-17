@@ -150,6 +150,7 @@
             this.btnSeason.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSeason.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSeason.UseVisualStyleBackColor = true;
+            this.btnSeason.Click += new System.EventHandler(this.btnSeason_Click);
             // 
             // btnStudio
             // 

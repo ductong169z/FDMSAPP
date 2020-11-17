@@ -113,5 +113,11 @@ namespace FMSAPP
         {
 
         }
+
+        private void btnSeason_Click(object sender, EventArgs e)
+        {
+            SeasonForm sf = new SeasonForm();
+            sf.Show();
+        }
     }
 }
