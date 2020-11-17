@@ -138,6 +138,7 @@ namespace FMSAPP
                 updateUser.gender = 3;
             }
 
+            updateUser.avatar = txtAvatar.Text;
             /* Updates to database */
             db.accounts.AddOrUpdate(updateUser);
             db.SaveChanges();
@@ -198,14 +199,19 @@ namespace FMSAPP
             // if user clicks OK, load the image
             if (open.ShowDialog() == DialogResult.OK)
             {
-                txtAvatar.Text = Path.GetFileName(open.FileName);
-                try
+                int count = 1;
+
+                string fileNameOnly = Path.GetFileNameWithoutExtension(open.FileName);
+                string extension = Path.GetExtension(open.FileName);
+                string path = Path.GetDirectoryName(open.FileName);
+                string newFullPath = open.FileName;
+
+                while (File.Exists(newFullPath))
                 {
-                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(open.FileName), true);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Don't change picture from the source file", "This admin is trying to change picture in source", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
+                    newFullPath = Path.Combine(path, tempFileName + extension);
+                    txtAvatar.Text = Path.GetFileName(newFullPath);
+                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(newFullPath));
                 }
             }
         }
@@ -221,10 +227,12 @@ namespace FMSAPP
             if (userGridView.Rows[e.RowIndex].Cells[6].Value.ToString().Equals("1"))
             {
                 cbbGender.Text = "Male";
-            } else if (userGridView.Rows[e.RowIndex].Cells[6].Value.ToString().Equals("2"))
+            }
+            else if (userGridView.Rows[e.RowIndex].Cells[6].Value.ToString().Equals("2"))
             {
                 cbbGender.Text = "Female";
-            } else
+            }
+            else
             {
                 cbbGender.Text = "Other";
             }

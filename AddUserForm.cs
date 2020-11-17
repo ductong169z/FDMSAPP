@@ -23,7 +23,7 @@ namespace FMSAPP
         static Regex EMAIL_REGEX = new Regex(@"[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
         static Regex PHONE_REGEX = new Regex(@"^[0-9]{10,11}$");
         static Regex PASS_REGEX = new Regex(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$= %^&*-]).{8,32}$");
-        
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -128,7 +128,7 @@ namespace FMSAPP
                 MessageBox.Show("Have something wrong in input! Please check again!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        
+
         /// <summary>
         /// Choose avatar for user
         /// </summary>

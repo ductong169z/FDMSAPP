@@ -73,7 +73,7 @@ namespace FMSAPP
                     {
                         // show message indicates successful login
                         MessageBox.Show("You have been logged in!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
+
                         // hide the form
                         this.Hide();
 

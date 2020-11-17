@@ -39,9 +39,9 @@
             this.btnLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // txtPassword
-            // 
+            //
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(207, 221);
@@ -52,7 +52,7 @@
             this.txtPassword.TabIndex = 7;
             // 
             // txtUsername
-            // 
+            //
             this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(207, 161);
@@ -60,9 +60,9 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(362, 39);
             this.txtUsername.TabIndex = 6;
-            // 
+            //
             // lblPassword
-            // 
+            //
             this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -71,9 +71,9 @@
             this.lblPassword.Size = new System.Drawing.Size(112, 32);
             this.lblPassword.TabIndex = 5;
             this.lblPassword.Text = "Password";
-            // 
+            //
             // lblUsername
-            // 
+            //
             this.lblUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,9 +82,9 @@
             this.lblUsername.Size = new System.Drawing.Size(122, 32);
             this.lblUsername.TabIndex = 4;
             this.lblUsername.Text = "Username";
-            // 
+            //
             // pictureBox1
-            // 
+            //
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
@@ -95,9 +95,9 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
-            // 
+            //
             // lblAdminLogin
-            // 
+            //
             this.lblAdminLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAdminLogin.AutoSize = true;
             this.lblAdminLogin.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,9 +106,9 @@
             this.lblAdminLogin.Size = new System.Drawing.Size(227, 45);
             this.lblAdminLogin.TabIndex = 14;
             this.lblAdminLogin.Text = "ADMIN LOGIN";
-            // 
+            //
             // lblError
-            // 
+            //
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
@@ -116,9 +116,9 @@
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 28);
             this.lblError.TabIndex = 15;
-            // 
+            //
             // btnLogin
-            // 
+            //
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -130,9 +130,9 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
-            // 
+            //
             // AdminLoginForm
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.WhiteSmoke;

@@ -92,9 +92,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.seasonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPoster)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // animeGridView
-            // 
+            //
             this.animeGridView.AllowUserToAddRows = false;
             this.animeGridView.AutoGenerateColumns = false;
             this.animeGridView.BackgroundColor = System.Drawing.SystemColors.Control;
@@ -123,180 +123,180 @@
             this.animeGridView.RowTemplate.Height = 24;
             this.animeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.animeGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
+            //
             // animeIDDataGridViewTextBoxColumn
-            // 
+            //
             this.animeIDDataGridViewTextBoxColumn.DataPropertyName = "AnimeID";
             resources.ApplyResources(this.animeIDDataGridViewTextBoxColumn, "animeIDDataGridViewTextBoxColumn");
             this.animeIDDataGridViewTextBoxColumn.Name = "animeIDDataGridViewTextBoxColumn";
             this.animeIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // accountIDDataGridViewTextBoxColumn
-            // 
+            //
             this.accountIDDataGridViewTextBoxColumn.DataPropertyName = "AccountID";
             resources.ApplyResources(this.accountIDDataGridViewTextBoxColumn, "accountIDDataGridViewTextBoxColumn");
             this.accountIDDataGridViewTextBoxColumn.Name = "accountIDDataGridViewTextBoxColumn";
             this.accountIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // nameDataGridViewTextBoxColumn
-            // 
+            //
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
             resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // episodesDataGridViewTextBoxColumn
-            // 
+            //
             this.episodesDataGridViewTextBoxColumn.DataPropertyName = "episodes";
             resources.ApplyResources(this.episodesDataGridViewTextBoxColumn, "episodesDataGridViewTextBoxColumn");
             this.episodesDataGridViewTextBoxColumn.Name = "episodesDataGridViewTextBoxColumn";
             this.episodesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // durationDataGridViewTextBoxColumn
-            // 
+            //
             this.durationDataGridViewTextBoxColumn.DataPropertyName = "duration";
             resources.ApplyResources(this.durationDataGridViewTextBoxColumn, "durationDataGridViewTextBoxColumn");
             this.durationDataGridViewTextBoxColumn.Name = "durationDataGridViewTextBoxColumn";
             this.durationDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // descriptionDataGridViewTextBoxColumn
-            // 
+            //
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
             resources.ApplyResources(this.descriptionDataGridViewTextBoxColumn, "descriptionDataGridViewTextBoxColumn");
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // trailerDataGridViewTextBoxColumn
-            // 
+            //
             this.trailerDataGridViewTextBoxColumn.DataPropertyName = "trailer";
             resources.ApplyResources(this.trailerDataGridViewTextBoxColumn, "trailerDataGridViewTextBoxColumn");
             this.trailerDataGridViewTextBoxColumn.Name = "trailerDataGridViewTextBoxColumn";
             this.trailerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // seasonIDDataGridViewTextBoxColumn
-            // 
+            //
             this.seasonIDDataGridViewTextBoxColumn.DataPropertyName = "SeasonID";
             resources.ApplyResources(this.seasonIDDataGridViewTextBoxColumn, "seasonIDDataGridViewTextBoxColumn");
             this.seasonIDDataGridViewTextBoxColumn.Name = "seasonIDDataGridViewTextBoxColumn";
             this.seasonIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // typeDataGridViewTextBoxColumn
-            // 
+            //
             this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
             resources.ApplyResources(this.typeDataGridViewTextBoxColumn, "typeDataGridViewTextBoxColumn");
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // ratingDataGridViewTextBoxColumn
-            // 
+            //
             this.ratingDataGridViewTextBoxColumn.DataPropertyName = "rating";
             resources.ApplyResources(this.ratingDataGridViewTextBoxColumn, "ratingDataGridViewTextBoxColumn");
             this.ratingDataGridViewTextBoxColumn.Name = "ratingDataGridViewTextBoxColumn";
             this.ratingDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // statusDataGridViewTextBoxColumn
-            // 
+            //
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
             resources.ApplyResources(this.statusDataGridViewTextBoxColumn, "statusDataGridViewTextBoxColumn");
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // posterDataGridViewTextBoxColumn
-            // 
+            //
             this.posterDataGridViewTextBoxColumn.DataPropertyName = "poster";
             resources.ApplyResources(this.posterDataGridViewTextBoxColumn, "posterDataGridViewTextBoxColumn");
             this.posterDataGridViewTextBoxColumn.Name = "posterDataGridViewTextBoxColumn";
             this.posterDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // releaseDateDataGridViewTextBoxColumn
-            // 
+            //
             this.releaseDateDataGridViewTextBoxColumn.DataPropertyName = "releaseDate";
             resources.ApplyResources(this.releaseDateDataGridViewTextBoxColumn, "releaseDateDataGridViewTextBoxColumn");
             this.releaseDateDataGridViewTextBoxColumn.Name = "releaseDateDataGridViewTextBoxColumn";
             this.releaseDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // createdatDataGridViewTextBoxColumn
-            // 
+            //
             this.createdatDataGridViewTextBoxColumn.DataPropertyName = "created_at";
             resources.ApplyResources(this.createdatDataGridViewTextBoxColumn, "createdatDataGridViewTextBoxColumn");
             this.createdatDataGridViewTextBoxColumn.Name = "createdatDataGridViewTextBoxColumn";
             this.createdatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
+            //
             // animeBindingSource
-            // 
+            //
             this.animeBindingSource.DataSource = typeof(FMSAPP.anime);
-            // 
+            //
             // btnAdd
-            // 
+            //
             this.btnAdd.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
+            //
             // lbName
-            // 
+            //
             resources.ApplyResources(this.lbName, "lbName");
             this.lbName.Name = "lbName";
-            // 
+            //
             // txtName
-            // 
+            //
             this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "name", true));
             resources.ApplyResources(this.txtName, "txtName");
             this.txtName.Name = "txtName";
             this.txtName.Leave += new System.EventHandler(this.txtName_Validating);
-            // 
+            //
             // txtEpi
-            // 
+            //
             this.txtEpi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "episodes", true));
             resources.ApplyResources(this.txtEpi, "txtEpi");
             this.txtEpi.Name = "txtEpi";
             this.txtEpi.Leave += new System.EventHandler(this.txtEpi_Validating);
-            // 
+            //
             // lbEp
-            // 
+            //
             resources.ApplyResources(this.lbEp, "lbEp");
             this.lbEp.Name = "lbEp";
-            // 
+            //
             // txtDura
-            // 
+            //
             this.txtDura.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "duration", true));
             resources.ApplyResources(this.txtDura, "txtDura");
             this.txtDura.Name = "txtDura";
             this.txtDura.Leave += new System.EventHandler(this.txtDura_Validating);
-            // 
+            //
             // lbDu
-            // 
+            //
             resources.ApplyResources(this.lbDu, "lbDu");
             this.lbDu.Name = "lbDu";
-            // 
+            //
             // txtDes
-            // 
+            //
             this.txtDes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "description", true));
             resources.ApplyResources(this.txtDes, "txtDes");
             this.txtDes.Name = "txtDes";
             this.txtDes.Leave += new System.EventHandler(this.txtDes_Validating);
-            // 
+            //
             // lbDes
-            // 
+            //
             resources.ApplyResources(this.lbDes, "lbDes");
             this.lbDes.Name = "lbDes";
-            // 
+            //
             // txtTrailer
-            // 
+            //
             this.txtTrailer.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "trailer", true));
             resources.ApplyResources(this.txtTrailer, "txtTrailer");
             this.txtTrailer.Name = "txtTrailer";
             this.txtTrailer.Leave += new System.EventHandler(this.txtTrailer_Validating);
-            // 
+            //
             // lbTrailer
-            // 
+            //
             resources.ApplyResources(this.lbTrailer, "lbTrailer");
             this.lbTrailer.Name = "lbTrailer";
-            // 
+            //
             // btnDelete
-            // 
+            //
             this.btnDelete.BackColor = System.Drawing.SystemColors.Control;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
@@ -304,9 +304,9 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
+            //
             // btnUpdate
-            // 
+            //
             this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
@@ -314,9 +314,9 @@
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
+            //
             // btnClear
-            // 
+            //
             this.btnClear.BackColor = System.Drawing.SystemColors.Control;
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.ForeColor = System.Drawing.Color.Black;
@@ -324,29 +324,29 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
+            //
             // lbSea
-            // 
+            //
             resources.ApplyResources(this.lbSea, "lbSea");
             this.lbSea.Name = "lbSea";
-            // 
+            //
             // lbType
-            // 
+            //
             resources.ApplyResources(this.lbType, "lbType");
             this.lbType.Name = "lbType";
-            // 
+            //
             // lbRa
-            // 
+            //
             resources.ApplyResources(this.lbRa, "lbRa");
             this.lbRa.Name = "lbRa";
-            // 
+            //
             // lbSta
-            // 
+            //
             resources.ApplyResources(this.lbSta, "lbSta");
             this.lbSta.Name = "lbSta";
-            // 
+            //
             // cbbType
-            // 
+            //
             this.cbbType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.animeBindingSource, "type", true));
             this.cbbType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "type", true));
             this.cbbType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.animeBindingSource, "type", true));
@@ -361,9 +361,9 @@
             resources.GetString("cbbType.Items5")});
             resources.ApplyResources(this.cbbType, "cbbType");
             this.cbbType.Name = "cbbType";
-            // 
+            //
             // cbbStatus
-            // 
+            //
             this.cbbStatus.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "status", true));
             this.cbbStatus.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.animeBindingSource, "status", true));
             this.cbbStatus.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.animeBindingSource, "status", true));
@@ -374,9 +374,9 @@
             resources.GetString("cbbStatus.Items1")});
             resources.ApplyResources(this.cbbStatus, "cbbStatus");
             this.cbbStatus.Name = "cbbStatus";
-            // 
+            //
             // cbbRating
-            // 
+            //
             this.cbbRating.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.animeBindingSource, "rating", true));
             this.cbbRating.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.animeBindingSource, "rating", true));
             this.cbbRating.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "rating", true));
@@ -390,9 +390,9 @@
             resources.GetString("cbbRating.Items4")});
             resources.ApplyResources(this.cbbRating, "cbbRating");
             this.cbbRating.Name = "cbbRating";
-            // 
+            //
             // cbbSeason
-            // 
+            //
             this.cbbSeason.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.animeBindingSource, "SeasonID", true));
             this.cbbSeason.DataSource = this.seasonBindingSource;
             this.cbbSeason.DisplayMember = "name";
@@ -401,117 +401,116 @@
             resources.ApplyResources(this.cbbSeason, "cbbSeason");
             this.cbbSeason.Name = "cbbSeason";
             this.cbbSeason.ValueMember = "SeasonID";
-            // 
+            //
             // seasonBindingSource
-            // 
+            //
             this.seasonBindingSource.DataSource = typeof(FMSAPP.season);
-            // 
+            //
             // lbReleaseDate
-            // 
+            //
             resources.ApplyResources(this.lbReleaseDate, "lbReleaseDate");
             this.lbReleaseDate.Name = "lbReleaseDate";
-            // 
+            //
             // txtReleaseDate
-            // 
+            //
             this.txtReleaseDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.animeBindingSource, "releaseDate", true));
             resources.ApplyResources(this.txtReleaseDate, "txtReleaseDate");
             this.txtReleaseDate.Name = "txtReleaseDate";
-            // 
+            //
             // txtCurrentDate
-            // 
+            //
             this.txtCurrentDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.animeBindingSource, "created_at", true));
             resources.ApplyResources(this.txtCurrentDate, "txtCurrentDate");
             this.txtCurrentDate.Name = "txtCurrentDate";
             this.txtCurrentDate.Value = new System.DateTime(2020, 11, 4, 13, 19, 56, 0);
-            // 
+            //
             // lbAdminId
-            // 
+            //
             resources.ApplyResources(this.lbAdminId, "lbAdminId");
             this.lbAdminId.Name = "lbAdminId";
-            // 
+            //
             // txtAdminId
-            // 
+            //
             this.txtAdminId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "AccountID", true));
             resources.ApplyResources(this.txtAdminId, "txtAdminId");
             this.txtAdminId.Name = "txtAdminId";
             this.txtAdminId.ReadOnly = true;
-            // 
+            //
             // openFileDialog1
-            // 
+            //
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
+            //
             // pbPoster
-            // 
+            //
             resources.ApplyResources(this.pbPoster, "pbPoster");
             this.pbPoster.Name = "pbPoster";
             this.pbPoster.TabStop = false;
-            this.pbPoster.Click += new System.EventHandler(this.pbPoster_Click);
-            // 
+            //
             // btnFind
-            // 
+            //
             resources.ApplyResources(this.btnFind, "btnFind");
             this.btnFind.Name = "btnFind";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
-            // 
+            //
             // lbFind
-            // 
+            //
             resources.ApplyResources(this.lbFind, "lbFind");
             this.lbFind.Name = "lbFind";
-            // 
+            //
             // txtFind
-            // 
+            //
             resources.ApplyResources(this.txtFind, "txtFind");
             this.txtFind.Name = "txtFind";
-            // 
+            //
             // btnChoose
-            // 
+            //
             resources.ApplyResources(this.btnChoose, "btnChoose");
             this.btnChoose.Name = "btnChoose";
             this.btnChoose.UseVisualStyleBackColor = true;
             this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
-            // 
+            //
             // txtPos
-            // 
+            //
             this.txtPos.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "poster", true));
             resources.ApplyResources(this.txtPos, "txtPos");
             this.txtPos.Name = "txtPos";
-            // 
+            //
             // lbPos
-            // 
+            //
             resources.ApplyResources(this.lbPos, "lbPos");
             this.lbPos.Name = "lbPos";
-            // 
+            //
             // lblCurrentDate
-            // 
+            //
             resources.ApplyResources(this.lblCurrentDate, "lblCurrentDate");
             this.lblCurrentDate.Name = "lblCurrentDate";
-            // 
+            //
             // lbUrAdminId
-            // 
+            //
             resources.ApplyResources(this.lbUrAdminId, "lbUrAdminId");
             this.lbUrAdminId.Name = "lbUrAdminId";
-            // 
+            //
             // txtUrAdminId
-            // 
+            //
             resources.ApplyResources(this.txtUrAdminId, "txtUrAdminId");
             this.txtUrAdminId.Name = "txtUrAdminId";
             this.txtUrAdminId.ReadOnly = true;
-            // 
+            //
             // lbAnimeId
-            // 
+            //
             resources.ApplyResources(this.lbAnimeId, "lbAnimeId");
             this.lbAnimeId.Name = "lbAnimeId";
-            // 
+            //
             // txtAnimeId
-            // 
+            //
             this.txtAnimeId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animeBindingSource, "AnimeID", true));
             resources.ApplyResources(this.txtAnimeId, "txtAnimeId");
             this.txtAnimeId.Name = "txtAnimeId";
             this.txtAnimeId.ReadOnly = true;
-            // 
+            //
             // AnimeForm
-            // 
+            //
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.txtAnimeId);
