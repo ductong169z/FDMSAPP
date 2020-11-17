@@ -94,7 +94,7 @@ namespace FMSAPP
                 txtavatar.Text = Path.GetFileName(open.FileName);
                 try
                 {
-                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(open.FileName), true);
+                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(open.FileName), true);
                 }
                 catch(Exception ex)
                 {

@@ -59,15 +59,11 @@ namespace FMSAPP
             db.animes.Load(); // load from database
             animeBindingSource.DataSource = db.animes.Local.Where(a => a.deleted_at == null); // load animes to data source (that are not deleted)                                                                   
 
-            try
-            {
+            
                 // update anime poster to picture box
                 pbPoster.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Posters/" + Path.GetFileName(txtPos.Text));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Cannot load anime poster", "Loading Poster Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
+          
 
             /* Load seasons to combo box */
             var season = db.seasons;
@@ -382,6 +378,11 @@ namespace FMSAPP
             txtReleaseDate.Text = "";
             txtPos.Text = "";
             pbPoster.Image = null;
+        }
+
+        private void pbPoster_Click(object sender, EventArgs e)
+        {
+
         }
 
 

@@ -43,7 +43,7 @@ namespace FMSAPP
             // loads if there is avatar
             if (txtAvatar.Text != null && txtAvatar.Text != "")
             {
-                pbAvatar.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+                pbAvatar.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(txtAvatar.Text));
             }
 
             ///* Load roles to combobox */
@@ -202,7 +202,7 @@ namespace FMSAPP
                 txtAvatar.Text = Path.GetFileName(open.FileName);
                 try
                 {
-                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(open.FileName), true);
+                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(open.FileName), true);
                 }
                 catch (Exception ex)
                 {
@@ -240,7 +240,7 @@ namespace FMSAPP
                 try
                 {
                     // update account avatar to picture box to display
-                    pbAvatar.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
+                    pbAvatar.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(txtAvatar.Text));
                 }
                 catch (Exception exc)
                 {

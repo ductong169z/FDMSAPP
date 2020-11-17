@@ -445,6 +445,7 @@
             resources.ApplyResources(this.pbPoster, "pbPoster");
             this.pbPoster.Name = "pbPoster";
             this.pbPoster.TabStop = false;
+            this.pbPoster.Click += new System.EventHandler(this.pbPoster_Click);
             // 
             // btnFind
             // 
