@@ -45,18 +45,15 @@
             this.txtre_pass = new System.Windows.Forms.TextBox();
             this.cbbRoleID = new System.Windows.Forms.ComboBox();
             this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.animeDataSet1 = new FMSAPP.animeDataSet1();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbgender = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.roleTableAdapter = new FMSAPP.animeDataSet1TableAdapters.roleTableAdapter();
             this.currentDate = new System.Windows.Forms.DateTimePicker();
             this.accountBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnChoose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,16 +194,6 @@
             this.cbbRoleID.Size = new System.Drawing.Size(174, 24);
             this.cbbRoleID.TabIndex = 34;
             // 
-            // roleBindingSource
-            // 
-            this.roleBindingSource.DataMember = "role";
-            this.roleBindingSource.DataSource = this.animeDataSet1;
-            // 
-            // animeDataSet1
-            // 
-            this.animeDataSet1.DataSetName = "animeDataSet1";
-            this.animeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -248,10 +235,6 @@
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // roleTableAdapter
-            // 
-            this.roleTableAdapter.ClearBeforeFill = true;
             // 
             // currentDate
             // 
@@ -310,7 +293,6 @@
             this.Load += new System.EventHandler(this.AddUserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -339,9 +321,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.BindingSource accountBindingSource;
         private System.Windows.Forms.BindingSource accountBindingSource1;
-        private animeDataSet1 animeDataSet1;
         private System.Windows.Forms.BindingSource roleBindingSource;
-        private animeDataSet1TableAdapters.roleTableAdapter roleTableAdapter;
         private System.Windows.Forms.DateTimePicker currentDate;
         private System.Windows.Forms.Button btnChoose;
     }

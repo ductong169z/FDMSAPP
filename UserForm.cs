@@ -111,6 +111,11 @@ namespace FMSAPP
             }
         }
 
+        /// <summary>
+        /// Update a user
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             // check if user has selected a row
@@ -133,7 +138,7 @@ namespace FMSAPP
                 updateUser.gender = 2;
             } else
             {
-                updateUser.gender = 0;
+                updateUser.gender = 3;
             }
 
             /* Updates to database */
@@ -206,6 +211,11 @@ namespace FMSAPP
             }
         }
 
+        /// <summary>
+        /// Update data to gender combo box and picture box on cell click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             /* Update combo box gender text */
@@ -241,7 +251,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         /// <summary>
-        /// Find users whost name contains find value
+        /// Find users whose username contains find value
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -250,11 +260,11 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
             // if find value is null or empty, show all users
             if (string.IsNullOrEmpty(this.txtFind.Text))
             {
-                this.accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null); // load all accounts to data source (that are not deleted)
+                accountBindingSource.DataSource = db.accounts.Local.ToBindingList().Where(a => a.deleted_at == null); // load all accounts to data source (that are not deleted)
             }
             else
             {
-                // obtain list of accounts whose full names contain find value and are not deleted
+                // obtain list of accounts whose usernames contain find value and are not deleted
                 var filteredData = db.accounts.Local.ToBindingList()
                     .Where(x => x.username.Contains(this.txtFind.Text) && x.deleted_at == null);
 
