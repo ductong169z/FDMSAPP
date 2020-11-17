@@ -6382,12 +6382,6 @@
       </summary>
       <param name="fileName">A path to the image file.</param>
     </member>
-    <member name="P:DevExpress.Pdf.PdfSignatureBuilder.SigningTime">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="T:DevExpress.Pdf.PdfSignatureFieldInfo">
       <summary>
         <para>Contains information about the signature field.</para>

@@ -26,7 +26,7 @@ namespace FMSAPP
             txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtCreated_at.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
-
+        DataTable dt = new DataTable("Season");
         private void SeasonForm_Load(object sender, EventArgs e)
         {
 
@@ -107,14 +107,24 @@ namespace FMSAPP
             btnAdd.Enabled = true;
         }
 
-        private void separatorControl1_Click(object sender, EventArgs e)
+        private void bntSearch_Click(object sender, EventArgs e)
         {
-
+            if (!txtSearch.Text.Equals(""))
+            {
+                dataGridView1.DataSource = db.seasons.Where(x => x.name.Contains(txtSearch.Text)).ToList();
+            }
+            else
+            {
+                MessageBox.Show("Input in search name is null ! Please enter the name of season !!");
+            }
+            
+            
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void bnt_searchdate_Click(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = db.seasons.Where(x => x.created_at.Value).ToList();
+            
         }
     }
 }
