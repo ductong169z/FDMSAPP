@@ -208,14 +208,17 @@ namespace FMSAPP
                 string extension = Path.GetExtension(open.FileName);
                 string path = Path.GetDirectoryName(open.FileName);
                 string newFullPath = open.FileName;
-
-                while (File.Exists(newFullPath))
+                if (txtAvatar.Text == "") 
+                {
+                    txtAvatar.Text = Path.GetFileName(open.FileName);
+                }
+                    while (File.Exists(@"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(txtAvatar.Text)))
                 {
                     string tempFileName = string.Format("{0}({1})", fileNameOnly, count++);
-                    newFullPath = Path.Combine(path, tempFileName + extension);
+                    newFullPath = Path.Combine(@"../../../FDMSWEB/Content/Images/users/", tempFileName + extension);
                     txtAvatar.Text = Path.GetFileName(newFullPath);
-                    File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(newFullPath));
-                }   
+                }
+                File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(newFullPath));
                 /**  try
                   {
                       File.Copy(open.FileName, @"../../../FDMSWEB/Content/Images/users/" + Path.GetFileName(open.FileName));
