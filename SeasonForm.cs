@@ -24,6 +24,8 @@ namespace FMSAPP
         public SeasonForm()
         {
             InitializeComponent();
+
+            this.CenterToScreen(); // center the form
         }
 
         /// <summary>
@@ -135,7 +137,7 @@ namespace FMSAPP
                 MessageBox.Show("Please enter another ID that doesn't exist in database!", "Not found ID!");
                 return;
             }
-            MessageBox.Show("Delete successfull!", "Successfull!");
+            MessageBox.Show("Delete successful!", "Successful!");
 
             // save changes to database
             db.SaveChanges();
