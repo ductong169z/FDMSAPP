@@ -26,10 +26,6 @@ namespace FMSAPP
             currentDate.Value = DateTime.Now;
             this.AcceptButton = btnAdd;
             this.CenterToScreen();
-            this.FormClosing += delegate
-            {
-                Application.Exit();
-            };
         }
         // Regex contstraints
         static Regex EMAIL_REGEX = new Regex(@"[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");

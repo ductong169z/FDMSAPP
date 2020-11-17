@@ -311,6 +311,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\account.datasource" />
     <None Include="Properties\DataSources\anime.datasource" />
+    <None Include="Properties\DataSources\role.datasource" />
     <None Include="Properties\DataSources\season.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

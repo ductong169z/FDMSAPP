@@ -65,11 +65,13 @@
             this.lbFind = new System.Windows.Forms.Label();
             this.btnFind = new System.Windows.Forms.Button();
             this.lblCurrentDate = new System.Windows.Forms.Label();
+            this.roleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.userGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // userGridView
@@ -190,7 +192,7 @@
             // lbRoleId
             // 
             this.lbRoleId.AutoSize = true;
-            this.lbRoleId.Location = new System.Drawing.Point(20, 22);
+            this.lbRoleId.Location = new System.Drawing.Point(14, 22);
             this.lbRoleId.Name = "lbRoleId";
             this.lbRoleId.Size = new System.Drawing.Size(67, 20);
             this.lbRoleId.TabIndex = 5;
@@ -198,9 +200,8 @@
             // 
             // cbbRoleID
             // 
-            this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "RoleID", true));
             this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.accountBindingSource, "RoleID", true));
-            this.cbbRoleID.DataSource = this.roleBindingSource;
+            this.cbbRoleID.DataSource = this.roleBindingSource1;
             this.cbbRoleID.DisplayMember = "name";
             this.cbbRoleID.FormattingEnabled = true;
             this.cbbRoleID.Location = new System.Drawing.Point(107, 19);
@@ -223,7 +224,7 @@
             // lbFullName
             // 
             this.lbFullName.AutoSize = true;
-            this.lbFullName.Location = new System.Drawing.Point(17, 73);
+            this.lbFullName.Location = new System.Drawing.Point(14, 76);
             this.lbFullName.Name = "lbFullName";
             this.lbFullName.Size = new System.Drawing.Size(84, 20);
             this.lbFullName.TabIndex = 8;
@@ -259,7 +260,7 @@
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(20, 126);
+            this.lbEmail.Location = new System.Drawing.Point(14, 125);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(52, 20);
             this.lbEmail.TabIndex = 12;
@@ -276,22 +277,20 @@
             // 
             // cbbGender
             // 
-            this.cbbGender.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "gender", true));
-            this.cbbGender.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.accountBindingSource, "gender", true));
-            this.cbbGender.DataSource = this.accountBindingSource;
-            this.cbbGender.DisplayMember = "gender";
             this.cbbGender.FormattingEnabled = true;
+            this.cbbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.cbbGender.Location = new System.Drawing.Point(107, 175);
             this.cbbGender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbGender.Name = "cbbGender";
             this.cbbGender.Size = new System.Drawing.Size(195, 28);
             this.cbbGender.TabIndex = 16;
-            this.cbbGender.ValueMember = "gender";
             // 
             // lbGender
             // 
             this.lbGender.AutoSize = true;
-            this.lbGender.Location = new System.Drawing.Point(20, 175);
+            this.lbGender.Location = new System.Drawing.Point(14, 178);
             this.lbGender.Name = "lbGender";
             this.lbGender.Size = new System.Drawing.Size(67, 20);
             this.lbGender.TabIndex = 15;
@@ -448,6 +447,10 @@
             this.lblCurrentDate.Text = "Current Date:";
             this.lblCurrentDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // roleBindingSource1
+            // 
+            this.roleBindingSource1.DataSource = typeof(FMSAPP.role);
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -488,6 +491,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animeDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,5 +535,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createdatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource roleBindingSource1;
     }
 }

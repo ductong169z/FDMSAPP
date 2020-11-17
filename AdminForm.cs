@@ -47,17 +47,21 @@ namespace FMSAPP
             // check if the column is gender
             if (this.adminGridView.Columns[e.ColumnIndex].Index == 6)
             {
-                if (e.Value.ToString().Equals("1"))
+                // check if cell value is null
+                if (e.Value != null)
                 {
-                    e.Value = "Male";
-                }
-                else if (e.Value.ToString().Equals("2"))
-                {
-                    e.Value = "Female";
-                }
-                else
-                {
-                    e.Value = "Other";
+                    if (e.Value.ToString().Equals("1"))
+                    {
+                        e.Value = "Male";
+                    }
+                    else if (e.Value.ToString().Equals("2"))
+                    {
+                        e.Value = "Female";
+                    }
+                    else
+                    {
+                        e.Value = "Other";
+                    }
                 }
             }
         }

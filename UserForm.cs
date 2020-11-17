@@ -46,9 +46,12 @@ namespace FMSAPP
                 pbAvatar.Image = Image.FromFile(@"../../../FDMSWEB/Content/Images/Avatar/" + Path.GetFileName(txtAvatar.Text));
             }
 
-            /* Load roles to combobox */
+            ///* Load roles to combobox */
+            //cbbRoleID.DisplayMember = "name";
+            //cbbRoleID.ValueMember = "RoleID";
             var roleid = db.roles;
             cbbRoleID.DataSource = roleid.ToList();
+
         }
 
         /// <summary>
@@ -117,6 +120,24 @@ namespace FMSAPP
                 return;
             }
 
+            int n = userGridView.CurrentRow.Index; // current row index
+            int updateId = Convert.ToInt32(userGridView.Rows[n].Cells[0].Value); // get account ID
+            account updateUser = db.accounts.FirstOrDefault(a => a.AccountID == updateId); // get account object using ID
+
+            // update gender
+            if (cbbGender.Text == "Male")
+            {
+                updateUser.gender = 1;
+            } else if (cbbGender.Text == "Female")
+            {
+                updateUser.gender = 2;
+            } else
+            {
+                updateUser.gender = 0;
+            }
+
+            /* Updates to database */
+            db.accounts.AddOrUpdate(updateUser);
             db.SaveChanges();
 
             // update binding source data
@@ -154,6 +175,7 @@ namespace FMSAPP
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             userGridView.Refresh();
+            MessageBox.Show("The grid view has been refreshed!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         /// <summary>
@@ -186,13 +208,16 @@ namespace FMSAPP
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (cbbGender.Text == "1")
+            /* Update combo box gender text */
+            if (userGridView.Rows[e.RowIndex].Cells[6].Value.ToString().Equals("1"))
             {
                 cbbGender.Text = "Male";
-            }
-            else if (cbbGender.Text == "2")
+            } else if (userGridView.Rows[e.RowIndex].Cells[6].Value.ToString().Equals("2"))
             {
                 cbbGender.Text = "Female";
+            } else
+            {
+                cbbGender.Text = "Other";
             }
 
             // check if account has any avatar
@@ -249,17 +274,21 @@ MessageBoxButtons.OK, MessageBoxIcon.Error);
             // check if the column is gender
             if (userGridView.Columns[e.ColumnIndex].Index == 6)
             {
-                if (e.Value.ToString().Equals("1"))
+                // check if cell value is null
+                if (e.Value != null)
                 {
-                    e.Value = "Male";
-                }
-                else if (e.Value.ToString().Equals("2"))
-                {
-                    e.Value = "Female";
-                }
-                else
-                {
-                    e.Value = "Other";
+                    if (e.Value.ToString().Equals("1"))
+                    {
+                        e.Value = "Male";
+                    }
+                    else if (e.Value.ToString().Equals("2"))
+                    {
+                        e.Value = "Female";
+                    }
+                    else
+                    {
+                        e.Value = "Other";
+                    }
                 }
             }
         }
