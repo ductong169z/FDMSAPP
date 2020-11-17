@@ -71,7 +71,6 @@
             this.lblPassword.Size = new System.Drawing.Size(112, 32);
             this.lblPassword.TabIndex = 5;
             this.lblPassword.Text = "Password";
-            this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
             // 
             // lblUsername
             // 
@@ -83,7 +82,6 @@
             this.lblUsername.Size = new System.Drawing.Size(122, 32);
             this.lblUsername.TabIndex = 4;
             this.lblUsername.Text = "Username";
-            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
             // pictureBox1
             // 
@@ -154,7 +152,6 @@
             this.MinimizeBox = false;
             this.Name = "AdminLoginForm";
             this.Text = "Admin Login Form";
-            this.Load += new System.EventHandler(this.AdminLoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
