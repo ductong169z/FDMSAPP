@@ -46,7 +46,7 @@
             this.cbbRoleID = new System.Windows.Forms.ComboBox();
             this.roleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblRoleId = new System.Windows.Forms.Label();
+            this.lblRole = new System.Windows.Forms.Label();
             this.cmbgender = new System.Windows.Forms.ComboBox();
             this.lbGender = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -150,7 +150,6 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "password", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.txtPassword.Location = new System.Drawing.Point(206, 428);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -192,7 +191,6 @@
             // cbbRoleID
             // 
             this.cbbRoleID.BackColor = System.Drawing.SystemColors.Window;
-            this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.accountBindingSource, "RoleID", true));
             this.cbbRoleID.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.accountBindingSource, "RoleID", true));
             this.cbbRoleID.DataSource = this.roleBindingSource1;
             this.cbbRoleID.DisplayMember = "name";
@@ -208,14 +206,14 @@
             // 
             this.roleBindingSource1.DataSource = typeof(FMSAPP.role);
             // 
-            // lblRoleId
+            // lblRole
             // 
-            this.lblRoleId.AutoSize = true;
-            this.lblRoleId.Location = new System.Drawing.Point(14, 526);
-            this.lblRoleId.Name = "lblRoleId";
-            this.lblRoleId.Size = new System.Drawing.Size(139, 20);
-            this.lblRoleId.TabIndex = 33;
-            this.lblRoleId.Text = "Role ID (required):";
+            this.lblRole.AutoSize = true;
+            this.lblRole.Location = new System.Drawing.Point(14, 526);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(118, 20);
+            this.lblRole.TabIndex = 33;
+            this.lblRole.Text = "Role (required):";
             // 
             // cmbgender
             // 
@@ -262,7 +260,6 @@
             this.currentDate.Size = new System.Drawing.Size(269, 26);
             this.currentDate.TabIndex = 38;
             this.currentDate.Value = new System.DateTime(2020, 11, 4, 13, 35, 15, 0);
-            this.currentDate.Validating += new System.ComponentModel.CancelEventHandler(this.currentDate_Validating);
             // 
             // accountBindingSource1
             // 
@@ -300,7 +297,7 @@
             this.Controls.Add(this.cmbgender);
             this.Controls.Add(this.lbGender);
             this.Controls.Add(this.cbbRoleID);
-            this.Controls.Add(this.lblRoleId);
+            this.Controls.Add(this.lblRole);
             this.Controls.Add(this.lblre_pass);
             this.Controls.Add(this.txtre_pass);
             this.Controls.Add(this.lblpass);
@@ -346,7 +343,7 @@
         private System.Windows.Forms.Label lblre_pass;
         private System.Windows.Forms.TextBox txtre_pass;
         private System.Windows.Forms.ComboBox cbbRoleID;
-        private System.Windows.Forms.Label lblRoleId;
+        private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.ComboBox cmbgender;
         private System.Windows.Forms.Label lbGender;
         private System.Windows.Forms.Button btnAdd;
