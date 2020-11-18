@@ -107,29 +107,35 @@ namespace FMSAPP
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBox1.Text); // cast value to int and set to ID
-
-            // create new object of season
-            studio studios = new studio();
-            studios = db.studios.FirstOrDefault(ss => ss.StudioID == id);
-
-            // find obj in datasource exist or not
-            if (studios != null)
+            try
             {
-                // call function remove
-                db.studios.Remove(studios);
-            }
-            else
+                int id = Convert.ToInt32(textBox1.Text); // cast value to int and set to ID
+
+                // create new object of season
+                studio studios = new studio();
+                studios = db.studios.FirstOrDefault(ss => ss.StudioID == id);
+
+                // find obj in datasource exist or not
+                if (studios != null)
+                {
+                    // call function remove
+                    db.studios.Remove(studios);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter another ID that doesn't exist in database!", "Not found ID!");
+                    return;
+                }
+                MessageBox.Show("Delete successful!", "Successful!");
+
+                // save changes to database
+                db.SaveChanges();
+
+                studioBindingSource1.DataSource = db.studios.ToList(); // update datasource
+            } catch (Exception ex)
             {
-                MessageBox.Show("Please enter another ID that doesn't exist in database!", "Not found ID!");
-                return;
+                MessageBox.Show("Cannot delete because the studio you tried to delete is linked to other animes!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            MessageBox.Show("Delete successful!", "Successful!");
-
-            // save changes to database
-            db.SaveChanges();
-
-            studioBindingSource1.DataSource = db.studios.ToList(); // update datasource
         }
 
         /// <summary>

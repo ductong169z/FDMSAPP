@@ -68,29 +68,36 @@ namespace FMSAPP
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBox1.Text); // cast value to int and set to ID
-
-            // create new object of season
-            genre genres = new genre();
-            genres = db.genres.FirstOrDefault(ss => ss.GenreID == id);
-
-            // find obj in datasource exist or not
-            if (genres != null)
+            try
             {
-                // call function remove
-                db.genres.Remove(genres);
+                int id = Convert.ToInt32(textBox1.Text); // cast value to int and set to ID
+
+                // create new object of season
+                genre genres = new genre();
+                genres = db.genres.FirstOrDefault(ss => ss.GenreID == id);
+
+                // find obj in datasource exist or not
+                if (genres != null)
+                {
+                    // call function remove
+                    db.genres.Remove(genres);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter another ID that doesn't exist in database!", "Not found ID!");
+                    return;
+                }
+                MessageBox.Show("Delete successful!", "Successful!");
+
+                // save changes to database
+                db.SaveChanges();
+
+                genreBindingSource2.DataSource = db.genres.ToList(); // update datasource
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please enter another ID that doesn't exist in database!", "Not found ID!");
-                return;
+                MessageBox.Show("Cannot delete because the genre you tried to delete is linked to other animes!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            MessageBox.Show("Delete successful!", "Successful!");
-
-            // save changes to database
-            db.SaveChanges();
-
-            genreBindingSource2.DataSource = db.genres.ToList(); // update datasource
         }
 
         /// <summary>
@@ -133,7 +140,6 @@ namespace FMSAPP
             db = new animeEntities(); // instantiate new instance
             db.genres.Load(); // load data from database
             genreBindingSource2.DataSource = db.genres.Local; // set datasource
-            
         }
 
         /// <summary>
