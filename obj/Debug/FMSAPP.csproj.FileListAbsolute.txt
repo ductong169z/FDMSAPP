@@ -31,6 +31,7 @@ D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Buffers.xml
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Memory.xml
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Numerics.Vectors.xml
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csprojAssemblyReference.cache
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.Properties.Resources.resources
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csproj.GenerateResource.cache
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csproj.CoreCompileInputs.cache
@@ -65,6 +66,19 @@ D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\CrystalDecisions.ReportAppSer
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.DashBoard.resources
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.FormReportUser.resources
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.FormReportAnime.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AddUserForm.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AdminForm.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AdminLoginForm.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AnimeForm.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.DashBoard.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.FormReportAnime.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.FormReportUser.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.Properties.Resources.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.SeasonForm.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.UserForm.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csproj.GenerateResource.cache
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.exe.licenses
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csproj.CoreCompileInputs.cache
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\FMSAPP.exe.config
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\FMSAPP.exe
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\FMSAPP.pdb
@@ -74,6 +88,10 @@ C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\CrystalDecisions.CrystalReports.Eng
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\CrystalDecisions.Shared.dll
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Data.Desktop.v20.1.dll
+C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Data.v20.1.dll
+C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Printing.v20.1.Core.dll
+C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Utils.v20.1.dll
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\EntityFramework.dll
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\EntityFramework.SqlServer.dll
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\Google.Protobuf.dll
@@ -101,8 +119,14 @@ C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\CrystalDecisions.ReportAppServer.Xm
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Pdf.v20.1.Core.dll
+C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Pdf.v20.1.Drawing.dll
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\stdole.dll
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Data.Desktop.v20.1.xml
+C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Data.v20.1.xml
+C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Printing.v20.1.Core.xml
+C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Utils.v20.1.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\EntityFramework.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\EntityFramework.SqlServer.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\Google.Protobuf.pdb
@@ -117,31 +141,6 @@ C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\System.Buffers.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\System.Memory.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\System.Numerics.Vectors.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AddUserForm.resources
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AdminForm.resources
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AdminLoginForm.resources
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.AnimeForm.resources
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.DashBoard.resources
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.FormReportAnime.resources
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.FormReportUser.resources
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.Properties.Resources.resources
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.UserForm.resources
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csproj.GenerateResource.cache
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.exe.licenses
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csproj.CoreCompileInputs.cache
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csproj.CopyComplete
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.exe
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.pdb
-C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Data.Desktop.v20.1.dll
-C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Data.v20.1.dll
-C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Printing.v20.1.Core.dll
-C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Utils.v20.1.dll
-C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Pdf.v20.1.Core.dll
-C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Pdf.v20.1.Drawing.dll
-C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Data.Desktop.v20.1.xml
-C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Data.v20.1.xml
-C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Printing.v20.1.Core.xml
-C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Utils.v20.1.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Pdf.v20.1.Core.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\DevExpress.Pdf.v20.1.Drawing.xml
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\de\DevExpress.Data.v20.1.resources.dll
@@ -160,36 +159,6 @@ C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\de\DevExpress.Pdf.v20.1.Core.resour
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csprojAssemblyReference.cache
-C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.SeasonForm.resources
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Data.Desktop.v20.1.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Data.v20.1.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Printing.v20.1.Core.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Utils.v20.1.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Pdf.v20.1.Core.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Pdf.v20.1.Drawing.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Data.Desktop.v20.1.xml
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Data.v20.1.xml
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Printing.v20.1.Core.xml
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Utils.v20.1.xml
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Pdf.v20.1.Core.xml
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\DevExpress.Pdf.v20.1.Drawing.xml
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\de\DevExpress.Data.v20.1.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\es\DevExpress.Data.v20.1.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\ja\DevExpress.Data.v20.1.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\ru\DevExpress.Data.v20.1.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\de\DevExpress.Printing.v20.1.Core.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\es\DevExpress.Printing.v20.1.Core.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\ja\DevExpress.Printing.v20.1.Core.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\ru\DevExpress.Printing.v20.1.Core.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\de\DevExpress.Utils.v20.1.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\es\DevExpress.Utils.v20.1.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\ja\DevExpress.Utils.v20.1.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\ru\DevExpress.Utils.v20.1.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\de\DevExpress.Pdf.v20.1.Core.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.SeasonForm.resources
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.GenreForm.resources
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.StudioForm.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csproj.CopyComplete
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.exe
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.pdb

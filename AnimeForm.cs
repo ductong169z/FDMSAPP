@@ -38,12 +38,8 @@ namespace FMSAPP
             InitializeComponent();
             dateTimeDelete = DateTime.Now;  // set deleted date
             txtCurrentDate.Value = DateTime.Now; // set current date
-            txtCurrentDate.Enabled = false; // disable editing
-
             txtUrAdminId.Text = adminId; // set own admin id
             this.adminId = adminId; // set admin id to global variable
-
-            this.Width = Screen.PrimaryScreen.WorkingArea.Width; // set form width to cover screen width
 
             this.CenterToScreen(); // center form
         }
