@@ -24,6 +24,8 @@ namespace FMSAPP
 
             dateTimeAdd.Value = DateTime.Now; // set current time
             dateTimeAdd.Enabled = false; // disable editing
+
+            this.CenterToScreen(); // center the form
         }
 
         /// <summary>
