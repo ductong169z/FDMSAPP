@@ -92,6 +92,10 @@ namespace FMSAPP
             crystalReportViewer1.SelectionFormula = "{account.RoleID} =" + tipe ;
             crystalReportViewer1.RefreshReport();
         }
+
+        /// <summary>
+        /// Load Grid data
+        /// </summary>
         public void LoadGridData()
         {
             db = new animeEntities();
