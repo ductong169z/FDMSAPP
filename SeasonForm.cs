@@ -60,7 +60,7 @@ namespace FMSAPP
         /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            // check if name is null or empty 
+            // check if name is null or empty
             if (String.IsNullOrEmpty(txtName.Text))
             {
                 MessageBox.Show("Name field cannot be empty!", "Required !");
@@ -100,7 +100,7 @@ namespace FMSAPP
             int id = Convert.ToInt32(txtID.Text); // cast value to int and set to ID
             season seasons = new season(); // create new object of season
             seasons = db.seasons.FirstOrDefault(ss => ss.SeasonID == id); // get the object season to update
-            
+
             /* Update season properties */
             seasons.SeasonID = id;
             seasons.name = txtName.Text;
@@ -121,7 +121,7 @@ namespace FMSAPP
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtID.Text); // cast value to int and set to ID
-            
+
             // create new object of season
             season seasons = new season();
             seasons = db.seasons.FirstOrDefault(ss => ss.SeasonID == id);
@@ -173,8 +173,8 @@ namespace FMSAPP
             {
                 MessageBox.Show("Input in search name is null ! Please enter the name of season !!");
             }
-            
-            
+
+
         }
 
         /// <summary>
@@ -186,7 +186,7 @@ namespace FMSAPP
         {
             DateTime dt = searchDate.Value;
            seasonGridView.DataSource = db.seasons.Where(t => DbFunctions.TruncateTime(t.created_at) >= dt);
-            
+
         }
     }
 }

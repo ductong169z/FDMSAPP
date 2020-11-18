@@ -59,9 +59,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
+            //
             // lbAddNewUser
-            // 
+            //
             this.lbAddNewUser.AutoSize = true;
             this.lbAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAddNewUser.Location = new System.Drawing.Point(135, 26);
@@ -69,81 +69,81 @@
             this.lbAddNewUser.Size = new System.Drawing.Size(196, 29);
             this.lbAddNewUser.TabIndex = 18;
             this.lbAddNewUser.Text = "ADD NEW USER";
-            // 
+            //
             // lblemail
-            // 
+            //
             this.lblemail.AutoSize = true;
             this.lblemail.Location = new System.Drawing.Point(14, 340);
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(52, 20);
             this.lblemail.TabIndex = 26;
             this.lblemail.Text = "Email:";
-            // 
+            //
             // txtemail
-            // 
+            //
             this.txtemail.Location = new System.Drawing.Point(206, 337);
             this.txtemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(235, 26);
             this.txtemail.TabIndex = 25;
-            // 
+            //
             // accountBindingSource
-            // 
+            //
             this.accountBindingSource.DataSource = typeof(FMSAPP.account);
-            // 
+            //
             // lblavatar
-            // 
+            //
             this.lblavatar.AutoSize = true;
             this.lblavatar.Location = new System.Drawing.Point(14, 290);
             this.lblavatar.Name = "lblavatar";
             this.lblavatar.Size = new System.Drawing.Size(59, 20);
             this.lblavatar.TabIndex = 24;
             this.lblavatar.Text = "Avatar:";
-            // 
+            //
             // txtavatar
-            // 
+            //
             this.txtavatar.Location = new System.Drawing.Point(206, 287);
             this.txtavatar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtavatar.Name = "txtavatar";
             this.txtavatar.Size = new System.Drawing.Size(235, 26);
             this.txtavatar.TabIndex = 23;
-            // 
+            //
             // lblfullname
-            // 
+            //
             this.lblfullname.AutoSize = true;
             this.lblfullname.Location = new System.Drawing.Point(14, 237);
             this.lblfullname.Name = "lblfullname";
             this.lblfullname.Size = new System.Drawing.Size(84, 20);
             this.lblfullname.TabIndex = 22;
             this.lblfullname.Text = "Full Name:";
-            // 
+            //
             // txtfullname
-            // 
+            //
             this.txtfullname.Location = new System.Drawing.Point(206, 234);
             this.txtfullname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtfullname.Name = "txtfullname";
             this.txtfullname.Size = new System.Drawing.Size(235, 26);
             this.txtfullname.TabIndex = 21;
-            // 
+            //
             // lblusername
-            // 
+            //
             this.lblusername.AutoSize = true;
             this.lblusername.Location = new System.Drawing.Point(14, 187);
             this.lblusername.Name = "lblusername";
             this.lblusername.Size = new System.Drawing.Size(87, 20);
             this.lblusername.TabIndex = 28;
             this.lblusername.Text = "Username:";
-            // 
+            //
             // txtusername
-            // 
+            //
             this.txtusername.Location = new System.Drawing.Point(206, 184);
             this.txtusername.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(235, 26);
             this.txtusername.TabIndex = 18;
-            // 
+            //
             // txtPassword
-            // 
+            //
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.txtPassword.Location = new System.Drawing.Point(206, 428);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -151,27 +151,27 @@
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(235, 25);
             this.txtPassword.TabIndex = 29;
-            // 
+            //
             // lblpass
-            // 
+            //
             this.lblpass.AutoSize = true;
             this.lblpass.Location = new System.Drawing.Point(14, 431);
             this.lblpass.Name = "lblpass";
             this.lblpass.Size = new System.Drawing.Size(154, 20);
             this.lblpass.TabIndex = 30;
             this.lblpass.Text = "Password (required):";
-            // 
+            //
             // lblre_pass
-            // 
+            //
             this.lblre_pass.AutoSize = true;
             this.lblre_pass.Location = new System.Drawing.Point(14, 480);
             this.lblre_pass.Name = "lblre_pass";
             this.lblre_pass.Size = new System.Drawing.Size(179, 20);
             this.lblre_pass.TabIndex = 32;
             this.lblre_pass.Text = "Re-password (required):";
-            // 
+            //
             // txtre_pass
-            // 
+            //
             this.txtre_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.txtre_pass.Location = new System.Drawing.Point(206, 477);
             this.txtre_pass.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -179,9 +179,9 @@
             this.txtre_pass.PasswordChar = '•';
             this.txtre_pass.Size = new System.Drawing.Size(235, 25);
             this.txtre_pass.TabIndex = 31;
-            // 
+            //
             // cbbRoleID
-            // 
+            //
             this.cbbRoleID.BackColor = System.Drawing.SystemColors.Window;
             this.cbbRoleID.DataSource = this.roleBindingSource1;
             this.cbbRoleID.DisplayMember = "name";
@@ -192,40 +192,40 @@
             this.cbbRoleID.Size = new System.Drawing.Size(235, 28);
             this.cbbRoleID.TabIndex = 34;
             this.cbbRoleID.ValueMember = "RoleID";
-            // 
+            //
             // roleBindingSource1
-            // 
+            //
             this.roleBindingSource1.DataSource = typeof(FMSAPP.role);
-            // 
+            //
             // lblRole
-            // 
+            //
             this.lblRole.AutoSize = true;
             this.lblRole.Location = new System.Drawing.Point(14, 526);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(118, 20);
             this.lblRole.TabIndex = 33;
             this.lblRole.Text = "Role (required):";
-            // 
+            //
             // cmbgender
-            // 
+            //
             this.cmbgender.FormattingEnabled = true;
             this.cmbgender.Location = new System.Drawing.Point(206, 378);
             this.cmbgender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbgender.Name = "cmbgender";
             this.cmbgender.Size = new System.Drawing.Size(235, 28);
             this.cmbgender.TabIndex = 36;
-            // 
+            //
             // lbGender
-            // 
+            //
             this.lbGender.AutoSize = true;
             this.lbGender.Location = new System.Drawing.Point(14, 381);
             this.lbGender.Name = "lbGender";
             this.lbGender.Size = new System.Drawing.Size(67, 20);
             this.lbGender.TabIndex = 35;
             this.lbGender.Text = "Gender:";
-            // 
+            //
             // btnAdd
-            // 
+            //
             this.btnAdd.Location = new System.Drawing.Point(140, 584);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
@@ -234,23 +234,23 @@
             this.btnAdd.Text = "ADD USER";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
+            //
             // currentDate
-            // 
+            //
             this.currentDate.Enabled = false;
             this.currentDate.Location = new System.Drawing.Point(99, 116);
             this.currentDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.currentDate.Name = "currentDate";
             this.currentDate.Size = new System.Drawing.Size(269, 26);
             this.currentDate.TabIndex = 38;
-            this.currentDate.Value = new System.DateTime(2020, 11, 18, 0, 0, 0, 0);
-            // 
+            this.currentDate.Value = new System.DateTime(2020, 11, 4, 13, 35, 15, 0);
+            //
             // accountBindingSource1
-            // 
+            //
             this.accountBindingSource1.DataSource = typeof(FMSAPP.account);
-            // 
+            //
             // btnChoose
-            // 
+            //
             this.btnChoose.Location = new System.Drawing.Point(109, 286);
             this.btnChoose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChoose.Name = "btnChoose";
@@ -259,18 +259,18 @@
             this.btnChoose.Text = "Choose";
             this.btnChoose.UseVisualStyleBackColor = true;
             this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
-            // 
+            //
             // label1
-            // 
+            //
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(179, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 40;
             this.label1.Text = "Current Date:";
-            // 
+            //
             // AddUserForm
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 650);
