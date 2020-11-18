@@ -162,3 +162,4 @@ C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resour
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csproj.CopyComplete
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.exe
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.pdb
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csprojAssemblyReference.cache

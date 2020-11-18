@@ -13,12 +13,21 @@ namespace FMSAPP
 {
     public partial class FormReportAnime : Form
     {
-        animeEntities db;
+        animeEntities db; // database context to use
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public FormReportAnime()
         {
             InitializeComponent();
+
+            this.CenterToScreen(); // center the form
         }
-        //Viewmodel
+
+        /// <summary>
+        /// Anime details
+        /// </summary>
         public class AnimeRemake
         {
             public int AnimeID { get; set; }
@@ -36,6 +45,11 @@ namespace FMSAPP
             public string trailer { get; set; }
         }
 
+        /// <summary>
+        /// Load data to report
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
             db = new animeEntities();

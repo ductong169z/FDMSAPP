@@ -156,7 +156,8 @@ namespace FMSAPP
         /// <param name="e"></param>
         private void btnUserReport_Click(object sender, EventArgs e)
         {
-
+            FormReportUser frmReportUser = new FormReportUser();
+            frmReportUser.Show();
         }
 
         /// <summary>
@@ -166,7 +167,8 @@ namespace FMSAPP
         /// <param name="e"></param>
         private void btnAnimeReport_Click(object sender, EventArgs e)
         {
-
+            FormReportAnime frmReportAnime = new FormReportAnime();
+            frmReportAnime.Show();
         }
     }
 }
