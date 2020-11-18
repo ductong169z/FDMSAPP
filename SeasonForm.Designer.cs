@@ -306,7 +306,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.MaximizeBox = false;
             this.Name = "SeasonForm";
-            this.Text = "Season Form";
+            this.Text = "Season Management Form";
             this.Load += new System.EventHandler(this.SeasonForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.seasonGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separator)).EndInit();

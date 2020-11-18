@@ -65,7 +65,7 @@ namespace FMSAPP
 
             //count studio
             Int32 countstudio = db.studios.Count();
-            lbStudio.Text = countstudio.ToString();
+            lbStudio2.Text = countstudio.ToString();
 
             //count anime
             Int32 countanime = db.animes.Count(t => t.deleted_at == null);
