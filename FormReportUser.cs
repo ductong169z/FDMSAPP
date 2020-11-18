@@ -15,12 +15,21 @@ namespace FMSAPP
 {
     public partial class FormReportUser : Form
     {
-        animeEntities db;
+        animeEntities db; // database context
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public FormReportUser()
         {
             InitializeComponent();
+
+            this.CenterToScreen(); // center the form
         }
-        //Viewmodel
+        
+        /// <summary>
+        /// Account details
+        /// </summary>
         public class UserRemake
         {
             public int AccountID { get; set; }
@@ -31,6 +40,12 @@ namespace FMSAPP
             public string email { get; set; }
             public int gender { get; set; }
         }
+
+        /// <summary>
+        /// Load data to report
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
             db = new animeEntities();
@@ -49,11 +64,11 @@ namespace FMSAPP
             crystalReportViewer1.ReportSource = user;
         }
 
-        private void FormReportUser_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Find accounts with account id in report
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             db = new animeEntities();
@@ -77,6 +92,10 @@ namespace FMSAPP
             crystalReportViewer1.SelectionFormula = "{account.RoleID} =" + tipe ;
             crystalReportViewer1.RefreshReport();
         }
+
+        /// <summary>
+        /// Load Grid data
+        /// </summary>
         public void LoadGridData()
         {
             db = new animeEntities();

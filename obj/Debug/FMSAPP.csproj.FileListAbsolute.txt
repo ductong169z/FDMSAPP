@@ -31,7 +31,6 @@ D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Buffers.xml
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Memory.xml
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Numerics.Vectors.xml
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csprojAssemblyReference.cache
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.Properties.Resources.resources
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csproj.GenerateResource.cache
 D:\CH VLVD Nhựt Tân\baigithub\FDMSAPP\obj\Debug\FMSAPP.csproj.CoreCompileInputs.cache
@@ -162,3 +161,6 @@ C:\Workbench\Coding\GitHub\FDMSAPP\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resour
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csproj.CopyComplete
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.exe
 C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.pdb
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.csprojAssemblyReference.cache
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.GenreForm.resources
+C:\Workbench\Coding\GitHub\FDMSAPP\obj\Debug\FMSAPP.StudioForm.resources

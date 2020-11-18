@@ -96,9 +96,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.animeBindingSource)).BeginInit();
             this.panelStudio.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // panel2
-            // 
+            //
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.panel2.Controls.Add(this.pbStudios);
             this.panel2.Controls.Add(this.panelStudio);
@@ -108,9 +108,9 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(739, 1088);
             this.panel2.TabIndex = 3;
-            // 
+            //
             // typeChart
-            // 
+            //
             chartArea7.Name = "ChartArea1";
             this.typeChart.ChartAreas.Add(chartArea7);
             legend7.Name = "Legend1";
@@ -127,9 +127,9 @@
             this.typeChart.Size = new System.Drawing.Size(531, 348);
             this.typeChart.TabIndex = 5;
             this.typeChart.Text = "chart1";
-            // 
+            //
             // panel1
-            // 
+            //
             this.panel1.Controls.Add(this.btnSeason);
             this.panel1.Controls.Add(this.btnStudio);
             this.panel1.Controls.Add(this.btnGenre);
@@ -142,9 +142,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 666);
             this.panel1.TabIndex = 2;
-            // 
+            //
             // btnSeason
-            // 
+            //
             this.btnSeason.FlatAppearance.BorderSize = 0;
             this.btnSeason.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeason.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -159,9 +159,9 @@
             this.btnSeason.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSeason.UseVisualStyleBackColor = true;
             this.btnSeason.Click += new System.EventHandler(this.btnSeason_Click);
-            // 
+            //
             // btnStudio
-            // 
+            //
             this.btnStudio.FlatAppearance.BorderSize = 0;
             this.btnStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudio.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -176,9 +176,9 @@
             this.btnStudio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnStudio.UseVisualStyleBackColor = true;
             this.btnStudio.Click += new System.EventHandler(this.btnStudio_Click);
-            // 
+            //
             // btnGenre
-            // 
+            //
             this.btnGenre.FlatAppearance.BorderSize = 0;
             this.btnGenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenre.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -193,9 +193,9 @@
             this.btnGenre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnGenre.UseVisualStyleBackColor = true;
             this.btnGenre.Click += new System.EventHandler(this.btnGenre_Click);
-            // 
+            //
             // btnAnime
-            // 
+            //
             this.btnAnime.FlatAppearance.BorderSize = 0;
             this.btnAnime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnime.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -210,9 +210,9 @@
             this.btnAnime.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAnime.UseVisualStyleBackColor = true;
             this.btnAnime.Click += new System.EventHandler(this.btnAnime_Click);
-            // 
+            //
             // btnUser
-            // 
+            //
             this.btnUser.FlatAppearance.BorderSize = 0;
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -228,9 +228,9 @@
             this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnUser.UseVisualStyleBackColor = true;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
-            // 
+            //
             // btnAdmin
-            // 
+            //
             this.btnAdmin.FlatAppearance.BorderSize = 0;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -245,9 +245,9 @@
             this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
-            // 
+            //
             // panel3
-            // 
+            //
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.Controls.Add(this.lbDashboard);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -255,9 +255,9 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(166, 76);
             this.panel3.TabIndex = 0;
-            // 
+            //
             // lbDashboard
-            // 
+            //
             this.lbDashboard.AutoSize = true;
             this.lbDashboard.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbDashboard.ForeColor = System.Drawing.Color.Black;
@@ -267,9 +267,9 @@
             this.lbDashboard.TabIndex = 0;
             this.lbDashboard.Text = "Admin\r\nDashboard\r\n";
             this.lbDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // lbAnime
-            // 
+            //
             this.lbAnime.AutoSize = true;
             this.lbAnime.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbAnime.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -278,9 +278,9 @@
             this.lbAnime.Size = new System.Drawing.Size(71, 25);
             this.lbAnime.TabIndex = 10;
             this.lbAnime.Text = "lorem";
-            // 
+            //
             // lbTotalAnimes
-            // 
+            //
             this.lbTotalAnimes.AutoSize = true;
             this.lbTotalAnimes.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbTotalAnimes.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -289,9 +289,9 @@
             this.lbTotalAnimes.Size = new System.Drawing.Size(159, 25);
             this.lbTotalAnimes.TabIndex = 9;
             this.lbTotalAnimes.Text = "Total Animes:";
-            // 
+            //
             // lbUser
-            // 
+            //
             this.lbUser.AutoSize = true;
             this.lbUser.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbUser.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -300,9 +300,9 @@
             this.lbUser.Size = new System.Drawing.Size(71, 25);
             this.lbUser.TabIndex = 12;
             this.lbUser.Text = "lorem";
-            // 
+            //
             // lbTotalUsers
-            // 
+            //
             this.lbTotalUsers.AutoSize = true;
             this.lbTotalUsers.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbTotalUsers.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -311,9 +311,9 @@
             this.lbTotalUsers.Size = new System.Drawing.Size(145, 25);
             this.lbTotalUsers.TabIndex = 11;
             this.lbTotalUsers.Text = "Total Users:";
-            // 
+            //
             // lbAdmin
-            // 
+            //
             this.lbAdmin.AutoSize = true;
             this.lbAdmin.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbAdmin.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -322,9 +322,9 @@
             this.lbAdmin.Size = new System.Drawing.Size(71, 25);
             this.lbAdmin.TabIndex = 14;
             this.lbAdmin.Text = "lorem";
-            // 
+            //
             // lbTotalAds
-            // 
+            //
             this.lbTotalAds.AutoSize = true;
             this.lbTotalAds.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbTotalAds.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -333,9 +333,9 @@
             this.lbTotalAds.Size = new System.Drawing.Size(159, 25);
             this.lbTotalAds.TabIndex = 13;
             this.lbTotalAds.Text = "Total Admins:";
-            // 
+            //
             // lbGenre
-            // 
+            //
             this.lbGenre.AutoSize = true;
             this.lbGenre.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbGenre.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -344,9 +344,9 @@
             this.lbGenre.Size = new System.Drawing.Size(71, 25);
             this.lbGenre.TabIndex = 16;
             this.lbGenre.Text = "lorem";
-            // 
+            //
             // lbTotalGenres
-            // 
+            //
             this.lbTotalGenres.AutoSize = true;
             this.lbTotalGenres.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbTotalGenres.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -355,9 +355,9 @@
             this.lbTotalGenres.Size = new System.Drawing.Size(159, 25);
             this.lbTotalGenres.TabIndex = 15;
             this.lbTotalGenres.Text = "Total Genres:";
-            // 
+            //
             // lbSeason
-            // 
+            //
             this.lbSeason.AutoSize = true;
             this.lbSeason.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbSeason.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -366,9 +366,9 @@
             this.lbSeason.Size = new System.Drawing.Size(71, 25);
             this.lbSeason.TabIndex = 18;
             this.lbSeason.Text = "lorem";
-            // 
+            //
             // lbTotalSeasons
-            // 
+            //
             this.lbTotalSeasons.AutoSize = true;
             this.lbTotalSeasons.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbTotalSeasons.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -377,9 +377,9 @@
             this.lbTotalSeasons.Size = new System.Drawing.Size(172, 25);
             this.lbTotalSeasons.TabIndex = 17;
             this.lbTotalSeasons.Text = "Total Seasons:";
-            // 
+            //
             // lbStudio
-            // 
+            //
             this.lbStudio.AutoSize = true;
             this.lbStudio.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbStudio.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -388,9 +388,9 @@
             this.lbStudio.Size = new System.Drawing.Size(71, 25);
             this.lbStudio.TabIndex = 20;
             this.lbStudio.Text = "lorem";
-            // 
+            //
             // lbTotalStudios
-            // 
+            //
             this.lbTotalStudios.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbTotalStudios.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbTotalStudios.Location = new System.Drawing.Point(3, 4);
@@ -398,9 +398,9 @@
             this.lbTotalStudios.Size = new System.Drawing.Size(243, 276);
             this.lbTotalStudios.TabIndex = 19;
             this.lbTotalStudios.Text = "Total Studios:";
-            // 
+            //
             // panel4
-            // 
+            //
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel4.Controls.Add(this.btnUserReport);
             this.panel4.Controls.Add(this.btnAnimeReport);
@@ -409,9 +409,9 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(733, 55);
             this.panel4.TabIndex = 21;
-            // 
+            //
             // btnUserReport
-            // 
+            //
             this.btnUserReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnUserReport.FlatAppearance.BorderSize = 0;
             this.btnUserReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -427,9 +427,9 @@
             this.btnUserReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnUserReport.UseVisualStyleBackColor = true;
             this.btnUserReport.Click += new System.EventHandler(this.btnUserReport_Click);
-            // 
+            //
             // btnAnimeReport
-            // 
+            //
             this.btnAnimeReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnAnimeReport.FlatAppearance.BorderSize = 0;
             this.btnAnimeReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -445,9 +445,9 @@
             this.btnAnimeReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAnimeReport.UseVisualStyleBackColor = true;
             this.btnAnimeReport.Click += new System.EventHandler(this.btnAnimeReport_Click);
-            // 
+            //
             // btnLogout
-            // 
+            //
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -463,9 +463,9 @@
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
+            //
             // panelAnime
-            // 
+            //
             this.panelAnime.BackColor = System.Drawing.Color.White;
             this.panelAnime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelAnime.Controls.Add(this.lbTotalAnimes);
@@ -474,9 +474,9 @@
             this.panelAnime.Name = "panelAnime";
             this.panelAnime.Size = new System.Drawing.Size(215, 55);
             this.panelAnime.TabIndex = 22;
-            // 
+            //
             // panelUsers
-            // 
+            //
             this.panelUsers.BackColor = System.Drawing.Color.White;
             this.panelUsers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelUsers.Controls.Add(this.lbTotalUsers);
@@ -485,9 +485,9 @@
             this.panelUsers.Name = "panelUsers";
             this.panelUsers.Size = new System.Drawing.Size(203, 55);
             this.panelUsers.TabIndex = 23;
-            // 
+            //
             // panelAdmin
-            // 
+            //
             this.panelAdmin.BackColor = System.Drawing.Color.White;
             this.panelAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelAdmin.Controls.Add(this.lbTotalAds);
@@ -496,9 +496,9 @@
             this.panelAdmin.Name = "panelAdmin";
             this.panelAdmin.Size = new System.Drawing.Size(216, 55);
             this.panelAdmin.TabIndex = 23;
-            // 
+            //
             // panel8
-            // 
+            //
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.lbTotalStudios);
@@ -507,9 +507,9 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(216, 55);
             this.panel8.TabIndex = 23;
-            // 
+            //
             // panelSeason
-            // 
+            //
             this.panelSeason.BackColor = System.Drawing.Color.White;
             this.panelSeason.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelSeason.Controls.Add(this.lbTotalSeasons);
@@ -518,9 +518,9 @@
             this.panelSeason.Name = "panelSeason";
             this.panelSeason.Size = new System.Drawing.Size(203, 55);
             this.panelSeason.TabIndex = 23;
-            // 
+            //
             // panelGenre
-            // 
+            //
             this.panelGenre.BackColor = System.Drawing.Color.White;
             this.panelGenre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelGenre.Controls.Add(this.lbTotalGenres);
@@ -529,9 +529,9 @@
             this.panelGenre.Name = "panelGenre";
             this.panelGenre.Size = new System.Drawing.Size(211, 55);
             this.panelGenre.TabIndex = 23;
-            // 
+            //
             // pbAnime
-            // 
+            //
             this.pbAnime.BackColor = System.Drawing.Color.White;
             this.pbAnime.Image = ((System.Drawing.Image)(resources.GetObject("pbAnime.Image")));
             this.pbAnime.Location = new System.Drawing.Point(356, 93);
@@ -540,9 +540,9 @@
             this.pbAnime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbAnime.TabIndex = 24;
             this.pbAnime.TabStop = false;
-            // 
+            //
             // pbSeasons
-            // 
+            //
             this.pbSeasons.BackColor = System.Drawing.Color.White;
             this.pbSeasons.Image = ((System.Drawing.Image)(resources.GetObject("pbSeasons.Image")));
             this.pbSeasons.Location = new System.Drawing.Point(443, 236);
@@ -551,9 +551,9 @@
             this.pbSeasons.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbSeasons.TabIndex = 19;
             this.pbSeasons.TabStop = false;
-            // 
+            //
             // pbStudios
-            // 
+            //
             this.pbStudios.BackColor = System.Drawing.Color.White;
             this.pbStudios.Image = ((System.Drawing.Image)(resources.GetObject("pbStudios.Image")));
             this.pbStudios.Location = new System.Drawing.Point(508, 658);
@@ -562,9 +562,9 @@
             this.pbStudios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbStudios.TabIndex = 21;
             this.pbStudios.TabStop = false;
-            // 
+            //
             // pbGenres
-            // 
+            //
             this.pbGenres.BackColor = System.Drawing.Color.White;
             this.pbGenres.Image = ((System.Drawing.Image)(resources.GetObject("pbGenres.Image")));
             this.pbGenres.Location = new System.Drawing.Point(209, 236);
@@ -573,9 +573,9 @@
             this.pbGenres.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbGenres.TabIndex = 27;
             this.pbGenres.TabStop = false;
-            // 
+            //
             // pbAdmins
-            // 
+            //
             this.pbAdmins.BackColor = System.Drawing.Color.White;
             this.pbAdmins.Image = ((System.Drawing.Image)(resources.GetObject("pbAdmins.Image")));
             this.pbAdmins.Location = new System.Drawing.Point(829, 93);
@@ -584,9 +584,9 @@
             this.pbAdmins.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbAdmins.TabIndex = 26;
             this.pbAdmins.TabStop = false;
-            // 
+            //
             // pbUsers
-            // 
+            //
             this.pbUsers.BackColor = System.Drawing.Color.White;
             this.pbUsers.Image = ((System.Drawing.Image)(resources.GetObject("pbUsers.Image")));
             this.pbUsers.Location = new System.Drawing.Point(585, 93);
@@ -595,13 +595,13 @@
             this.pbUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbUsers.TabIndex = 25;
             this.pbUsers.TabStop = false;
-            // 
+            //
             // animeBindingSource
-            // 
+            //
             this.animeBindingSource.DataSource = typeof(FMSAPP.anime);
-            // 
+            //
             // panelStudio
-            // 
+            //
             this.panelStudio.BackColor = System.Drawing.Color.White;
             this.panelStudio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelStudio.Controls.Add(this.lbStudio2);
@@ -610,9 +610,9 @@
             this.panelStudio.Name = "panelStudio";
             this.panelStudio.Size = new System.Drawing.Size(212, 55);
             this.panelStudio.TabIndex = 24;
-            // 
+            //
             // lbTotalStudios2
-            // 
+            //
             this.lbTotalStudios2.AutoSize = true;
             this.lbTotalStudios2.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbTotalStudios2.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -621,9 +621,9 @@
             this.lbTotalStudios2.Size = new System.Drawing.Size(243, 38);
             this.lbTotalStudios2.TabIndex = 17;
             this.lbTotalStudios2.Text = "Total Studios:";
-            // 
+            //
             // lbStudio2
-            // 
+            //
             this.lbStudio2.AutoSize = true;
             this.lbStudio2.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbStudio2.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -632,9 +632,9 @@
             this.lbStudio2.Size = new System.Drawing.Size(71, 25);
             this.lbStudio2.TabIndex = 18;
             this.lbStudio2.Text = "lorem";
-            // 
+            //
             // DashBoard
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));

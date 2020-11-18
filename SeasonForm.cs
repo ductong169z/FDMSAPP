@@ -120,29 +120,36 @@ namespace FMSAPP
         /// <param name="e"></param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtID.Text); // cast value to int and set to ID
-
-            // create new object of season
-            season seasons = new season();
-            seasons = db.seasons.FirstOrDefault(ss => ss.SeasonID == id);
-
-            // find obj in datasource exist or not
-            if (seasons != null)
+            try
             {
-                // call function remove
-                db.seasons.Remove(seasons);
+                int id = Convert.ToInt32(txtID.Text); // cast value to int and set to ID
+
+                // create new object of season
+                season seasons = new season();
+                seasons = db.seasons.FirstOrDefault(ss => ss.SeasonID == id);
+
+                // find obj in datasource exist or not
+                if (seasons != null)
+                {
+                    // call function remove
+                    db.seasons.Remove(seasons);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter another ID that doesn't exist in database!", "Not found ID!");
+                    return;
+                }
+                MessageBox.Show("Delete successful!", "Successful!");
+
+                // save changes to database
+                db.SaveChanges();
+
+                seasonGridView.DataSource = db.seasons.ToList(); // update datasource
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please enter another ID that doesn't exist in database!", "Not found ID!");
-                return;
+                MessageBox.Show("Cannot delete because the season you tried to delete is linked to other animes!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            MessageBox.Show("Delete successful!", "Successful!");
-
-            // save changes to database
-            db.SaveChanges();
-
-            seasonGridView.DataSource = db.seasons.ToList(); // update datasource
         }
 
         /// <summary>
@@ -175,7 +182,6 @@ namespace FMSAPP
             }
 
 
-
         }
 
         /// <summary>
@@ -186,7 +192,7 @@ namespace FMSAPP
         private void bnt_searchdate_Click(object sender, EventArgs e)
         {
             DateTime dt = searchDate.Value;
-           seasonGridView.DataSource = db.seasons.Where(t => DbFunctions.TruncateTime(t.created_at) >= dt);
+            seasonGridView.DataSource = db.seasons.Where(t => DbFunctions.TruncateTime(t.created_at) >= dt);
 
         }
     }
