@@ -13,19 +13,24 @@ namespace FMSAPP
 {
     public partial class StudioForm : Form
     {
-        animeEntities db;
+        animeEntities db; // database context to use
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public StudioForm()
         {
             InitializeComponent();
-            DateTimePicker dt = new DateTimePicker();
-            dateTimeAdd.Value = DateTime.Now;
+
+            dateTimeAdd.Value = DateTime.Now; // set current time
+            dateTimeAdd.Enabled = false; // disable editing
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Add a studio
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             // check if name is null or empty 
@@ -51,6 +56,11 @@ namespace FMSAPP
             studioBindingSource1.DataSource = db.studios.ToList(); // update datasource
         }
 
+        /// <summary>
+        /// Update studio
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             // check if studio is null or empty
@@ -76,20 +86,23 @@ namespace FMSAPP
             studioBindingSource1.DataSource = db.studios.ToList(); // update datasource
         }
 
+        /// <summary>
+        /// Load data to form on load
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form3_Load_1(object sender, EventArgs e)
         {
-            db = new animeEntities();
-            db.studios.Load();
-            studioBindingSource1.DataSource = db.studios.Local;
+            db = new animeEntities(); // instantiate
+            db.studios.Load(); // load data
+            studioBindingSource1.DataSource = db.studios.Local; // set data source
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            db = new animeEntities();
-            db.studios.Load();
-            studioBindingSource1.DataSource = db.studios.Local;
-        }
-
+        /// <summary>
+        /// Remove studio
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textBox1.Text); // cast value to int and set to ID
@@ -117,6 +130,11 @@ namespace FMSAPP
             studioBindingSource1.DataSource = db.studios.ToList(); // update datasource
         }
 
+        /// <summary>
+        /// Bind data from cell to text boxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             /* Bind data from cell to text boxes manually */

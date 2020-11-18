@@ -37,7 +37,6 @@
     <Property Name="created_at" Type="DateTime" Nullable="false" />
     <Property Name="deleted_at" Type="DateTime" />
     <NavigationProperty Name="account" Relationship="Self.Admin" FromRole="anime" ToRole="account" />
-    <NavigationProperty Name="anime_studio" Relationship="animeModel.FKAnime_Stud329273" FromRole="anime" ToRole="anime_studio" />
   </EntityType>
   <EntityType Name="genre">
     <Key>
@@ -84,7 +83,6 @@
     <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="created_at" Type="DateTime" Nullable="false" />
     <Property Name="deleted_at" Type="DateTime" />
-    <NavigationProperty Name="anime_studio" Relationship="animeModel.FKAnime_Stud650632" FromRole="studio" ToRole="anime_studio" />
   </EntityType>
   <EntityType Name="anime_studio">
     <Key>
@@ -95,7 +93,6 @@
     <Property Name="StudioID" Type="Int32" Nullable="false" />
     <Property Name="created_at" Type="DateTime" />
     <NavigationProperty Name="anime" Relationship="animeModel.FKAnime_Stud329273" FromRole="anime_studio" ToRole="anime" />
-    <NavigationProperty Name="studio" Relationship="animeModel.FKAnime_Stud650632" FromRole="anime_studio" ToRole="studio" />
   </EntityType>
   <EntityType Name="genre_anime">
     <Key>
